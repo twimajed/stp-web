@@ -1,0 +1,77 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.ui006 {
+}
+
+.ui006  .el-ml-28 {
+  margin-left: 28px;
+}
+
+/**表格布局*/
+.tablelist > .table > thead > tr > .t3 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .t6 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .t7 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .t8 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .t10 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .t11 {
+  min-width: 180px;
+}
+
+
+.ui006 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.ui006 > .navpage {
+  width: 100%;
+}
+
+.ui006 > .ui006Panel {
+  width: 100%;
+  min-height: 350px;
+}
+
+
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+
+/**************以下代码不需要看*****************/
+.ui006 > .ui006Panel >.dateDemo001{
+  width: 400px;
+  border: 1px solid  #000;
+  margin: 10px; padding: 20px;
+}
+.ui006 > .title {
+  text-align: center;
+  border: 1px dashed #000;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  font-size: 24px;
+  margin: 25px auto;
+}
+.dateDemo001 > .date{
+  width: 300px;
+}

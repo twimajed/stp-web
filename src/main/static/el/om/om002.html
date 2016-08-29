@@ -1,0 +1,1337 @@
+<!-- Default panel contents start -->
+<div class="om002">
+  <div class="view listView">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body panel-tight">
+
+        <!--检索条件隐藏、显示-->
+        <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+                data-original-title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+        <!--检索条件隐藏、显示  end -->
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label for="soName">订单名称</label>
+            <input type="text" style="width:150px" class="form-control" id="soName">
+          </div>
+          <div class="form-group el-mr-15">
+            <label for="custName">客户名称</label>
+            <input type="text" style="width:150px" class="form-control" id="custName">
+          </div>
+          <div class="form-group date el-mr-15">
+            <label>订单日期</label>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" style="width:109px" class="form-control pull-right el-dtp cm004-date-from">
+            </div>
+            <label>-</label>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" style="width:109px" class="form-control pull-right el-dtp cm004-date-to">
+            </div>
+          </div>
+          <div class="form-group el-mr-10">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+          </div>
+          </div>
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label for="prodName">产品名称</label>
+            <input type="text" style="width:150px" class="form-control" id="prodName">
+          </div>
+          <div class="form-group ">
+            <label>订单状态</label>
+            <input type="checkbox" name="check1">新建
+            <input type="checkbox" name="check2">订单生效
+            <input type="checkbox" name="check3">暂停分单
+            <input type="checkbox" name="check3">生产中
+            <input type="checkbox" name="check2">已入库
+            <input type="checkbox" name="check3">已发货
+            <input type="checkbox" name="check3">发货完毕
+            <input type="checkbox" name="check3">已完成
+          </div>
+        </div>
+      </div>
+      <div class="navbarbtn navbar-form">
+        <!--<div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="printView">查看</button>
+        </div>-->
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="transView">发货通知单</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="stockView">库存查询</button>
+        </div>
+      </div>
+      <div class="box-head om002-table-listView table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th class="t1" ></th>
+            <th class="t2" >行号</th>
+            <th class="t5" >订单状态</th>
+            <th class="t6">订单编号</th>
+            <th class="t5">订单日期</th>
+            <th class="t6">订单交货日期</th>
+            <th class="t5" >业务员</th>
+            <th class="t5" >部门名称</th>
+            <th class="t5" >客户编码</th>
+            <th class="t5" >客户名称</th>
+            <th class="t5" >订单总金额</th>
+            <th class="t6">产品名称</th>
+            <th class="t5">产品类型</th>
+            <th class="t5">数量</th>
+            <th class="t5">金额</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap om002-table-listView">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="om002_listView">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paging el-hide om002-paging-listView"></div>
+  </div>
+  <div class="view printView ">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-primary floatRight" data-view-value="listView">返回</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="payDetail">价格明细</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="listView">提交</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="listView">保存</button>
+        <!--
+        <button type="button" class="btn btn-primary floatRight" data-view-value="listView">信控通过</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="">委任单确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="payView">合同确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="statementView">文件确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="paperConfView">纸张确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="editOrderView">订单变更</button>-->
+      </div>
+      <fieldset>
+        <legend style="margin-bottom:10px;">基础信息</legend>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">订单编号</label>
+            <input type="text" class="form-control" readonly="readonly" value="th999" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:42px;">客户编号</label>
+            <input type="text" class="form-control" readonly="readonly" id="cityName" value="cx123" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">客户名称</label>
+            <input type="text" class="form-control" readonly="readonly" value="百度" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label >交货时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-12" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15">
+            <label style="padding-left:42px;">业务员</label>
+            <input type="text" class="form-control" readonly="readonly" value="王二" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15">
+            <label style="padding-left:42px;">业务部门</label>
+            <input type="text" class="form-control" readonly="readonly" value="管理部门" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">登记时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-16" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label >生效时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-18" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+
+          <div class="form-group el-mr-15">
+            <label style="padding-left:28px;">付款方式</label>
+            <input type="text" class="form-control" readonly="readonly" value="信用卡支付" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:42px;">付款条款</label>
+            <input type="text" class="form-control" readonly="readonly" value="先验货后付款" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:14px;">对应报价单</label>
+            <input type="text" class="form-control" readonly="readonly" value="2000" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label>工艺评审确认</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:14px;">信控审核状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已审核" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>合同确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="未确认" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left" >
+          <div class="form-group el-mr-15 ">
+            <label>文件确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>委印单确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>纸张确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="未确认" style="width:150px;">
+          </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label class="form-group el-ml-43 ">委印单</label>
+            <button type="submit" class="btn btn-primary search-btn">上传</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>产品信息</legend>
+        <div class="tablelist table-responsive pre-scrollable">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t2">行号</th>
+              <th class="t5">产品名称</th>
+              <th class="t5">装订方式</th>
+              <th class="t5">成品宽度</th>
+              <th class="t5">成品高度</th>
+              <th class="t5">合计数量</th>
+              <th class="t5">订单数量</th>
+              <th class="t5">赠送数量</th>
+              <th class="t5">样书数量</th>
+            </tr>
+            </thead>
+            <tbody class="om002_product">
+            </tbody>
+          </table>
+        </div>
+        <div class="modal fade" id="om002-link-prodview-modal" tabindex="-1" role="dialog"
+             aria-labelledby="om002-link-prodview-ModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="om002-link-prodview-ModalLabel">
+                  产品查看
+                </h4>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>套装信息</legend>
+        <div class="tablelist table-responsive pre-scrollable">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t2">行号</th>
+              <th class="t5">产品名称</th>
+              <th class="t5">合计数量</th>
+              <th class="t5">订单数量</th>
+              <th class="t5">赠送数量</th>
+              <th class="t5">样书数量</th>
+            </tr>
+            </thead>
+            <tbody class="om002_products">
+            </tbody>
+          </table>
+        </div>
+        <div class="modal fade" id="om002-link-suitview-modal" tabindex="-1" role="dialog"
+             aria-labelledby="om002-link-suitview-ModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="om002-link-suitview-ModalLabel">
+                  套装名称：小学教材合集
+                </h4>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+      </fieldset>
+      <div class="page-container el-mt-15 el-ml-15 el-mr-15">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active">
+            <a href="#proDemd2" data-toggle="tab">
+              印前要求
+            </a>
+          </li>
+          <li>
+            <a href="#packDemd2" data-toggle="tab">
+              包装要求
+            </a>
+          </li>
+          <li>
+            <a href="#transDemd2" data-toggle="tab">
+              物流要求
+            </a>
+          </li>
+        </ul>
+
+        <!--proDemd start-->
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="proDemd2">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">印前项目名称</th>
+                  <th class="t6">数量</th>
+                  <th class="t6">单位</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om002_proDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--proDemd tab end-->
+
+          <!--packDemd start-->
+          <div class="tab-pane fade" id="packDemd2">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">包装项目名称</th>
+                  <th class="t6">数量</th>
+                  <th class="t6">单位</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om002_packDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--packDemd end-->
+          <!--transDemd start-->
+          <div class="tab-pane fade" id="transDemd2">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">产品名称</th>
+                  <th class="t6">物流项目名称</th>
+                  <th class="t6">发货日期</th>
+                  <th class="t6">发货数量</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om002_transDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--transDemd end-->
+
+      </div>
+    </div>
+  </div>
+  <!-- 发货通知单 start -->
+  <div class="view transView">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-sm floatRight" data-view-value="listView">返回</button>
+      </div>
+      <div class="panel-body">
+
+        <!-- search panel start -->
+        <div class="navbar-form navbar-left">
+          <div class="form-group">
+            <label for="docNo">发货通知单号</label> <input type="text"
+                                                     class="form-control" id="docNo" value="保存时自动生成" disabled>
+          </div>
+          <div class="form-group">
+            <label for="ouName">结算公司</label> <input type="text"
+                                                    class="form-control" id="ouName" value="北京盛通印刷股份有限公司"
+                                                    disabled>
+          </div>
+        </div>
+      </div>
+      <!-- search panel end -->
+      <div class="navbarbtn navbar-form">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="saveBtn">保存</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="addButton">复制</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="removeBtn">删除
+          </button>
+        </div>
+      </div>
+      <!-- <div class="tablelist table-responsive"> -->
+      <div class="box-head om002-table-transView table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th class="t1"><input type="checkbox" class="checkall" value=""></th>
+            <th class="t8">印刷订单号</th>
+            <th class="t6">客户名称</th>
+            <th class="t6">产品编码</th>
+            <th class="t10">产品名称</th>
+            <th class="t6">订单正数</th>
+            <th class="t6">未发货数量</th>
+            <th class="t6">发货数量</th>
+            <th class="t6">赠送数量</th>
+            <th class="t6">计量单位</th>
+            <th class="t6">打包方式</th>
+            <th class="t6">每箱本数</th>
+            <th class="t6">箱数</th>
+            <th class="t6">余数</th>
+            <th class="t6">状态</th>
+            <th class="t6">单位重量</th>
+            <th class="t6">总重量</th>
+            <th class="t6">送货地址</th>
+            <th class="t6">联系人</th>
+            <th class="t6">电话</th>
+            <th class="t6">发货日期</th>
+            <th class="t6">备注</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- </div> -->
+      <div class="box-wrap antiscroll-wrap om002-table-transView">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="om002_transView">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paging el-hide om002-paging-transView"></div>
+  </div>
+  <!-- 发货通知单 end -->
+  <!-- 订单变更 start-->
+  <!-- 库存查询 start -->
+  <script class="hbs" id="stockNum" type="text/x-handlebars-template">
+    <label>套装名称：小学语文一年级</label>
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t2">行号</th>
+          <th class="t5">产品名称</th>
+          <th class="t5">单套装中数量</th>
+        </tr>
+        </thead>
+        <tbody class="om002_stockNum">
+        </tbody>
+      </table>
+    </div>
+    <fieldset disabled>
+      <legend>产品信息</legend>
+      <div class="tablelist table-responsive pre-scrollable">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th class="t2">行号</th>
+            <th class="t5">产品名称</th>
+            <th class="t5">仓库名称</th>
+            <th class="t5">库存数量</th>
+          </tr>
+          </thead>
+          <tbody class="om002_productNum">
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+
+  </script>
+  <!-- 库存查询 end -->
+  <script class="hbs" id="editOrder" type="text/x-handlebars-template">
+    <div class="navbar-form">
+      <button type="submit" class="btn btn-primary">添加</button>
+      <button type="submit" class="btn btn-primary">编辑</button>
+      <button type="submit" class="btn btn-primary rbtn">移除</button>
+    </div>
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t2"></th>
+          <th class="t6">变更日期</th>
+          <th class="t6">变更人</th>
+          <th class="t6">变更金额</th>
+          <th class="t6">变更说明</th>
+        </tr>
+        </thead>
+        <tbody class="partMessage_data">
+        <tr>
+        <td class="t2"><input type="checkbox"></td>
+        <td class="t6">2016-12-09</td>
+        <td class="t6">王强</td>
+        <td class="t6">1200</td>
+        <td class="t6">变更</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+  <!--订单变更 end  -->
+  <!-- 价格明细 start -->
+  <script class="hbs" id="payDetail" type="text/x-handlebars-template">
+    <div class="well">
+      币种<input type="text" value="RMB" disabled="disabled" style="width: 40px">
+      平台价格<input type="text" value="18000" disabled="disabled" style="width: 80px">
+      报价单价格<input type="text" value="17000" disabled="disabled" style="width: 80px">
+    </div>
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseOne"><i class="glyphicon glyphicon-chevron-up"></i>
+              纸张费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>纸张编码</th>
+                  <th>纸张名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="paperCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseTwo"> <i class="glyphicon glyphicon-chevron-down"></i>
+              辅料费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>辅料编码</th>
+                  <th>辅料名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="accessCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseThree"> <i class="glyphicon glyphicon-chevron-down"></i>
+              印刷费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseThree" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="printCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseFour"> <i class="glyphicon glyphicon-chevron-down"></i>
+              表面处理费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseFour" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="dealCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseFive"> <i class="glyphicon glyphicon-chevron-down"></i>
+              装订费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseFive" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="bindCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseSix"> <i class="glyphicon glyphicon-chevron-down"></i>
+              手工费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseSix" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="handCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseSeven"> <i class="glyphicon glyphicon-chevron-down"></i>
+              印前费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseSeven" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="printlnCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseEight"> <i class="glyphicon glyphicon-chevron-down"></i>
+              包装费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseEight" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="packCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseNine"> <i class="glyphicon glyphicon-chevron-down"></i>
+              物流费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseNine" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="transCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- 价格明细 end -->
+  <!-- page panel end -->
+
+  <script class="hbs hbs-tables" data-view-id="listView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1 el-center"><input type="radio"  name="om002_table1"></td>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-left">{{lineStatus}}</td>
+      <td class="t6 el-center"><a href="javascript:void(0)" data-param="{{soNo}}">{{soNo}}</a></td>
+      <td class="t5 el-right">{{date}}</td>
+      <td class="t6 el-center">{{deliDate}}</td>
+      <td class="t5 el-left">{{agentName}}</td>
+      <td class="t5 el-left">{{docName}}</td>
+      <td class="t5 el-center">{{custCode}}</td>
+      <td class="t5 el-left">{{custName}}</td>
+      <td class="t5 el-right">{{sum}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t5 el-left">{{prodType}}</td>
+      <td class="t5 el-right">{{num}}</td>
+      <td class="t5 el-right">{{money}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="printView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-left"><a href="####" data-toggle="modal" data-target="#om002-link-prodview-modal">{{prodName}}</a></td>
+      <td class="t5 el-left">{{method}}</td>
+      <td class="t5 el-right">{{width}}</td>
+      <td class="t5 el-right">{{heigh}}</td>
+      <td class="t5 el-right">{{proNum}}</td>
+      <td class="t5 el-right">{{proNum1}}</td>
+      <td class="t5 el-right">{{proNum2}}</td>
+      <td class="t5 el-right">{{proNum3}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="print2View" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center"><a href="####" data-toggle="modal" data-target="#om002-link-suitview-modal">{{prodName}}</a></td>
+      <td class="t5 el-right">{{num}}</td>
+      <td class="t5 el-right">{{num2}}</td>
+      <td class="t5 el-right">{{num3}}</td>
+      <td class="t5 el-right">{{num4}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="proDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-right">{{num}}</td>
+      <td class="t6 el-left">{{unit}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!-- 包装要求 -->
+  <script class="hbs" data-view-id="packDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-left">{{num}}</td>
+      <td class="t6 el-left">{{unit}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!-- 物流要求 -->
+  <script class="hbs" data-view-id="transDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-left">{{transName}}</td>
+      <td class="t6 el-center">{{date}}</td>
+      <td class="t6 el-right">{{num}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--价格明细-->
+  <script class="hbs" data-view-id="paperCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA}}</td>
+      <td>{{BB}}</td>
+      <td>{{CC}}</td>
+      <td>{{DD}}</td>
+      <td>{{EE}}</td>
+      <td>{{FF}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="accessCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA1}}</td>
+      <td>{{BB1}}</td>
+      <td>{{CC1}}</td>
+      <td>{{DD1}}</td>
+      <td>{{EE1}}</td>
+      <td>{{FF1}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="printCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA2}}</td>
+      <td>{{BB2}}</td>
+      <td>{{CC2}}</td>
+      <td>{{DD2}}</td>
+      <td>{{EE2}}</td>
+      <td>{{FF2}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="dealCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA3}}</td>
+      <td>{{BB3}}</td>
+      <td>{{CC3}}</td>
+      <td>{{DD3}}</td>
+      <td>{{EE3}}</td>
+      <td>{{FF3}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="bindCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA4}}</td>
+      <td>{{BB4}}</td>
+      <td>{{CC4}}</td>
+      <td>{{DD4}}</td>
+      <td>{{EE4}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="handCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA5}}</td>
+      <td>{{BB5}}</td>
+      <td>{{CC5}}</td>
+      <td>{{DD5}}</td>
+      <td>{{EE5}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="printlnCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA6}}</td>
+      <td>{{BB6}}</td>
+      <td>{{CC6}}</td>
+      <td>{{DD6}}</td>
+      <td>{{EE6}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="packCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA7}}</td>
+      <td>{{BB7}}</td>
+      <td>{{CC7}}</td>
+      <td>{{DD7}}</td>
+      <td>{{EE7}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="transCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA8}}</td>
+      <td>{{BB8}}</td>
+      <td>{{CC8}}</td>
+      <td>{{DD8}}</td>
+      <td>{{EE8}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!-- 发货通知单 -->
+  <script class="hbs" data-view-id="transView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1 el-center"><input type="checkbox" class='checkItem'></td>
+      <td class="t8 el-center">{{foId}}</td>
+      <td class="t6">{{custName}}</td>
+      <td class="t6 el-center">{{itemCode}}</td>
+      <td class="t10">{{itemnName}}</td>
+      <td class="t6 el-right">{{fomanuQty}}</td>
+      <td class="t6 el-right">{{qty}}</td>
+      <td class="t6 el-center"><input type="text" value="" style="min-width:100px;width:100px;text-align: right;"></td>
+      <td class="t6 el-center"><input type="text" value="" style="min-width:100px;width:100px;text-align: right;"></td>
+      <td class="t6 el-center">{{uom}}</td>
+      <td class="t6 el-center">
+        <select>
+          <option>牛皮</option>
+          <option>手工</option>
+        </select>
+      </td>
+      <td class="t6 el-center"><input type="text" value="{{QTY_PERPACKAGE}}"
+                                      style="min-width:100px;width:100px;text-align: right;"></td>
+      <td class="t6 el-right">{{PACKAGE_QTY}}</td>
+      <td class="t6 el-right">{{SPARE_QTY}}</td>
+      <td class="t6 el-center">{{lineStatus}}</td>
+      <td class="t6 el-right">{{uomWeight}}</td>
+      <td class="t6 el-right">{{weight}}</td>
+      <td class="t6 el-center"><input type="text" value="" style="min-width:100px;width:100px;text-align: left;"></td>
+      <td class="t6 el-center"><input type="text" value="" style="min-width:100px;width:100px;text-align: left;"></td>
+      <td class="t6 el-center"><input type="text" value="" style="min-width:100px;width:100px;text-align: left;"></td>
+      <td class="t6 el-center"><input type="text" class="dtp" value=""
+                                      style="min-width:100px;width:100px;text-align: left;"></td>
+      <td class="t6 el-center"><input type="text" value="{{remark}}"
+                                      style="min-width:100px;width:100px;text-align: left;"></td>
+    </tr>
+    {{/each}}
+  </script>
+  <!-- 发货通知单 end -->
+  <script class="hbs hbs-tables" data-view-id="stockNum" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center">{{prodName}}</td>
+      <td class="t5 el-center">{{num}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="productNum" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center">{{prodName}}</td>
+      <td class="t5 el-center">{{stockName}}</td>
+      <td class="t5 el-center">{{stockNum}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="prodView" type="text/x-handlebars-template" id="om002-2-prod-look-tmpl">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label class="label-pl ">产品名称</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:14px;">产品大类</label>
+            <select class="form-control top-input-width" disabled>
+              <option>图书</option>
+              <option>期刊</option>
+              <option>报纸</option>
+              <option>包装</option>
+              <option>商业印品</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >产品小类</label>
+            <select class="form-control top-input-width" disabled>
+              <option>儿童绘本</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >成品单位</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">成品高度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:14px;">成品宽度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >书脊厚度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >成品重量</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label >前勒口宽度</label><!--class="el-ml-5"-->
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >后勒口宽度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >装订方式</label>
+            <select class="form-control top-input-width" disabled>
+              <option>胶订</option>
+            </select>
+            <select class="form-control top-input-width" disabled>
+              <option>方脊</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:43px;">开本</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">定价信息</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >色彩标识</label>
+            <select class="form-control top-input-width" disabled>
+              <option>G7</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >追色标准</label>
+            <select class="form-control top-input-width" disabled>
+              <option>数码样</option>
+            </select>
+          </div>
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label >ISBN/ISSN</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:43px;">本型</label>
+            <select class="form-control top-input-width" disabled>
+              <option>左翻本</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label class="label-pl-2size">版次</label>
+            <input type="text" class="form-control top-input-short" disabled>
+            -
+            <input type="text" class="form-control top-input-short" disabled>
+          </div>
+        </div>
+        <!-- <div class="navbar-form  ">
+           <div class="form-group el-mr-25" >
+             <label >ISBN/ISSN</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+           <div class="form-group el-mr-25" >
+             <label style="padding-left:43px;">本型</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+           <div class="form-group el-mr-25" >
+             <label class="label-pl-2size">期数</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+         </div>
+         <div class="navbar-form  ">
+           <div class="form-group el-mr-25" >
+             <label style="padding-left:43px;">批次</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+         </div>-->
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">特殊要求</label>
+            <input type="text" class="form-control top-input-long" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否FSC纸张</label>
+            <input type="checkbox"  disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否绿色印刷</label>
+            <input type="checkbox"  disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否保密</label>
+            <input type="checkbox"  disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+    <fieldset>
+      <legend >部件信息</legend>
+      <div class="tablelist  table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <!-- <th class="t2"></th>-->
+            <th class="t4">行号</th>
+            <th class="t4">部件类型</th>
+            <th class="t4">是否客来</th>
+            <th class="t4">是否装订</th>
+            <th class="t4">部件编号</th>
+            <th class="t8">部件名称</th>
+            <th class="t4">P数</th>
+            <th class="t4">正面色数</th>
+            <th class="t4">背面色数</th>
+            <th class="t5">正面专色数</th>
+            <th class="t5">背面专色书</th>
+            <th class="t4">专色号</th>
+            <th class="t4">部件高度</th>
+            <th class="t4">部件宽度</th>
+            <th class="t4">部件深度</th>
+            <th class="t4">展开高度</th>
+            <th class="t4">展开宽度</th>
+            <th class="t4">联数</th>
+            <th class="t4">工艺要求</th>
+            <th class="t4">其他说明</th>
+            <th class="t4">纸张来源</th>
+            <th class="t4">纸张料号</th>
+            <th class="t4">纸张种类</th>
+            <th class="t4">纸张规格</th>
+            <th class="t4">纸张高度</th>
+            <th class="t4">纸张宽度</th>
+            <th class="t4">纸张克重</th>
+            <th class="t4">纸张品牌</th>
+          </tr>
+          </thead>
+          <tbody class="om002-2-prodTeam-tmpl">
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t4 el-center">1</td>
+            <td class="t4 el-center">封面</td>
+            <td class="t4 el-center">否</td>
+            <td class="t4 el-center">是</td>
+            <td class="t4 el-center">BJ1</td>
+            <td class="t8 el-center">封面</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t5 el-center">1</td>
+            <td class="t5 el-center">0</td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+          </tr>
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t4 el-center">2</td>
+            <td class="t4 el-center">内文</td>
+            <td class="t4 el-center">否</td>
+            <td class="t4 el-center">是</td>
+            <td class="t4 el-center">BJ2</td>
+            <td class="t8 el-center">内文F1-F8</td>
+            <td class="t4 el-center">128</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t5 el-center">0</td>
+            <td class="t5 el-center">0</td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+  </script>
+  <script class="hbs hbs-tables" data-view-id="suitlook" type="text/x-handlebars-template" id="om002-2-suit-look-tmpl">
+    <div class="tablelist  table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t4">产品名称</th>
+          <th class="t4">单套装中数量</th>
+        </tr>
+        </thead>
+        <tbody class="om002-2-prodTeam-tmpl">
+        <tr>
+          <td class="t4 el-center">小学语文一年级</td>
+          <td class="t4 el-center">1</td>
+        </tr>
+        <tr>
+          <td class="t4 el-center">小学数学一年级</td>
+          <td class="t4 el-center">1</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+</div>

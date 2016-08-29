@@ -1,0 +1,28 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm001 {
+}
+
+.cm001 > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm001 > .panel > .panel-body > .navbar-left {
+  width: 100%;
+}
+
+.cm001 > .panel > .panel-body > .navbar-left > .form-group {
+  min-width: 200px;
+}
+
+.cm001 > .panel > .panel-body > .navbar-right {
+  padding-right: 60px;
+}
+
+.cm001 > .panel > .panel-body > .navbar-right > .processType > select {
+  width: 200px;
+}

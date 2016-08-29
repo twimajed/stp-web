@@ -1,0 +1,37 @@
+module.exports=function(){
+  return [
+    {
+      prodCode:'001',
+      prodName:'西游记',
+      prodType:'图书',
+      qualifyLevel:'A',
+      printDiffLevel:'A',
+      bindDiffLevel:'A',
+      bindType:'骑马订',
+      prodSum:'3000',
+      proInfoStatus:'是'
+    },
+    {
+      prodCode:'001',
+      prodName:'西游记',
+      prodType:'图书',
+      qualifyLevel:'A',
+      printDiffLevel:'A',
+      bindDiffLevel:'A',
+      bindType:'骑马订',
+      prodSum:'3000',
+      proInfoStatus:'是'
+    },
+    {
+      prodCode:'001',
+      prodName:'西游记',
+      prodType:'图书',
+      qualifyLevel:'A',
+      printDiffLevel:'A',
+      bindDiffLevel:'A',
+      bindType:'骑马订',
+      prodSum:'3000',
+      proInfoStatus:'是'
+    }
+  ];
+};

@@ -1,0 +1,113 @@
+<!-- Default panel contents start -->
+<div class="sm005">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body panel-tight">
+
+      <!-- search panel start -->
+      <div class="navbar-form form-tight navbar-left">
+        <div class="form-group  el-mr-15">
+          <label for="foDocNo">印刷订单号</label>
+          <input type="text" style="width:150px" class="form-control" id="foDocNo">
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="custName">客户名称</label>
+          <input type="text" style="width:150px" class="form-control" id="custName">
+        </div>
+        <div class="form-group date  el-mr-15">
+          <label>单据日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" style="width:109px" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd"
+                   value="">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" style="width:109px" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd"
+                   value="">
+          </div>
+        </div>
+        <div class="form-group  el-mr-15">
+          <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+        </div>
+      </div>
+      <!-- search panel end -->
+      <div class="navbar-form form-tight navbar-left">
+        <div class="form-group  el-mr-15">
+          <label for="whNameTo" class="el-ml-14">调入仓库</label>
+          <input type="text" style="width:150px" class="form-control" id="whNameTo">
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="whNameFrom">调出仓库</label>
+          <input type="text" style="width:150px" class="form-control" id="whNameFrom">
+        </div>
+      </div>
+    </div>
+    <div class="box-head stp-table-sm005 table-responsive">
+      <table class="table table-bordered table-striped table-hover stp-table-sm005">
+        <thead>
+        <tr>
+          <th class="t2">行号</th>
+          <th class="t6">调拨单号</th>
+          <th class="t6">单据日期</th>
+          <th class="t6">印刷订单号</th>
+          <th class="t6">客户编码</th>
+          <th class="t6">客户名称</th>
+          <th class="t6">纸张编码</th>
+          <th class="t6">纸张名称</th>
+          <th class="t6">纸张类型</th>
+          <th class="t6">品牌</th>
+          <th class="t8">厂家</th>
+          <th class="t6">长</th>
+          <th class="t6">宽</th>
+          <th class="t6">克重</th>
+          <th class="t6">调拨数量</th>
+          <th class="t6">调出仓库</th>
+          <th class="t6">调入仓库</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="box-wrap antiscroll-wrap stp-table-sm005">
+      <div class="box-inner">
+        <div class="antiscroll-inner">
+          <table class="table table-bordered table-striped table-hover">
+            <tbody class="sm005_data">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="paging el-hide stp-paging-sm005 el-mt-15"></div>
+</div>
+</div>
+
+<script id="sm005_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t2 el-center">{{lineNo}}</td>
+    <td class="t6 el-center">{{paDocNo}}</td>
+    <td class="t6 el-center">{{docDate}}</td>
+    <td class="t6 el-center">{{foDocNo}}</td>
+    <td class="t6 el-center">{{custCode}}</td>
+    <td class="t6 el-left">{{custName}}</td>
+    <td class="t6 el-center">{{itemCode}}</td>
+    <td class="t6 el-left">{{itemnName}}</td>
+    <td class="t6 el-left">{{itemType}}</td>
+    <td class="t6 el-left">{{brand}}</td>
+    <td class="t8 el-left" title="{{factory}}">{{substring factory 0 6}}</td>
+    <td class="t6 el-right">{{lenth}}</td>
+    <td class="t6 el-right">{{width}}</td>
+    <td class="t6 el-right">{{weight}}</td>
+    <td class="t6 el-right">{{planOuQty}}</td>
+    <td class="t6 el-left">{{whNameFrom}}</td>
+    <td class="t6 el-left">{{whNameTo}}</td>
+  </tr>
+  {{/each}}
+</script>

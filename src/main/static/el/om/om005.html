@@ -1,0 +1,163 @@
+<!-- Default panel contents start -->
+<div class="om005">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body panel-tight">
+      <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩"
+              type="button" data-original-title="Collapse" id="om005-collapse-btn">
+        <i class="fa fa-minus"></i>
+      </button>
+      <!-- search panel start -->
+      <div class="navbar-form form-tight navbar-left search-toggle-content">
+        <!-- <div class="form-group">
+          <label for="docNo">发货通知单号</label>
+          <input type="text" class="form-control" id="docNo">
+        </div> -->
+        <div class="form-group el-mr-15">
+          <label for="soNo">印刷订单号</label>
+          <input type="text" class="form-control" id="soNo" style="width:120px;">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="custName">&nbsp;&nbsp;&nbsp;&nbsp;客户名称</label>
+          <input type="text" class="form-control" id="custName" style="width:120px;">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="deliDateFrom">发货日期从</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input type="text" class="form-control el-dtp" id="deliDateFrom" style="width:109px;">
+          </div>
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="deliDateTo" style="padding-right:2px;">发货日期至</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input type="text" class="form-control el-dtp" id="deliDateTo" style="width:109px;">
+          </div>
+        </div>
+        <div class="form-group el-mr-15">
+          <button type="button" class="btn btn-primary om005-listView-searchBtn" ><i class="fa fa-search"></i>&nbsp;检索</button>
+        </div>
+      </div>
+      <div class="navbar-form form-tight navbar-left search-toggle-content">
+        <div class="form-group el-mr-15">
+          <label for="prodName" style="padding-left:14px">产品名称</label>
+          <input type="text" class="form-control" id="prodName" style="width:120px;">
+        </div>
+        <div class="form-group el-mr-15">
+          <label style="padding-left:41px;">状态</label>
+          <div class="checkbox el-mr-15" style="padding-left:5px;">
+            <label>
+              <input type="checkbox" >
+              新建
+            </label>
+          </div>
+
+          <div class="checkbox el-mr-15">
+            <label>
+              <input type="checkbox" >
+              部分发货
+            </label>
+          </div>
+
+          <div class="checkbox el-mr-15">
+            <label>
+              <input type="checkbox" >
+              已完成
+            </label>
+          </div>
+
+          <div class="checkbox el-mr-15">
+            <label>
+              <input type="checkbox" >
+              已关闭
+            </label>
+          </div>
+          <div class="checkbox el-mr-15">
+            <label>
+              <input type="checkbox" >
+              已回单
+            </label>
+          </div>
+          <div class="checkbox el-mr-15">
+            <label>
+              <input type="checkbox" >
+              回单已确认
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search panel end  -->
+      <div class="box-head om005-listView-table table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th class="t1"></th>
+            <th class="t6">发货通知单号</th>
+            <th class="t8">结算公司</th>
+            <th class="t7">印刷订单号</th>
+            <th class="t5">客户编码</th>
+            <th class="t6">客户名称</th>
+            <th class="t7">产品编号</th>
+            <th class="t8">产品名称</th>
+            <th class="t4">订单正数</th>
+            <th class="t4">发货数量</th>
+            <th class="t4">赠送数量</th>
+            <th class="t6">累计发货数量</th>
+            <th class="t6">累计赠送数量</th>
+            <th class="t4">状态</th>
+            <th class="t4">单位重量</th>
+            <th class="t4">总重量</th>
+            <th class="t6">发货地址</th>
+            <th class="t4">联系人</th>
+            <th class="t6">电话</th>
+            <th class="t5">发货日期</th>
+            <th class="t6">备注</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap om005-listView-table">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody id="om005-listViewData"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+     </div>
+    <!-- </div> -->
+    <!-- page panel start -->
+    <div class="paging el-hide om005-listView-paging el-mt-10"></div>
+    <!-- page panel end -->
+</div>
+<!-- Default panel end -->
+<script id="om005-listViewTpl" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t1 el-center">{{inc @index}}</td>
+    <td class="t6 el-center">{{docNo}}</td>
+    <td class="t8  el-left">{{ouName}}</td>
+    <td class="t7 el-center">{{soNo}}</td>
+    <td class="t5 el-center">{{custCode}}</td>
+    <td class="t6 el-left">{{custName}}</td>
+    <td class="t7 el-center">{{prodCode}}</td>
+    <td class="t8 el-left">{{prodName}}</td>
+    <td class="t4 el-right">{{fomanuQty}}</td>
+    <td class="t4 el-right">{{demandDeliQty}}</td>
+    <td class="t4 el-right">{{demandGiftQty}}</td>
+    <td class="t6 el-right">{{sumDeliQty}}</td>
+    <td class="t6 el-right">{{sumGiftQty}}</td>
+    <td class="t4 el-center">{{lineStatus}}</td>
+    <td class="t4 el-right">{{uomWeight}}</td>
+    <td class="t4 el-right">{{weight}}</td>
+    <td class="t6 el-left">{{deliAddrNo}}</td>
+    <td class="t4 el-left">{{coutPerson}}</td>
+    <td class="t6 el-center">{{coutTel}}</td>
+    <td class="t5 el-center">{{deliDate}}</td>
+    <td class="t6  el-left">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>

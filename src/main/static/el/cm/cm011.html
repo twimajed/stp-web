@@ -1,0 +1,131 @@
+<!-- Default panel contents start -->
+<div class="cm011">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <div class="navbarbtn navbar-form navbar-left">
+        <div class="form-group"><label>需要核价的订单列表:</label></div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary agreeBtn">同意</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary returnBtn">退回</button>
+        </div>
+      </div>
+    </div>
+    <!-- Default panel contents end -->
+
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th class="t2"></th>
+            <th class="t2">行号</th>
+            <th class="t4">工厂编号</th>
+            <th class="t8">工厂名称</th>
+            <th class="t4">上月交付准时率</th>
+            <th class="t2">质量等级</th>
+            <th class="t3">印刷难度等级</th>
+            <th class="t3">装订难度等级</th>
+            <th class="t4">产品编号</th>
+            <th class="t4">产品名称</th>
+            <th class="t4">产品总数</th>
+            <th class="t4">分单数量</th>
+            <th class="t4">产品总价</th>
+            <th class="t4">分单总价</th>
+            <th class="t4">变更后分单金额</th>
+            <th class="t8">变更原因</th>
+            <th class="t3">外发成本价</th>
+            <th class="t3">调度员</th>
+            <th class="t5">分单时间</th>
+         </tr>
+        </thead>
+        <tbody class="order_data">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- page panel start -->
+  <div class="paging-wrap">
+    <div class="left-records">显示记录<select class="records">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="40">40</option>
+    </select></div>
+    <div class="right-pages">
+      <div class="paging paging-master" style="width: 1121px;">
+        <ul class="pagination">
+          <li class="item previous disabled" data-pi="0"><span>上一页</span></li>
+          <li class="item idx active"><span data-pi="0">1</span></li>
+          <li class="item idx"><span data-pi="1">2</span></li>
+          <li class="item idx"><span data-pi="2">3</span></li>
+          <li class="item idx"><span data-pi="3">4</span></li>
+          <li class="item idx"><span data-pi="4">5</span></li>
+          <li class="item idx"><span data-pi="5">6</span></li>
+          <li class="item idx"><span data-pi="6">7</span></li>
+          <li class="item idx"><span data-pi="7">8</span></li>
+          <li class="item idx"><span data-pi="8">9</span></li>
+          <li class="item idx"><span data-pi="9">10</span></li>
+          <li class="item next " data-pi="0" data-pc="14"><span>下一页</span></li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-primary forward">跳转</button>
+      <input type="number" min="1" max="3" placeholder="页码" class="chosePage">
+      <div class="total">共<span class="pn">14</span>页/<span class="rn">132</span>条</div>
+    </div>
+  </div>
+  <!-- page panel end -->
+
+  <div class="el-msg-returnBtn modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">请填写退回原因</h4>
+        </div>
+        <div class="modal-body"><textarea rows='3' class='orderPriceBackTextarea' name="cm011-reason" style='width:100%'></textarea></div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" class="btn btn-danger ok">确认</div>
+          <div data-dismiss="modal" class="btn btn-default cancel">取消</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="el-msg-tip el-hide"  style="color:#F00">请填写退回原因</div>
+
+  <script class="order_table_body" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center"><input type="radio" name="cm011_table"></td>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{factCode}}</td>
+      <td class="el-left">{{factFullName}}</td>
+      <td class="el-right">{{punctuality}}</td>
+      <td class="el-left">{{qualifyLevel}}</td>
+      <td class="el-left">{{printDiffLevel}}</td>
+      <td class="el-left">{{bindDiffLevel}}</td>
+      <td class="el-left">{{prodCode}}</td>
+      <td class="el-left">{{prodName}}</td>
+      <td class="el-right">{{totalNum}}</td>
+      <td class="el-right">{{orderNum}}</td>
+      <td class="el-right">{{prodAmt}}</td>
+      <td class="el-right">{{orderAmt}}</td>
+      <td class="el-right">{{changedAmt}}</td>
+      <td class="el-left">{{changeReason}}</td>
+      <td class="el-right">{{salePrice}}</td>
+      <td class="el-left">{{dispatcher}}</td>
+      <td class="el-left">{{spiltTime}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+</div>
+
+

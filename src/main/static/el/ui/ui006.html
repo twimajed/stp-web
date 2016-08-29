@@ -1,0 +1,715 @@
+<div class="ui006">
+  <!-- Default page start -->
+  <div class="view listView hide"></div>
+
+  <div class="view editView hide"></div>
+
+  <div class="view saveView hide"></div>
+  <!-- Default page end -->
+
+  <script class="hbs" data-view-id="editView" type="text/x-handlebars-template">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title ">基础信息:</h1>
+      <button type="button" class="btn btn-warning btn-sm floatRight">返回列表</button>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="form-group col-sm-2">
+          <button type="submit" class="btn btn-primary">计算产品的厚度/重量</button>
+        </div>
+        <div class="form-group col-sm-2">
+          <button type="submit" class="btn btn-primary">打印</button>
+        </div>
+        <div class="form-group col-sm-2">
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+        <div class="form-group col-sm-2">
+          <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+
+      <div class="example-box-wrapper">
+        <form id="demo-form" class="form-horizontal bordered-row">
+          <div class="row">
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="productName2">来源产品名称</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="productName2">
+              </div>
+
+              <label class="col-sm-1 control-label" for="cusName">客户名称</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="cusName">
+              </div>
+
+              <label class="col-sm-1 control-label" for="productBig">产品大类</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="productBig">
+                  <option>图书</option>
+                  <option>期刊周刊</option>
+                  <option>报纸</option>
+                  <option>包装</option>
+                  <option>商业印品</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="productSmall">产品小类</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="productSmall">
+                  <option>儿童绘本</option>
+                  <option>教材</option>
+                  <option>出版物</option>
+                  <option>报纸</option>
+                  <option>商业印品</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="prodCode">产品编号</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodCode">
+              </div>
+
+              <label class="col-sm-1 control-label" for="prodName">产品名称</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodName">
+              </div>
+
+              <label class="col-sm-1 control-label" for="prodUnit">成品单位</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodUnit">
+              </div>
+
+              <label class="col-sm-1 control-label" for="estiPrintQty">预估印量</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="estiPrintQty">
+              </div>
+            </div>
+
+            <div class="form-group ">
+
+              <label class="col-sm-1 control-label" for="printRatio">印加比例</label>
+              <div class="col-sm-2">
+                <div class=" input-group">
+                  <input type="text" class="form-control" id="printRatio">
+                  <span class="input-group-addon">%</span>
+                </div>
+              </div>
+
+              <label class="col-sm-1 control-label" for="loadRatio">装加比例</label>
+              <div class="col-sm-2 ">
+                <div class=" input-group">
+                  <input class="form-control" type="text" id="loadRatio">
+                  <span class="input-group-addon">%</span>
+                </div>
+
+              </div>
+
+              <label class="col-sm-1 control-label" for="prodHeight">成品高度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodHeight">
+              </div>
+
+              <label class="col-sm-1 control-label" for="prodWidth">成品宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodWidth">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="prodLarge">成品厚度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodLarge">
+              </div>
+
+              <label class="col-sm-1 control-label" for="frontFlapWidth">前勒口宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="frontFlapWidth">
+              </div>
+
+              <label class="col-sm-1 control-label" for="backFlapWidth">后勒口宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="backFlapWidth">
+              </div>
+
+              <label class="col-sm-1 control-label" for="withinThick">书芯厚度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="withinThick">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="sizeUnit">尺寸单位</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="sizeUnit">
+              </div>
+
+              <label class="col-sm-1 control-label" for="prodWeight">成品重量</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodWeight">
+              </div>
+
+              <label class="col-sm-1 control-label" for="impressionCnt">印张总数</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="impressionCnt">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="prodFormat">开本</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="prodFormat">
+              </div>
+
+              <label class="col-sm-1 control-label" for="openType">本型</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="openType">
+                  <option>左翻本</option>
+                  <option>右翻本</option>
+                  <option>上翻本</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="bindType">装订方式</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="bindType">
+                  <option>骑马订</option>
+                  <option>胶订</option>
+                  <option>精装</option>
+                  <option>环装</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="bindSon">装订子类</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="bindSon">
+                  <option>一订</option>
+                  <option>二订</option>
+                  <option>三订</option>
+                  <option>四订</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="prodFor">产品结构</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="prodFor">
+                  <option>机包盒</option>
+                  <option>手包盒</option>
+                  <option>异性盒</option>
+                  <option>手提袋</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="ISBN">ISBN/ISSN</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="ISBN">
+              </div>
+
+              <label class="col-sm-1 control-label" for="versionNum">版次</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="versionNum">
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="priceMes">定价信息</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="priceMes">
+              </div>
+
+              <label class="col-sm-1 control-label" for="colorStandard">色彩标示</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="colorStandard">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="colormatchStandard">追色标准</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="colormatchStandard">
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="FscFlag">是否FSC纸张</label>
+              <div class="col-sm-2">
+                <label class="checkbox-inline">
+                  <input id="FscFlag" type="checkbox" value="option1">
+                </label>
+              </div>
+
+              <label class="col-sm-1 control-label" for="greenFlag">是否绿色印刷</label>
+              <div class="col-sm-2">
+                <label class="checkbox-inline">
+                  <input id="greenFlag" type="checkbox" value="option2">
+                </label>
+              </div>
+
+              <label class="col-sm-1 control-label" for="secretFlag">是否加密</label>
+              <div class="col-sm-2">
+                <label class="checkbox-inline">
+                  <input id="secretFlag" type="checkbox" value="option3">
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="specialDemand">特殊要求</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="specialDemand">
+              </div>
+
+              <label class="col-sm-1 control-label" for="fileAddress">文件路径</label>
+              <div class="col-sm-4">
+                <input class="form-control" type="text" id="fileAddress">
+              </div>
+
+              <!--<label class="col-sm-1 control-label" for="typeImg">排版图片</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="typeImg">
+                <input  type="file">
+              </div>-->
+
+              <label class="col-sm-1 control-label">排版图片</label>
+              <div class="col-sm-2">
+                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                  <div class="form-control" data-trigger="fileinput">
+                    <span class="fileinput-filename"></span>
+                  </div>
+                  <span class="input-group-addon btn btn-primary btn-file">
+                    <span class="fileinput-new">上传</span>
+                    <input type="file" name="...">
+                    <!--<div class="ripple-wrapper"></div>-->
+                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="navbar">
+        <h2>部件信息:</h2>
+      </div>
+
+      <div class="row">
+        <div class="navbarbtn navbar-form">
+          <div class="form-group col-sm-1">
+            <button type="submit" class="btn btn-primary">新建部件</button>
+          </div>
+          <div class="form-group col-sm-1">
+            <button type="submit" class="btn btn-primary">删除部件</button>
+          </div>
+          <div class="form-group col-sm-1">
+            <button type="submit" class="btn btn-primary">修改部件</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tablelist table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>行号</th>
+            <th>部件类型</th>
+            <th>是否客来</th>
+            <th>是否装订</th>
+            <th>部件编号</th>
+            <th>部件名称</th>
+            <th>P数</th>
+            <th>色数</th>
+            <th>专色数</th>
+            <th>专色号</th>
+            <th>部件高度</th>
+            <th>部件宽度</th>
+            <th>部件深度</th>
+            <th>展开高度</th>
+            <th>展开宽度</th>
+            <th>联数</th>
+            <th>工艺要求</th>
+            <th>其他说明</th>
+            <th>纸张来源</th>
+            <th>纸张料号</th>
+            <th>纸张种类</th>
+            <th>纸张规格</th>
+            <th>纸张高度</th>
+            <th>纸张宽度</th>
+            <th>纸张克重</th>
+            <th>纸张品牌</th>
+            <th>纸张产地</th>
+          </tr>
+          </thead>
+          <tbody class="partMessage_data">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="form-group ">
+        <button type="submit" class="btn btn-primary">保存部件</button>
+      </div>
+
+      <div class="example-box-wrapper">
+        <form id="partMessage" class="form-horizontal bordered-row">
+          <div class="row">
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="partType">部件类型</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="partType">
+                  <option>封面</option>
+                  <option>内文</option>
+                  <option>海报</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="partCode">部件编号</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="partCode">
+              </div>
+
+              <label class="col-sm-1 control-label" for="partName">部件名称</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="partName">
+              </div>
+
+              <label class="col-sm-1 control-label" for="pageCnt">P数</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="pageCnt">
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <label class="col-sm-1 control-label">是否客来</label>
+              <div class="col-sm-2">
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="option1">
+                </label>
+
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="option2">
+                </label>
+              </div>
+
+              <label class="col-sm-1 control-label" for="coloeType">色数</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="coloeType">
+              </div>
+
+              <label class="col-sm-1 control-label" for="ZSS">专色数</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="ZSS">
+              </div>
+
+              <label class="col-sm-1 control-label" for="ZSH">专色号</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="ZSH">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="partHeight">部件高度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="partHeight">
+              </div>
+
+              <label class="col-sm-1 control-label" for="partWidth">部件宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="partWidth">
+              </div>
+
+              <label class="col-sm-1 control-label" for="pageDepth">部件深度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="pageDepth">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="fullWidth">展开宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="fullWidth">
+              </div>
+
+              <label class="col-sm-1 control-label" for="fullHeight">展开高度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="fullHeight">
+              </div>
+
+              <label class="col-sm-1 control-label" for="Count">联数</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="Count">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="processDemand">工艺要求</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="processDemand">
+              </div>
+
+              <label class="col-sm-1 control-label" for="otherDesc">其他说明</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="otherDesc">
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperSource">纸张来源</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="paperSource">
+                  <option>客来</option>
+                  <option>本公司</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="paperItem">纸张料号</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperItem">
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperType">纸张种类</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="paperType">
+                  <option>铜版纸</option>
+                  <option>胶版纸</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperSpec">纸张规格</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="paperSpec">
+                  <option>大度纸</option>
+                  <option>正度纸</option>
+                </select>
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperHeigh">纸张高度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperHeigh">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-1 control-label" for="paperWidth">纸张宽度</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperWidth">
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperWeight">纸张克重</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperWeight">
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperBrand">纸张品牌</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperBrand">
+              </div>
+
+              <label class="col-sm-1 control-label" for="paperVendor">纸张产地</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="text" id="paperVendor">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</script>
+
+  <script class="hbs" data-view-id="saveView" type="text/x-handlebars-template">
+
+  </script>
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group el-mr-15">
+          <label for="productName">产品名称</label>
+          <input type="text" class="form-control" id="productName">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="productType">产品类型</label>
+          <input type="text" class="form-control" id="productType">
+        </div>
+        <div class="form-group">
+          <label class="el-ml-28">建立日期</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+          <label>-</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+        </div>
+
+      </div>
+      <div class="navbar-form navbar-left">
+        <div class="form-group el-mr-15">
+          <label for="customName">客户名称</label>
+          <input type="text" class="form-control" id="customName">
+        </div>
+        <div class="form-group el-mr-15 productStatus">
+          <label>产品状态</label>
+        </div>
+        <div class="form-group el-mr-15 designStatus">
+          <label>工艺评审状态</label>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> 检索</button>
+        </div>
+      </div>
+      <!-- search panel end  -->
+    </div>
+    <!-- Default panel contents end -->
+
+    <div class="navbarbtn navbar-form">
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" data-view-id="editView">修改</button>
+      </div>
+    </div>
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover ui006-table-demo">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">产品状态</th>
+          <th class="t7">工艺评审状态</th>
+          <th class="t6">文件状态</th>
+          <th class="t6">产品类型</th>
+          <th class="t6">成品单位</th>
+          <th class="t6">预估印量</th>
+          <th class="t6">印加比例</th>
+          <th class="t6">装加比例</th>
+          <th class="t6">成品高度</th>
+          <th class="t6">成品宽度</th>
+          <th class="t6">成品厚度</th>
+          <th class="t7">前勒口宽度</th>
+          <th class="t7">后勒口宽度</th>
+          <th class="t6">书芯厚度</th>
+          <th class="t6">尺寸单位</th>
+          <th class="t6">成品重量</th>
+          <th class="t6">印张总数</th>
+          <th class="t6">开本</th>
+          <th class="t6">本型</th>
+          <th class="t6">装订方式</th>
+          <th class="t6">产品结构</th>
+          <th class="t6">ISBN/ISSN</th>
+          <th class="t6">版次</th>
+          <th class="t6">定价信息</th>
+          <th class="t6">色彩标准</th>
+          <th class="t6">追色标准</th>
+          <th class="t7">是否FSC纸张</th>
+          <th class="t7">是否绿色印刷</th>
+          <th class="t6">是否保密</th>
+          <th class="t6">特殊要求</th>
+          <th class="t6">文件路径</th>
+          <th class="t6">质量等级</th>
+          <th class="t7">印刷难度等级</th>
+          <th class="t7">装订难度等级</th>
+          <th class="t7">来源产品名称</th>
+          <th class="t6">客户简称</th>
+          <th class="t6">营业员</th>
+          <th class="t7">最后修改时间</th>
+          <th class="t6">工艺员</th>
+          <th class="t6">评审时间</th>
+          <th class="t6">评审意见</th>
+          <th class="t7">文件确认人员</th>
+          <th class="t6">确认时间</th>
+          <th class="t7">文件确认意见</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each this}}
+        <tr data-view-id="editView" data-view-value="{{1}}">
+          <td class="el-center">{{1 }}</td>
+          <td class="el-center">{{2 }}</td>
+          <td class="el-left">{{3 }}</td>
+          <td class="el-center">{{ 4}}</td>
+          <td class="el-center">{{5 }}</td>
+          <td class="el-center">{{6 }}</td>
+          <td class="el-left">{{7 }}</td>
+          <td class="el-left">{{8 }}</td>
+          <td class="el-right">{{9 }}</td>
+          <td class="el-left">{{10 }}</td>
+          <td class="el-left">{{11 }}</td>
+          <td class="el-right">{{ 12}}</td>
+          <td class="el-right">{{13 }}</td>
+          <td class="el-right">{{14 }}</td>
+          <td class="el-right">{{15 }}</td>
+          <td class="el-right">{{ 16}}</td>
+          <td class="el-right">{{17 }}</td>
+          <td class="el-left">{{18 }}</td>
+          <td class="el-right">{{19 }}</td>
+          <td class="el-right">{{20 }}</td>
+          <td class="el-right">{{21 }}</td>
+          <td class="el-left">{{22 }}</td>
+          <td class="el-left">{{23 }}</td>
+          <td class="el-left">{{24 }}</td>
+          <td class="el-left">{{25 }}</td>
+          <td class="el-left">{{26 }}</td>
+          <td class="el-left">{{27 }}</td>
+          <td class="el-left">{{28 }}</td>
+          <td class="el-left">{{29 }}</td>
+          <td class="el-left">{{30 }}</td>
+          <td class="el-left">{{ 31}}</td>
+          <td class="el-left">{{ 32}}</td>
+          <td class="el-left">{{ 33}}</td>
+          <td class="el-left">{{34 }}</td>
+          <td class="el-left">{{35 }}</td>
+          <td class="el-left">{{ 36}}</td>
+          <td class="el-left">{{ 37}}</td>
+          <td class="el-left">{{38 }}</td>
+          <td class="el-left">{{39 }}</td>
+          <td class="el-left">{{ 40}}</td>
+          <td class="el-left">{{ 41}}</td>
+          <td class="el-left">{{42 }}</td>
+          <td class="el-left">{{ 43}}</td>
+          <td class="el-left">{{44 }}</td>
+          <td class="el-left">{{ 45}}</td>
+          <td class="el-left">{{ 46}}</td>
+          <td class="el-left">{{47 }}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</script>
+
+
+  <script class="hbs" data-view-id="designStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select" name="designStatus">{{opt this}}</select>
+  </script>
+  <script class="hbs" data-view-id="productStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select"  name="productStatus">{{opt this}}</select>
+  </script>
+
+</div>

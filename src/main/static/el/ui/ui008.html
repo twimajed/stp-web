@@ -1,0 +1,125 @@
+<div class="ui008">
+
+  <div class="box-header">
+    <h3 class="box-title">jQuery antiscroll</h3>
+    <button type="submit" class="btn btn-info pull-right search-btn">Search</button>
+  </div>
+
+  <h4 class="box-title">1.纯文字表头</h4>
+  <div class="box-head table-example">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="t0"><input type="checkbox"/></th>
+          <th class="t1">一</th>
+          <th class="t2">一二</th>
+          <th class="t3">一二三</th>
+          <th class="t4">一二三四</th>
+          <th class="t5">一二三四五</th>
+          <th class="t6">一二三四五六</th>
+          <th class="t7">一二三四五六七</th>
+          <th class="t8">一二三四五六七八</th>
+          <th class="t9">一二三四五六七八九</th>
+          <th class="t10">一二三四五六七八九十</th>
+
+          <th class="t10">门店编号</th>
+          <th class="t10">门店</th>
+          <th class="t10">订单编号</th>
+          <th class="t10">单据类型</th>
+          <th class="t10">状态</th>
+          <th class="t10">订单日期</th>
+          <th class="t10">送货日期</th>
+          <th class="t10">订单金额</th>
+          <th class="t10">客户级别</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="box-wrap antiscroll-wrap table-example">
+    <div class="box-inner">
+      <div class="antiscroll-inner">
+        <table class="table table-bordered table-striped table-hover">
+          <tbody class="el-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script class="hbs hbs-tables" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t0"><input type="checkbox"/></td>
+      <td class="t1">一</td>
+      <td class="t2">一二</td>
+      <td class="t3">一二三</td>
+      <td class="t4">一二三四</td>
+      <td class="t5">一二三四五</td>
+      <td class="t6">一二三四五六</td>
+      <td class="t7">一二三四五六七</td>
+      <td class="t8">一二三四五六七八</td>
+      <td class="t9">一二三四五六七八九</td>
+      <td class="t10">一二三四五六七八九十</td>
+
+      <td class="t10">{{store}}</td>
+      <td class="t10">{{storeName}}</td>
+      <td class="t10">{{orderNo}}</td>
+      <td class="t10">{{orderType}}</td>
+      <td class="t10">{{status}}</td>
+      <td class="t10 el-center">{{orderDate}}</td>
+      <td class="t10 el-center">{{deliverDay}}</td>
+      <td class="t10 el-right">{{orderAmt}}</td>
+      <td class="t10">{{customerLevel}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <h4 class="box-title el-mt-10">2.纯文字 + 排序图标表头</h4>
+  <div class="box-head table-example2">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="t0"><input type="checkbox"/></th>
+          <th class="t2 sorting">一</th>
+          <th class="t3 sorting">一二</th>
+          <th class="t4 sorting">一二三</th>
+          <th class="t5 sorting">一二三四</th>
+          <th class="t6 sorting">一二三四五</th>
+          <th class="t7 sorting">一二三四五六</th>
+          <th class="t8 sorting">一二三四五六七</th>
+          <th class="t9 sorting">一二三四五六七八</th>
+          <th class="t10 sorting">一二三四五六七八九</th>
+          <th class="t11 sorting">一二三四五六七八九十</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="box-wrap antiscroll-wrap table-example2">
+    <div class="box-inner">
+      <div class="antiscroll-inner">
+        <table class="table table-bordered table-striped table-hover">
+          <tbody class="el-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script class="hbs hbs-tables2" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t0 el-center"><input type="checkbox"/></td>
+      <td class="t2">一</td>
+      <td class="t3">一二</td>
+      <td class="t4">一二三</td>
+      <td class="t5">一二三四</td>
+      <td class="t6">一二三四五</td>
+      <td class="t7">一二三四五六</td>
+      <td class="t8">一二三四五六七</td>
+      <td class="t9">一二三四五六七八</td>
+      <td class="t10">一二三四五六七八九</td>
+      <td class="t11">一二三四五六七八九十</td>
+    </tr>
+    {{/each}}
+  </script>
+
+
+</div>

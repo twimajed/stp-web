@@ -1,0 +1,44 @@
+<!-- Default panel contents start -->
+<div class="cm201">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+      <div class="navbar-form navbar-left">
+        <div class="form-group">
+          <label>当月订单总数</label>
+          <label>100</label>
+        </div>
+        <div class="form-group">
+          <label>生产中订单数</label>
+          <label>20</label>
+        </div>
+        <div class="form-group">
+          <label>已完成订单数</label>
+          <label>60</label>
+        </div>
+        <div class="form-group">
+          <label>已完结订单数</label>
+          <label>20</label>
+        </div>
+      </div>
+      <div class="navbar-form navbar-right">
+        <div class="form-group processType">
+          <label>工序类型</label>
+        </div>
+      </div>
+    </div>
+    <!-- Default panel contents end -->
+
+    <div class="canvaslist">
+      <canvas class="myChart" width="750px" height="200px"></canvas>
+    </div>
+  </div>
+
+
+</div>
+<!-- Default panel end -->
+
+<script id="processType" type="text/x-handlebars-template">
+  <select class="form-control form-selection processTypeSele el-select" name="processType">{{opt this}}</select>
+</script>
+

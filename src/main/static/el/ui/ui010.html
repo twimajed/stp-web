@@ -1,0 +1,93 @@
+<div class="ui010">
+
+  <div class="box-header">
+    <h3 class="box-title">Table</h3>
+    <button type="button" class="btn btn-info pull-right submit-btn">Submit</button>
+  </div>
+
+  <div class="table-multiselect">
+    <div class="col-left">
+      <div class="box-head table-selectable">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t0"><input type="checkbox" class="el-check-all" data-target=".item-choice"></input></th>
+              <th class="t4">门店</th>
+              <th class="t5">订单编号</th>
+              <th class="t5">订单金额</th>
+              <th class="t5">客户级别</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-selectable">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="el-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script class="hbs hbs-selectable" type="text/x-handlebars-template">
+      {{#each this}}
+      <tr>
+        <td class="t0"><input type="checkbox" class="item-choice" data-idx="{{idx}}"></input></td>
+        <td class="t4">{{store}}</td>
+        <td class="t5">{{orderNo}}</td>
+        <td class="t5 el-right">{{orderAmt}}</td>
+        <td class="t5">{{customerLevel}}</td>
+      </tr>
+      {{/each}}
+    </script>
+
+    <div class="col-middle">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-default el-add-all"><i class="fa fa-angle-double-right"></i></button>
+        <button type="button" class="btn btn-default el-add"><i class="fa fa-angle-right"></i></button>
+        <button type="button" class="btn btn-default el-del"><i class="fa fa-angle-left"></i></button>
+        <button type="button" class="btn btn-default el-del-all"><i class="fa fa-angle-double-left"></i></button>
+      </div>
+    </div>
+
+    <div class="col-right">
+      <div class="box-head table-selection">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t0"><input type="checkbox" class="el-check-all" data-target=".detail-choice"></input></th>
+              <th class="t4">门店编号</th>
+              <th class="t5">订单编号</th>
+              <th class="t5">订单金额</th>
+              <th class="t5">客户级别</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-selection">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="el-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script class="hbs hbs-selection" type="text/x-handlebars-template">
+      {{#each this}}
+      <tr>
+        <td class="t0"><input type="checkbox" class="detail-choice" data-idx="{{idx}}"></input></td>
+        <td class="t4">{{store}}</td>
+        <td class="t5">{{orderNo}}</td>
+        <td class="t5 el-right">{{orderAmt}}</td>
+        <td class="t5">{{customerLevel}}</td>
+      </tr>
+      {{/each}}
+    </script>
+  </div>
+
+</div>

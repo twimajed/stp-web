@@ -1,0 +1,296 @@
+<div class="cm007">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+      <h1 class="panel-title ">订单详情:</h1>
+      <!-- client button panel start -->
+      <button type="button" class="btn btn-warning btn-sm floatRight">返回订单查询</button>
+      <button type="button" class="btn btn-primary floatRight">暂停分单</button>
+      <button type="button" class="btn btn-primary floatRight">重新分配</button>
+      <button type="button" class="btn btn-primary floatRight">手工分单</button>
+      <button type="button" class="btn btn-primary floatRight">自动分单</button>
+      <button type="button" class="btn btn-primary floatRight">修改价格</button>
+      <!-- client button panel end -->
+    </div>
+    <div class="panel-body">
+      <fieldset disabled>
+        <legend>客户信息</legend>
+        <label>客户名称</label>
+        <input type="text" size="20" value="出版社">
+      </fieldset>
+      <fieldset disabled>
+        <legend>订单信息</legend>
+        <label>订单编号</label>
+        <input type="text" size="20" value="0001">
+        <label>要求交期</label>
+        <input type="text" size="20" value="2016-06-15">
+        <label>营业员</label>
+        <input type="text" size="20" value="">
+        <label>登记时间</label>
+        <input type="text" size="20" value="2016-06-15 9:00:00">
+      </fieldset>
+      <fieldset disabled>
+        <legend>分单信息</legend>
+        <label>订单状态</label>
+        <input type="text" size="20" value="已下发">
+        <label>分单状态</label>
+        <input type="text" size="20" value="已接单">
+        <label>生产交期</label>
+        <input type="text" size="20" value="2016-06-13">
+        <label>分单方式</label>
+        <input type="text" size="20" value="自动分单">
+        <label>是否行拆分</label>
+        <input type="text" size="20" value="否">
+        <br />
+        <br />
+        <label>是否数量拆分</label>
+        <input type="text" size="20" value="否">
+        <label>工厂编号</label>
+        <input type="text" size="20" value="">
+        <label>工厂名称</label>
+        <input type="text" size="20" value="">
+        <label>接单员</label>
+        <input type="text" size="20" value="">
+        <label>接单时间</label>
+        <input type="text" size="20" value="">
+      </fieldset>
+    </div>
+
+    <div class="page-container">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#product" data-toggle="tab">产品明细</a>
+        </li>
+        <li>
+          <a href="#order" data-toggle="tab">
+            分单对象
+          </a>
+        </li>
+        <li>
+          <a href="#progressTrack" data-toggle="tab">
+            进度跟踪
+          </a>
+        </li>
+      </ul>
+
+
+      <div id="myTabContent" class="tab-content">
+        <!--product detail start-->
+        <div class="tab-pane fade in active" id="product">
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3 t7">行号</th>
+                <th class="t6 t7">产品编号</th>
+                <th class="t6 t7">产品名称</th>
+                <th class="t6 t7">产品类型</th>
+                <th class="t6 t7">质量等级</th>
+                <th class="t6 t7">印刷难度等级</th>
+                <th class="t6 t7">装订难度等级</th>
+                <th class="t6 t7">装订方式</th>
+                <th class="t6 t7">产品总数(pcs)</th>
+                <th class="t6 t7">分单数量(pcs)</th>
+              </tr>
+              </thead>
+              <tbody class="cm007_product_data">
+              </tbody>
+            </table>
+          </div>
+
+          <fieldset disabled>
+            <legend>工序产能</legend>
+            <div class="tablelist">
+              <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th class="t3 t7">行号</th>
+                  <th class="t6 t7">工序类型</th>
+                  <th class="t6 t7">工序合作产能</th>
+                  <th class="t6 t7">单位</th>
+                </tr>
+                </thead>
+                <tbody class="cm007_capacity_table">
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+
+        </div>
+        <!--product detail end-->
+
+        <!--order tab start-->
+        <div class="tab-pane fade" id="order">
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3 t7">行号</th>
+                <th class="t6 t7">工厂编号</th>
+                <th class="t6 t7">工厂名称</th>
+                <th class="t6 t7">产品编号</th>
+                <th class="t6 t7">产品名称</th>
+                <th class="t6 t7">产品类型</th>
+                <th class="t6 t7">质量等级</th>
+                <th class="t6 t7">印刷难度等级</th>
+                <th class="t6 t7">装订难度等级</th>
+                <th class="t6 t7">装订方式</th>
+                <th class="t6 t7">是否上次印刷</th>
+                <th class="t6 t7">产品总数（pcs）</th>
+                <th class="t6 t7">分单数量（pcs）</th>
+                <th class="t6 t7">产品总价（元）</th>
+                <th class="t6 t7">订单价格（元）</th>
+                <th class="t6 t7">自动发送批次</th>
+                <th class="t6 t7">发送时间</th>
+                <th class="t6 t7">发送状态</th>
+                <th class="t6 t7">分单方式</th>
+                <th class="t6 t7">接单状态</th>
+                <th class="t6 t7">接单员</th>
+                <th class="t6 t7">接单时间</th>
+                <th class="t6 t7">拒绝原因</th>
+              </tr>
+              </thead>
+              <tbody class="cm007_order_data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!--order tab end-->
+
+        <!--progress tab start-->
+        <div class="tab-pane fade" id="progressTrack">
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th colspan="1" style="text-align: center"></th>
+                <th colspan="5" style="text-align: center">产品信息</th>
+                <th colspan="2" style="text-align: center"></th>
+              </tr>
+              <tr>
+                <th class="t3 t7">行号</th>
+                <th class="t6 t7">产品编号</th>
+                <th class="t6 t7">产品名称</th>
+                <th class="t6 t7">产品类型</th>
+                <th class="t6 t7">产品总数</th>
+                <th class="t6 t7">分单数量</th>
+                <th class="t6 t7">入库数量</th>
+                <th class="t6 t7">产品状态</th>
+              </tr>
+              </thead>
+              <tbody class="cm007_progress_data">
+              </tbody>
+            </table>
+          </div>
+          <fieldset disabled>
+            <legend>完成列表</legend>
+            <div class="tablelist">
+              <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th class="t3 t7">行号</th>
+                  <th class="t6 t7">工序类型</th>
+                  <th class="t6 t7">工序所需产能</th>
+                  <th class="t6 t7">单位</th>
+                  <th class="t6 t7">完成比例</th>
+                </tr>
+                </thead>
+                <tbody class="cm007_finish_table">
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+        <!--progress tab end-->
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<script class="cm007_product_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-left">{{proCode}}</td>
+    <td class="el-left">{{factBref}}</td>
+    <td class="el-left">{{productType}}</td>
+    <td class="el-left">{{qualifyLevel}}</td>
+    <td class="el-left">{{printDiffLevel}}</td>
+    <td class="el-left">{{bindDiffLevel}}</td>
+    <td class="el-left">{{bindType}}</td>
+    <td class="el-right">{{prodNum}}</td>
+    <td class="el-right">{{spiltNum}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="cm007_order_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-left">{{fctCode}}</td>
+    <td class="el-left">{{fctName}}</td>
+    <td class="el-left">{{prodNo}}</td>
+    <td class="el-left">{{prodName}}</td>
+    <td class="el-left">{{prodType}}</td>
+    <td class="el-left">{{qualifyLevel}}</td>
+    <td class="el-left">{{printDiffLevel}}</td>
+    <td class="el-left">{{bindDiffLevel}}</td>
+    <td class="el-left">{{bindType}}</td>
+    <td class="el-left">{{lastPrint}}</td>
+    <td class="el-right">{{prodNum}}</td>
+    <td class="el-right">{{spiltNum}}</td>
+    <td class="el-right">{{prodPrice}}</td>
+
+    <td class="el-right">{{orderPrice}}</td>
+    <td class="el-right">{{send}}</td>
+    <td class="el-left">{{sendTime}}</td>
+    <td class="el-left">{{sendStatus}}</td>
+    <td class="el-left">{{spiltType}}</td>
+    <td class="el-left">{{accStatus}}</td>
+    <td class="el-left">{{clerk}}</td>
+    <td class="el-left">{{accTime}}</td>
+    <td class="el-left">{{refuseReason}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="cm007_progress_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-left">{{prodCode}}</td>
+    <td class="el-left">{{prodName}}</td>
+    <td class="el-left">{{prodType}}</td>
+    <td class="el-left">{{prodNum}}</td>
+    <td class="el-left">{{spiltNum}}</td>
+    <td class="el-right">{{storageNum}}</td>
+    <td class="el-left">{{prodStatus}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="cm007_capacity_data" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-left">{{procType}}</td>
+    <td class="el-right">{{procCapacity}}</td>
+    <td class="el-left">{{unit}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="cm007_finish_data" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-left">{{procType}}</td>
+    <td class="el-right">{{procNeed}}</td>
+    <td class="el-left">{{unit}}</td>
+    <td class="el-right">{{finish}}</td>
+  </tr>
+  {{/each}}
+</script>

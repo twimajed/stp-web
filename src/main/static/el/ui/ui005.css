@@ -1,0 +1,32 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.ui005>.ctls {
+  margin-bottom: 10px;
+}
+.ui005>.ctls>.my-book {
+  margin-left: 2em;
+}
+
+.ui005 ul>li.red {
+  color: red;
+}
+.ui005 ul>li.yellow {
+  color: yellow;
+}
+.ui005 ul>li.green {
+  color: green;
+}
+.ui005 ul>li.blue {
+  color: blue;
+}
+.ui005 ul>li.orange {
+  color: orange;
+}
+.ui005 ul>li.purple {
+  color: purple;
+}

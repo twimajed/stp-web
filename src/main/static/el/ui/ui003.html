@@ -1,0 +1,55 @@
+<div class="ui003">
+
+  <div class="box-header">
+    <h3 class="box-title">Hover Data Table</h3>
+    <button type="submit" class="btn btn-info pull-right search-btn">Search</button>
+  </div>
+
+  <div class="box-head table-example">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="t10 sorting" data-field="engine">Rendering engine</th>
+          <th class="t10">Browser</th>
+          <th class="t10 sorting" data-field="platform">Platform(s)</th>
+          <th class="t10 sorting" data-field="version">Engine version</th>
+          <th class="t10 sorting" data-field="grade">CSS grade</th>
+          <th class="t10 sorting" data-field="engine">Rendering engine</th>
+          <th class="t10">Browser</th>
+          <th class="t10 sorting" data-field="platform">Platform(s)</th>
+          <th class="t10 sorting" data-field="version">Engine version</th>
+          <th class="t10 sorting" data-field="grade">CSS grade</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="box-wrap antiscroll-wrap table-example">
+    <div class="box-inner">
+      <div class="antiscroll-inner">
+        <table class="table table-bordered table-striped table-hover">
+          <tbody class="el-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="paging el-hide stp-paging-name el-mt-10"></div>
+
+  <script class="hbs hbs-tables" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t10">{{engine}}</td>
+      <td class="t10">{{browser}}</td>
+      <td class="t10">{{platform}}</td>
+      <td class="t10 el-center">{{version}}</td>
+      <td class="t10 el-right">{{grade}}</td>
+      <td class="t10">{{engine}}</td>
+      <td class="t10">{{browser}}</td>
+      <td class="t10">{{platform}}</td>
+      <td class="t10 el-center">{{version}}</td>
+      <td class="t10 el-right">{{grade}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+</div>

@@ -1,0 +1,188 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm207 {
+}
+
+.cm207 > .panel > .panel-heading {
+  background-color: #f4f4f4;
+}
+
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm207-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.cm207 > .panel > .tablelist {
+  width: 100%;
+}
+.cm207 > .navpage{
+  width: 100%;
+}
+
+.cm207 > .view > .panel  .selection-wd01 {
+  min-width: 169px;
+}
+
+.tablelist > .table > thead > tr > .t3 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .t6 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .t7 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .t8 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .t10 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .t11 {
+  min-width: 180px;
+}
+.cm207 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm207 .w5 {
+  width: 70px;
+}
+
+/*///////////////////////////////////////////////////*/
+
+
+
+.cm207 > .panel > .panel-body > .navbar-left > .form-group > .form-selection {
+  min-width: 169px;
+}
+
+/**页面表头查询组块，间距和统一查询下来框宽度统一*/
+.cm207 > .view > .panel > .panel-body > .navbar-form > .form-group {
+  /*margin: auto 15px;*/
+  margin-left:-15px;
+}
+
+.cm207 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm207 > .navpage {
+  width: 100%;
+}
+
+.cm207 > .cm207Panel {
+  width: 100%;
+  min-height: 350px;
+}
+
+.cm207 > .dblView > .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.cm207 > .dblView > .panel > .panel-heading h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.cm207 > .dblView > .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm207 .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.cm207 .panel > .panel-heading h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.cm207 .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm207-heading {
+  padding: 0px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.cm207-mt {
+  float: right;
+  margin-right: 15px;
+  margin-top: -20px;
+  text-align: left;
+}
+
+.cm207 .navbar-form {
+  width: 99%;
+}
+
+.cm207 fieldset {
+  padding: 2px;
+}
+
+.cm207 .form-group {
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 25%;
+  max-width: 260px;
+  margin-right: 10px;
+}
+
+.cm207 legend {
+  margin-bottom: 0px;
+  padding: 2px;
+}
+
+.cm207 .panel-body {
+  padding: 2px;
+  margin: 2px
+}
+
+.cm207 .panel {
+  margin-bottom: 2px;
+}
+
+.cm207 .navbar-form .form-group > label {
+  float: left;
+  margin-top: 6px;
+  width: 35%;
+  text-align: right;
+}
+
+.cm207 .navbar-form .form-group > div {
+  width: 65%;
+  padding-left: 6px;
+  float: left;
+}
+
+.cm207 .navbar-form .form-group > div > input,
+.cm207 .navbar-form .form-group > div > select {
+  width: 100%;
+}
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>盛通出版服务云平台</title>
+  <link id="logo" rel="shortcut icon" href="/static/images/favicon.ico" />
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="/theme/bootstrap/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  {{!-- <link rel="stylesheet" href="/bower/Ionicons/css/ionicons.min.css"> --}}
+
+  <!-- iCheck -->
+  {{!-- <link rel="stylesheet" href="/theme/plugins/iCheck/flat/blue.css"> --}}
+  <!-- Select2 -->
+  {{!-- <link rel="stylesheet" href="/theme/plugins/select2/select2.css"> --}}
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="/theme/plugins/datepicker/datepicker3.css">
+  <!-- Date Range Picker -->
+  <!-- <link rel="stylesheet" href="/theme/plugins/daterangepicker/daterangepicker.css"> -->
+  <!-- bootstrap wysihtml5 - text editor -->
+  {{!-- <link rel="stylesheet" href="/theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> --}}
+
+  <!-- jvectormap -->
+  {{!-- <link rel="stylesheet" href="/theme/plugins/jvectormap/jquery-jvectormap-1.2.2.css"> --}}
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Theme style -->
+  {{!-- <link rel="stylesheet" href="/theme/dist/css/AdminLTE.css"> --}}
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  {{!-- <link rel="stylesheet" href="/theme/dist/css/skins/_all-skins.min.css"> --}}
+
+  <!-- <link rel="stylesheet" href="/bower/AdminLTE/plugins/select2/select2.min.css"> -->
+
+  <!-- antiscroll -->
+  <link rel="stylesheet" href="/bower/antiscroll/antiscroll.css">
+
+  <link rel="stylesheet" href="/static/theme/theme.css">
+  <link rel="stylesheet" href="/static/theme/theme.skin.css">
+
+  <link rel="stylesheet" href="/static/el/el.css">
+  <link rel="stylesheet" href="/static/theme/theme-stp.css">
+  <link rel="stylesheet" href="/static/el/el_stp.css">
+
+  {{{hole "mycss"}}}
+</head>
+
+<body class="hold-transition skin-stp sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="#" class="logo" style="width:300px">
+        <span class="logo-mini"><b>STP</b></span>
+        <span class="logo-lg"><b>盛通出版服务云平台</b></span>
+      </a>
+      <nav class="navbar navbar-static-top" style="margin-left: 300px;">
+        <div class="el-warn el-hide" style="display:none"></div>
+        <div class="el-quit"><i class="fa fa-power-off fa-lg"></i></div>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <div class="user-panel">
+        <div class="info">
+          <i class="fa fa-user"></i>
+          <span>管理员</span>
+        </div>
+      </div>
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+
+          {{!-- MENU --}}
+          {{#each menus}}
+            {{#if menuSub}}
+            <li class="treeview {{menuId}}" data-menu-fix="{{menuFix}}">
+              <a href="#">
+                <i class="fa fa-{{menuIco}}"></i>
+                <span>
+                  {{#if ../debug}}({{menuId}}){{/if}}
+                  {{menuLbl}}
+                </span>
+                {{#if menuSub}}
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                {{/if}}
+              </a>
+              {{#if menuSub}}
+              <ul class="treeview-menu">
+                {{#each menuSub}}
+                <li class="menu-item"
+                  data-menu-id="{{menuId}}" data-menu-ico="{{../menuIco}}" data-menu-lbl="{{menuLbl}}"
+                  ><a href="#"><i class="fa fa-{{menuIco}}"></i>
+                  {{#if ../../debug}}({{menuId}}){{/if}}
+                  {{menuLbl}}</a>
+                </li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </li>
+            {{else}}
+            <li class="treeview menu-item {{menuId}}" data-menu-fix="{{menuFix}}"
+              data-menu-id="{{menuId}}" data-menu-ico="{{menuIco}}" data-menu-lbl="{{menuLbl}}"
+              ><a href="#"><i class="fa fa-{{menuIco}}"></i> {{menuLbl}}</a></li>
+            {{/if}}
+          {{/each}}
+
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    {{{body}}}
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.1
+      </div>
+      <strong>Copyright &copy; 2016 <a href="http://www.shengtongprint.com/">shengtongprint.com</a>.</strong>
+      All rights reserved.
+    </footer>
+
+  </div>
+  <!-- /.wrapper -->
+
+  <div class="el-msg modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" class="btn btn-danger ok">OK</div>
+          <div data-dismiss="modal" class="btn btn-default cancel">Cancel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.el-msg -->
+
+  <!-- SystemJS -->
+  <script src="/bower/system.js/dist/system.js"></script>
+
+  <!-- Handlebars 4+ -->
+  <script src="/bower/handlebars/handlebars.min.js"></script>
+  <!-- LoDash 4+ -->
+  <script src="/bower/lodash/dist/lodash.min.js"></script>
+  <!-- Moment 2+ -->
+  <script src="/bower/moment/min/moment.min.js"></script>
+
+  <!-- jQuery 3+ -->
+  <script src="/bower/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="/theme/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- datepicker -->
+  <script src="/theme/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="/theme/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+  <!-- daterangepicker -->
+  <!-- <script src="/theme/plugins/daterangepicker/daterangepicker.js"></script> -->
+
+  <!-- Bootstrap WYSIHTML5 -->
+  {{!-- <script src="/theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> --}}
+  <!-- Slimscroll -->
+  <!-- <script src="/theme/plugins/slimScroll/jquery.slimscroll.min.js"></script> -->
+  <!-- antiscroll -->
+  <!-- <script src="/bower/antiscroll/deps/jquery-mousewheel.js"></script> -->
+  <script src="/bower/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+  <script src="/bower/antiscroll/antiscroll.js"></script>
+  <!-- FastClick -->
+  {{!-- <script src="/theme/plugins/fastclick/fastclick.js"></script> --}}
+  <!-- <script src="/bower/AdminLTE/plugins/select2/select2.min.js"></script> -->
+
+  <script src="/static/theme/theme.js"></script>
+
+  <script src="/static/el/el.js"></script>
+
+  <script src="/static/el/el_stp.js"></script>
+
+  {{{hole "myjs"}}}
+
+</body>
+
+</html>

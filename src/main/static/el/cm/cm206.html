@@ -1,0 +1,267 @@
+<!-- Default panel contents start -->
+<div class="cm206">
+  <!--Default panel start -->
+  <div class="panel panel-default">
+
+    <!-- panel heading  start -->
+    <div class="panel-heading">
+      <h1 class="panel-title ">订单详情:</h1>
+        <button type="button" class="btn btn-warning btn-sm floatRight">返回订单接单</button>
+        <button type="button" class="btn btn-primary btn-sm floatRight" id="cm206_refuse">拒绝</button>
+        <button type="button" class="btn btn-primary btn-sm floatRight">接单</button>
+    </div>
+
+    <!-- search panel start -->
+  <div class="panel-body">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="custBref" class="col-sm-1 control-label">公司简称</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly"  value="盛通股份">
+        </div>
+        <label for="soNo" class="col-sm-1 control-label">订单编号</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly"  id="soNo" value="0001">
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="soNo" class="col-sm-1 control-label">生产交期</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" value="2017-01-02">
+        </div>
+        <label for="soNo" class="col-sm-1 control-label">工厂总价</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" value="30000">
+        </div>
+        <label for="soNo" class="col-sm-1 control-label">别更后总价</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" value="100000">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- search panel end  -->
+
+</div>
+<!-- Default panel end -->
+
+<!-- tab statrt-->
+<div class="page-container el-mt-15">
+  <ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+       <a href="#productDetail" data-toggle="tab">产品明细</a>
+    </li>
+    <li>
+        <a href="#productData" data-toggle="tab">产能数据</a>
+    </li>
+  </ul>
+    <!--tab content start -->
+  <div id="myTabContent" class="tab-content">
+
+    <!--productData tab start-->
+    <div class="tab-pane fade" id="productData">
+      <!--productDetail button start -->
+      <div class="navbar">
+        <div class="navbarbtn navbar-form">
+            <div class="form-group">
+              <button type="button" class="btn btn-primary">查询产能</button>
+            </div>
+            <div class="form-group">
+              <label for="dateFrom">查询日期</label>
+              <input type="date" class="form-control" id="dateFrom">
+              <label for="dateTo">-</label>
+              <input type="date" class="form-control" id="dateTo">
+              <button type="button" class="btn btn-primary">一个月</button>
+              <button type="button" class="btn btn-primary">三个月</button>
+            </div>
+            <div class="form-group fromFloatRight">
+              <label for="processType">工序类型</label>
+              <select class="form-control selection-wd01">
+                <option>全部</option>
+                <option>骑马订</option>
+                <option>胶订</option>
+                <option>精装</option>
+                <option>其他</option>
+              </select>
+            </div>
+        </div>
+    </div>
+    <div class="tablelist">
+      <table class="table table-bordered table-striped  table-hover">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">生产日期</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">工序类型</th>
+          <th class="t6">合作产能</th>
+          <th class="t7">已占用产能</th>
+          <th class="t3">单位</th>
+          <th class="t6">占用比例</th>
+        </tr>
+        </thead>
+        <tbody class="produceData_data">
+        </tbody>
+      </table>
+    </div>
+    <!--productDefault button end -->
+
+      <!-- page panel start -->
+      <div class="navpage el-ml-15">
+        <nav>
+          <ul class="pagination pagination-sm">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- page panel end -->
+
+    </div>
+    <!--productData tab end-->
+
+    <!--productDetail tab start-->
+    <div class="tab-pane fade in active" id="productDetail">
+      <!--productDetail button start -->
+      <div class="navbar">
+        <div class="navbar-form ">
+          <div class="form-group">
+          <button type="button" class="btn btn-primary" id="cm206_query">查看产品信息</button>
+        </div>
+      </div>
+    </div>
+    <!--productDefault button end -->
+          <div class="tablelist">
+            <table class="table table-bordered table-striped  table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">产品编号</th>
+                <th class="t6">产品名称</th>
+                <th class="t6">产品类型</th>
+                <th class="t6">质量等级</th>
+                <th class="t7">印刷难度等级</th>
+                <th class="t7">装订难度等级</th>
+                <th class="t6">装订方式</th>
+                <th class="t7">产品总数(PCS)</th>
+              </tr>
+              </thead>
+              <tbody class="productDetail_data">
+              </tbody>
+            </table>
+            <!--info panel start-->
+            <fieldset class="el-margin-15">
+              <legend>
+                <h1 class="panel-title ">产能需求</h1>
+              </legend>
+                    <div class="tablelist">
+                      <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                          <th class="t3">行号</th>
+                          <th class="t6">工序类型</th>
+                          <th class="t7">工序所需产能</th>
+                          <th class="t3">单位</th>
+                        </tr>
+                        </thead>
+                        <tbody class="productDetailPanel_data">
+                        </tbody>
+                      </table>
+                    </div>
+                  </fieldset>
+            <!--info panel end-->
+          </div>
+          <!-- productDetail panel start -->
+
+          <!-- productDetail panel start -->
+        </div>
+        <!--productDetail tab end-->
+
+    </div>
+    <!--tab content end -->
+</div>
+<!--tab end -->
+</div>
+<!-- Default panel contents end -->
+
+<!-- showModal demo start-->
+<script class="myModal_cm206_refuse" type="text/x-handlebars-template">
+    <div class="box-body">
+      <div class="form-group">
+        <label for="inputRefuce" class="col-sm-6 control-label">请填写拒绝原因</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="inputRefuce">
+        </div>
+      </div>
+    </div>
+</script>
+<script class="myModal_cm206_info" type="text/x-handlebars-template">
+    <div class="box-body">
+      <div class="form-group">
+        <h3>产品信息</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><h4>产品编号:1101</h4></div>
+        <div class="col-sm-4"><h4>产品名称:西游记</h4></div>
+        <div class="col-sm-4">
+        <!--<button type="button" class="btn btn-primary">关闭</button>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <fieldset style="width:600px;height:100px;">
+          <legend>工艺信息</legend>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset style="width:600px;height:100px;">
+          <legend>用料信息</legend>
+        </fieldset>
+      </div>
+  </div>
+</script>
+<!--  showModal demo end-->
+
+
+<script id="productDetail_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td>{{prodCode}}</td>
+    <td>{{prodName}}</td>
+    <td>{{prodType}}</td>
+    <td>{{qualifyLevel}}</td>
+    <td>{{printDiffLevel}}</td>
+    <td>{{bindDiffLevel}}</td>
+    <td>{{bindType}}</td>
+    <td>{{prodSum}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script id="produceData_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td>{{produceDate}}</td>
+    <td>{{prodName}}</td>
+    <td>{{processType}}</td>
+    <td>{{validCapacity}}</td>
+    <td>{{alCapacity}}</td>
+    <td>{{uom}}</td>
+    <td>{{alScale}}</td>
+  </tr>
+  {{/each}}
+</script>

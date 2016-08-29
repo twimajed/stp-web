@@ -1,0 +1,21 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.sm001 {
+}
+.sm001 > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+.sm001 .form-tight{
+padding-top:0;
+padding-bottom:0;
+margin-bottom:0;
+}
+.sm001 .panel-tight{
+  padding-top:0;
+  padding-bottom:8px;
+}

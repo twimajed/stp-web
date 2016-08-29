@@ -1,0 +1,44 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.sm003 {
+}
+
+ .sm003 > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+.sm003  .el-ml-14 {
+  margin-left: 14px;
+}
+.sm003 > .panel > .tablelist {
+  width: 100%;
+}
+.sm003 > .panel > .tablelist >.table >thead>tr> th{
+  min-width:60px;
+}
+.sm003 > .panel > .tablelist > .table > thead > tr > .t3{
+  min-width:61px;
+}
+.sm003 > .panel > .tablelist > .table > thead > tr > .t6{
+  min-width:100px;
+}
+/* .sm003 > .panel > .tablelist th{
+  background-color: #ddd;
+  text-align: center;
+} */
+.sm003 > .navpage{
+  width: 100%;
+}
+.sm003 .form-tight{
+padding-top:0;
+padding-bottom:0;
+margin-bottom:0;
+}
+.sm003 .panel-tight{
+  padding-top:0;
+  padding-bottom:8px;
+}

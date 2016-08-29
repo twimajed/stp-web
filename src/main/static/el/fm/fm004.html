@@ -1,0 +1,164 @@
+<div class="fm004">
+  <div class="view payView">
+    <div class="panel panel-default">
+      <div class="panel-body panel-tight">
+        <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+                data-original-title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+        <!--检索条件隐藏、显示  end -->
+        <div class="navbar-form form-tight  search-toggle-content">
+          <div class="form-group  el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control ouName">
+          </div>
+          <div class="form-group  el-mr-15">
+            <label>收款日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp recvDateFrom" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp recvDateTo" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+          <div class="form-group  el-mr-15">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+
+        <div class="navbar-form form-tight  search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label>客户名称</label>
+            <input type="text" class="form-control custCode">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>发票日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp invDateFrom" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp invDateTo" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-head table-master">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="t6">结算公司编码</th>
+            <th class="t6">结算公司名称</th>
+            <th class="t4">收款客户</th>
+            <th class="t4">收款金额</th>
+            <th class="t4">收款号码</th>
+            <th class="t2">行号</th>
+            <th class="t4">收款日期</th>
+            <th class="t4">开票客户</th>
+            <th class="t4">开票金额</th>
+            <th class="t4">开票日期</th>
+            <th class="t4">发票号码</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap  table-master">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="payView-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--<div class="paging el-hide stp-fm004-pay"></div>-->
+      <div class="paging-wrap">
+        <div class="left-records">显示记录<select class="records">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="40">40</option>
+        </select></div>
+        <div class="right-pages">
+          <div class="paging paging-master" style="width: 1121px;">
+            <ul class="pagination">
+              <li class="item previous disabled" data-pi="0"><span>上一页</span></li>
+              <li class="item idx active"><span data-pi="0">1</span></li>
+              <li class="item idx"><span data-pi="1">2</span></li>
+              <li class="item idx"><span data-pi="2">3</span></li>
+              <li class="item idx"><span data-pi="3">4</span></li>
+              <li class="item idx"><span data-pi="4">5</span></li>
+              <li class="item next " data-pi="0" data-pc="14"><span>下一页</span></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary forward">跳转</button>
+          <input type="number" min="1" max="3" placeholder="页码" class="chosePage">
+          <div class="total">共<span class="pn">5</span>页/<span class="rn">46</span>条</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script class="hbs" data-view-id="payView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t6 el-left">{{ouCode}}</td>
+      <td class="t6 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{custCode}}</td>
+      <td class="t4 el-right">{{recvAmt}}</td>
+      <td class="t4 el-left">{{recvNo}}</td>
+      <td class="t2 el-center">{{lineNo}}</td>
+      <td class="t4 el-left">{{recvDateYmd}}</td>
+      <td class="t4 el-left">{{payer}}</td>
+      <td class="t4 el-right">{{invAmt}}</td>
+      <td class="t4 el-left">{{invDateYmd}}</td>
+      <td class="t4 el-left">{{gtInvNo}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td class="el-left">合计</td>
+      <td></td>
+      <td></td>
+      <td class="el-right">50000.00</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="el-right">75000.00</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </script>
+
+  <!--<script class="hbs" data-view-id="payTotal" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-left">合计</td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{recvAmtTotal}}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{invAmtTotal}}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  {{/each}}
+</script>-->
+</div>

@@ -1,0 +1,702 @@
+<!-- Default panel contents start -->
+<div class="cm208">
+  <!--Default panel start -->
+  <div class="panel panel-default">
+    <!-- panel heading  start -->
+    <div class="panel-heading">
+      <h1 class="panel-title ">订单详情:</h1>
+      <button type="button" class="btn btn-warning btn-sm floatRight">返回生产管理</button>
+    </div>
+      <!-- panel heading  end -->
+    <!-- search panel start -->
+  <div class="panel-body">
+
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="orgName" class="col-sm-1 control-label">公司简称</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" id="orgName" value="盛通股份">
+        </div>
+
+        <label for="soNo" class="col-sm-1 control-label">订单编号</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" id="soNo" value="0001">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="clert" class="col-sm-1 control-label">生产日期</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" readonly="readonly" value="2017-07-14">
+        </div>
+        <label for="accpUser" class="col-sm-1 control-label">接单员</label>
+        <div class="col-sm-2">
+        <input type="text" class="form-control" value="王海" readonly="readonly">
+      </div>
+      <label for="accpUser" class="col-sm-1 control-label">接单时间</label>
+      <div class="col-sm-2">
+      <input type="text" class="form-control" value="2017-07-22" readonly="readonly">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pageAppr" class="col-sm-1 control-label">纸张确认</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" readonly="readonly" id="pageAppr" value="盛通股份">
+      </div>
+      <label for="proInfoWay" class="col-sm-1 control-label">产品信息路径</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" readonly="readonly" id="proInfoWay" value="0001">
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <div class="panel-heading">
+    <h1 class="panel-title ">产品明细:</h1>
+  </div>
+  <div class="panel-body">
+  <div class="tablelist">
+    <table class="table table-bordered table-striped  table-hover">
+      <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">产品类型</th>
+          <th class="t6">质量等级</th>
+          <th class="t7">印刷难度等级</th>
+          <th class="t7">装订难度等级</th>
+          <th class="t6">装订方式</th>
+          <th class="t8">产品总数(PCS)</th>
+          <th class="t8">产品信息是否确认</th>
+          <th class="t6">完成率</th>
+       </tr>
+      </thead>
+      <tbody class="commonProductDetail_data">
+      </tbody>
+    </table>
+  </div>
+  <fieldset>
+    <legend>
+      <h1 class="panel-title">产能需求</h1>
+    </legend>
+    <div class="tablelist">
+      <table class="table table-bordered table-striped  table-hover">
+        <thead>
+          <tr>
+            <th class="t3">行号</th>
+            <th class="t6">工序类型</th>
+            <th class="t7">工序所需产能</th>
+            <th class="t3">单位</th>
+         </tr>
+        </thead>
+        <tbody class="commonProductRequire_data">
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+</div>
+  <!-- search panel end  -->
+<!-- Default panel end -->
+
+<!-- tab statrt-->
+<div class="page-container el-mt-15">
+  <ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+       <a href="#fileCheckData" data-toggle="tab">文件检查</a>
+    </li>
+    <li>
+        <a href="#pageCheckData" data-toggle="tab">纸张检查</a>
+    </li>
+    <li>
+        <a href="#orderData" data-toggle="tab">订单排产</a>
+    </li>
+    <li>
+        <a href="#produceData" data-toggle="tab">生产报工</a>
+    </li>
+    <li>
+        <a href="#recordData" data-toggle="tab">记录上报</a>
+    </li>
+    <li>
+        <a href="#finishData" data-toggle="tab">完工入库</a>
+    </li>
+  </ul>
+    <!--tab content start -->
+  <div id="myTabContent" class="tab-content">
+
+    <!--fileCheckData tab start-->
+    <div class="tab-pane fade in active" id="fileCheckData">
+      <div class="navbar">
+        <div class="navbar-form navbar-left">
+            <div class="form-group">
+              <button type="button" class="btn btn-primary">产品信息确认</button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" id="cm208_fileQuery">查询工艺信息</button>
+            </div>
+        </div>
+    </div>
+    <div class="tablelist">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">产品编码</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">产品类型</th>
+          <th class="t6">质量等级</th>
+          <th class="t7">印刷难度等级</th>
+          <th class="t7">装订难度等级</th>
+          <th class="t6">装订方式</th>
+          <th class="t8">产品数量(PCS)</th>
+          <th class="t8">产品信息是否确认</th>
+        </tr>
+        </thead>
+        <tbody class="fileCheck_data">
+        </tbody>
+      </table>
+    </div>
+    <fieldset class="el-margin-15">
+      <legend>
+        <h1 class="panel-title">产能需求</h1>
+        </legend>
+      <div class="tablelist">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t6">工序类型</th>
+              <th class="t7">工序所需产能</th>
+              <th class="t3">单位</th>
+           </tr>
+          </thead>
+          <tbody class="fileProductRequire_data">
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+    </div>
+    <!--fileCheckData tab end-->
+
+    <!--pageCheckData tab start-->
+    <div class="tab-pane fade" id="pageCheckData">
+      <div class="navbar">
+        <div class="navbar-form navbar-left">
+          <div class="form-group">
+          <button type="button" class="btn btn-primary">纸张确认</button>
+        </div>
+          <div class="form-group">
+          <button type="button" class="btn btn-primary" id="cm208_pageQuery">查看纸张信息</button>
+        </div>
+      </div>
+    </div>
+          <div class="tablelist">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3"></th>
+                <th class="t3">行号</th>
+                <th class="t6">调拨单号</th>
+                <th class="t6">单据日期</th>
+                <th class="t7">印刷订单号</th>
+                <th class="t6">客户编码</th>
+                <th class="t6">客户名称</th>
+                <th class="t6">纸张编码</th>
+                <th class="t6">纸张名称</th>
+                <th class="t6">纸张类型</th>
+                <th class="t3">品牌</th>
+                <th class="t3">厂家</th>
+                <th class="t3">长</th>
+                <th class="t3">宽</th>
+                <th class="t3">克重</th>
+                <th class="t6">调拨数量</th>
+                <th class="t6">调出公司</th>
+                <th class="t6">调入公司</th>
+                <th class="t7">纸张确认状态</th>
+              </tr>
+              </thead>
+              <tbody class="pageCheck_data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!--pageCheckData tab end-->
+
+        <!-- orderDta tab start-->
+        <div class="tab-pane fade cm" id="orderData">
+          <div class="calendar"></div>
+        </div>
+        <!-- order tab end-->
+
+        <!--produceData tab start-->
+        <div class="tab-pane fade" id="produceData">
+          <!--productDetail button start -->
+          <div class="navbar">
+            <div class="navbar-form navbar-left">
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">保存/报工</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+        <div class="tablelist">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t6">产品编码</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">报工时间</th>
+              <th class="t6">报工人员</th>
+              <th class="t6">报工类型</th>
+              <th class="t3">单位</th>
+              <th class="t6">需求总数</th>
+              <th class="t8">累计已报工数量</th>
+              <th class="t7">本次报工数量</th>
+            </tr>
+            </thead>
+            <tbody class="product_data">
+            </tbody>
+          </table>
+        </div>
+        <!--productDefault button end -->
+
+          <!-- page panel start -->
+          <div class="navpage el-ml-15">
+            <nav>
+              <ul class="pagination pagination-sm">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="tablelist el-margin-15">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">产品编码</th>
+                <th class="t6">产品名称</th>
+                <th class="t6">报工时间</th>
+                <th class="t6">报工人员</th>
+                <th class="t6">报工类型</th>
+                <th class="t3">单位</th>
+                <th class="t6">需求总数</th>
+                <th class="t8">累计已报工数量</th>
+                <th class="t7">本次报工数量</th>
+              </tr>
+              </thead>
+              <tbody class="productSave_data">
+              </tbody>
+            </table>
+          </div>
+          <!-- page panel end -->
+        </div>
+        <!--produceData tab end-->
+
+        <!--recordData tab start-->
+        <div class="tab-pane fade" id="recordData">
+          <!--productDetail button start -->
+
+          <div class="navbar">
+            <div class="navbar-form navbar-left">
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">保存/新增</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+        <div class="tablelist">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t3">时间</th>
+              <th class="t6">记录人员</th>
+              <th class="t3">描述</th>
+              <th class="t6">造成的影响</th>
+              <th class="t6">解决方案</th>
+            </tr>
+            </thead>
+            <tbody class="record_data">
+            </tbody>
+          </table>
+        </div>
+        <!--productDefault button end -->
+
+          <!-- page panel start -->
+          <div class="navpage el-ml-15">
+            <nav>
+              <ul class="pagination pagination-sm">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="tablelist el-margin-15">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t3">时间</th>
+                <th class="t6">记录人员</th>
+                <th class="t3">描述</th>
+                <th class="t7">造成的影响</th>
+                <th class="t6">解决方案</th>
+              </tr>
+              </thead>
+              <tbody class="recordSave_data">
+              </tbody>
+            </table>
+          </div>
+
+          <!-- page panel end -->
+        </div>
+        <!--recordData tab end-->
+
+        <!--finishData tab start-->
+        <div class="tab-pane fade" id="finishData">
+          <!--productDetail button start -->
+          <div class="navbar">
+            <div class="navbar-form navbar-left">
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">保存/入库</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+        <div class="tablelist">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t6">产品编码</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">入库人员</th>
+              <th class="t6">入库时间</th>
+              <th class="t6">需求总数</th>
+              <th class="t8">累计已入库数量</th>
+              <th class="t7">本次入库数量</th>
+              <th class="t7">未入库数量</th>
+              <th class="t3">备注</th>
+            </tr>
+            </thead>
+            <tbody class="finish_data">
+            </tbody>
+          </table>
+        </div>
+        <!--productDefault button end -->
+
+          <!-- page panel start -->
+          <div class="navpage el-ml-15">
+            <nav>
+              <ul class="pagination pagination-sm">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="tablelist el-margin-15">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">产品编码</th>
+                <th class="t6">产品名称</th>
+                <th class="t6">入库人员</th>
+                <th class="t6">入库时间</th>
+                <th class="t6">需求总数</th>
+                <th class="t8">累计已入库数量</th>
+                <th class="t7">本次入库数量</th>
+                <th class="t7">未入库数量</th>
+                <th class="t3">备注</th>
+              </tr>
+              </thead>
+              <tbody class="finishSave_data">
+              </tbody>
+            </table>
+          </div>
+          <!-- page panel end -->
+        </div>
+        <!--finishData tab end-->
+    </div>
+    <!--tab content end -->
+</div>
+<!--tab end -->
+</div>
+<!-- Default panel contents end -->
+
+<!-- common data start-->
+<script id="commonProductDetail_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{prodType}}</td>
+    <td class="el-center">{{qualifyLevel}}</td>
+    <td class="el-center">{{printDiffLevel}}</td>
+    <td class="el-center">{{bindDiffLevel}}</td>
+    <td class="el-center">{{bindType}}</td>
+    <td class="el-center">{{prodSum}}</td>
+    <td class="el-center">{{prodInfoStatus}}</td>
+    <td class="el-center">{{finish}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script id="commonProductRequire_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{processType}}</td>
+    <td class="el-center">{{processNeed}}</td>
+    <td class="el-center">{{uom}}</td>
+  </tr>
+  {{/each}}
+</script>
+<!-- common data end-->
+
+<!-- fileChek start-->
+<script id="fileCheck_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{prodType}}</td>
+    <td class="el-center">{{qualifyLevel}}</td>
+    <td class="el-center">{{printDiffLevel}}</td>
+    <td class="el-center">{{bindDiffLevel}}</td>
+    <td class="el-center">{{bindType}}</td>
+    <td class="el-center">{{prodSum}}</td>
+    <td class="el-center">{{proInfoStatus}}</td>
+  </tr>
+  {{/each}}
+</script>
+<script id="fileProductRequire_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{processType}}</td>
+    <td class="el-center">{{processNeed}}</td>
+    <td class="el-center">{{uom}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="myModal_file_query" type="text/x-handlebars-template">
+    <div class="box-body">
+      <div class="form-group">
+        <h3>产品信息</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><h4>产品编号:1101</h4></div>
+        <div class="col-sm-4"><h4>产品名称:西游记</h4></div>
+        <div class="col-sm-4">
+        <!--<button type="button" class="btn btn-primary">关闭</button>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <fieldset style="width:600px;height:100px;">
+          <legend>工艺信息</legend>
+        </fieldset>
+      </div>
+  </div>
+</script>
+<!-- fileChek end-->
+
+<!--pageCheck start-->
+<script id="pageCheck_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center"><input name="" type="radio" value="" /></td>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{docNo}}</td>
+    <td class="el-center">{{docDate}}</td>
+    <td class="el-center">{{ppoId}}</td>
+    <td class="el-center">{{custCode}}</td>
+    <td class="el-center">{{custName}}</td>
+    <td class="el-center">{{paperNo}}</td>
+    <td class="el-center">{{paperName}}</td>
+    <td class="el-center">{{paperType}}</td>
+    <td class="el-center">{{brand}}</td>
+    <td class="el-center">{{factName}}</td>
+    <td class="el-center">{{length}}</td>
+    <td class="el-center">{{width}}</td>
+    <td class="el-center">{{weight}}</td>
+    <td class="el-center">{{docQty}}</td>
+    <td class="el-center">{{outOu}}</td>
+    <td class="el-center">{{inOu}}</td>
+    <td class="el-center">{{paperReadyStatus}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+<script class="myModal_page_query" type="text/x-handlebars-template">
+    <div class="box-body">
+      <div class="form-group">
+        <h3>纸张信息</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><h4>产品编号:1101</h4></div>
+        <div class="col-sm-4"><h4>产品名称:西游记</h4></div>
+        <div class="col-sm-4">
+        <!--<button type="button" class="btn btn-primary">关闭</button>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <fieldset style="width:600px;height:100px;">
+          <legend>用料信息</legend>
+        </fieldset>
+      </div>
+  </div>
+</script>
+
+<!--pageCheck end-->
+
+<!--product start-->
+<script id="product_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{rptDt}}</td>
+    <td class="el-center">{{rptUser}}</td>
+    <td class="el-center">{{rptType}}</td>
+    <td class="el-center">{{uom}}</td>
+    <td class="el-center">{{sum}}</td>
+    <td class="el-center">{{countRptQty}}</td>
+    <td class="el-center">{{rptQty}}</td>
+  </tr>
+  {{/each}}
+</script>
+<script id="productSave_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{rptDt}}</td>
+    <td class="el-center">{{rptUser}}</td>
+    <td class="el-center">{{rptType}}</td>
+    <td class="el-center">{{uom}}</td>
+    <td class="el-center">{{sum}}</td>
+    <td class="el-center">{{countRptQty}}</td>
+    <td class="el-center"><input type="text"></td>
+  </tr>
+  {{/each}}
+</script>
+<!--product end -->
+
+<!--record start-->
+<script id="record_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{date}}</td>
+    <td class="el-center">{{recorder}}</td>
+    <td class="el-center">{{itemDesc}}</td>
+    <td class="el-center">{{itemImpact}}</td>
+    <td class="el-center">{{itemSolution}}</td>
+  </tr>
+  {{/each}}
+</script>
+<script id="recordSave_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{date}}</td>
+    <td class="el-center">{{recorder}}</td>
+    <td class="el-center"><input type="text"></td>
+    <td class="el-center"><input type="text"></td>
+    <td class="el-center"><input type="text"></td>
+  </tr>
+  {{/each}}
+</script>
+<!--record end-->
+
+<!--finish start-->
+<script id="finish_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{inPic}}</td>
+    <td class="el-center">{{docDate}}</td>
+    <td class="el-center">{{sum}}</td>
+    <td class="el-center">{{countInQty}}</td>
+    <td class="el-center">{{inQty}}</td>
+    <td class="el-center">{{unInQty}}</td>
+    <td class="el-center">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>
+<script id="finishSave_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{prodCode}}</td>
+    <td class="el-center">{{prodName}}</td>
+    <td class="el-center">{{inPic}}</td>
+    <td class="el-center">{{docDate}}</td>
+    <td class="el-center">{{sum}}</td>
+    <td class="el-center">{{countInQty}}</td>
+    <td class="el-center"><input type="text"></td>
+    <td class="el-center">{{unInQty}}</td>
+    <td class="el-center">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>
+<!--finish end-->

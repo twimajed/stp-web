@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>STP Cloud - Web Design</title>
+  <link id="logo" rel="shortcut icon" href="/build/images/favicon.ico" />
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <link rel="stylesheet" href="/build/css/ui.css">
+  <link rel="stylesheet" href="/build/css/el.css">
+  <link rel="stylesheet" href="/build/css/el_stp.css">
+</head>
+
+<body class="hold-transition skin-stp sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="/theme/index2.html" class="logo">
+        <span class="logo-mini"><b>STP</b></span>
+        <span class="logo-lg"><b>STP</b> Cloud</span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <div class="el-warn el-hide"></div>
+        <div class="el-quit"><i class="fa fa-power-off fa-lg"></i></div>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <div class="user-panel">
+        <div class="info">
+          <i class="fa fa-user"></i>
+          <span>印务 达人</span>
+        </div>
+      </div>
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+
+          {{!-- MENU --}}
+          {{#each menus}}
+            {{#if menuSub}}
+            <li class="treeview {{menuId}}" data-menu-fix="{{menuFix}}">
+              <a href="#">
+                <i class="fa fa-{{menuIco}}"></i>
+                <span>
+                  {{#if ../debug}}({{menuId}}){{/if}}
+                  {{menuLbl}}
+                </span>
+                {{#if menuSub}}
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                {{/if}}
+              </a>
+              {{#if menuSub}}
+              <ul class="treeview-menu">
+                {{#each menuSub}}
+                <li class="menu-item"
+                  data-menu-id="{{menuId}}" data-menu-ico="{{../menuIco}}" data-menu-lbl="{{menuLbl}}"
+                  ><a href="#"><i class="fa fa-{{menuIco}}"></i>
+                  {{#if ../../debug}}({{menuId}}){{/if}}
+                  {{menuLbl}}</a>
+                </li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </li>
+            {{else}}
+            <li class="treeview menu-item {{menuId}}" data-menu-fix="{{menuFix}}"
+              data-menu-id="{{menuId}}" data-menu-ico="{{menuIco}}" data-menu-lbl="{{menuLbl}}"
+              ><a href="#"><i class="fa fa-{{menuIco}}"></i> {{menuLbl}}</a></li>
+            {{/if}}
+          {{/each}}
+
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    {{{body}}}
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.1
+      </div>
+      <strong>Copyright &copy; 2016 <a href="http://www.shengtongprint.com/">shengtongprint.com</a>.</strong>
+      All rights reserved.
+    </footer>
+
+  </div>
+  <!-- /.wrapper -->
+
+  <div class="el-msg modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" class="btn btn-danger ok">OK</div>
+          <div data-dismiss="modal" class="btn btn-default cancel">Cancel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.el-msg -->
+
+  <script src="/build/js/ui.js"></script>
+  <script src="/build/js/el.js"></script>
+  <script src="/build/js/el_stp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!-- Default panel contents start -->
+<div class="cm002">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group">
+          <label for="cusName">客户简称</label>
+          <input type="text" class="form-control" id="cusName">
+        </div>
+        <div class="form-group">
+          <label for="docName">订单名称</label>
+          <input type="text" class="form-control" id="docName">
+        </div>
+        <div class="form-group">
+          <label for="productFactory">生产工厂</label>
+          <input type="text" class="form-control" id="productFactory">
+        </div>
+        <button type="submit" class="btn btn-primary">检索</button>
+      </div>
+      <!-- search panel end  -->
+
+      <!-- Default tool button panel start  -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group">
+          <label for="loginDate">登录日期</label>
+          <input type="date" class="form-control" id="loginDate">
+          <label for="dateFor">—</label>
+          <input type="date" class="form-control" id="dateFor">
+        </div>
+        <div class="form-group">
+          <label for="dateFrom">要求交期</label>
+          <input type="date" class="form-control" id="dateFrom">
+          <label for="dateTo">—</label>
+          <input type="date" class="form-control" id="dateTo">
+        </div>
+      </div>
+      <!-- Default tool button panel end  -->
+    </div>
+    <!-- Default panel contents end -->
+
+
+
+
+
+    <div class="tablelist">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="5" style="text-align: center">订单信息</th>
+            <th colspan="5" style="text-align: center">工厂信息</th>
+            <th colspan="7" style="text-align: center">齐清定信息</th>
+          </tr>
+
+          <tr>
+            <th>行号</th>
+            <th>客户简称</th>
+            <th>订单编号</th>
+            <th>订单名称</th>
+            <th>营业员</th>
+            <th>登录日期</th>
+            <th>要求交期</th>
+            <th>接单工厂简称</th>
+            <th>上月交付准时率</th>
+            <th>接单员</th>
+            <th>接单日期</th>
+            <th>生产交期</th>
+            <th>产品编号</th>
+            <th>产品名称</th>
+            <th>产品类型</th>
+            <th>产品总数(pcs)</th>
+            <th>分单数量(pcs)</th>
+            <th>纸张是否到位</th>
+            <th>产品信息是否完整</th>
+         </tr>
+        </thead>
+        <tbody class="cm002_product_data">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- page panel start -->
+  <div class="navpage">
+    <nav>
+      <ul class="pagination pagination-sm">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- page panel end -->
+</div>
+<!-- Default panel end -->
+
+<script class="cm002_product_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td>{{lineNo}}</td>
+    <td>{{custName}}</td>
+    <td>{{docNo}}</td>
+    <td>{{docName}}</td>
+    <td>{{shopAssistant}}</td>
+    <td>{{loginDate}}</td>
+    <td>{{dateFrom}}</td>
+    <td>{{factoryName}}</td>
+    <td>{{payOntime}}</td>
+    <td>{{clerkName}}</td>
+    <td>{{clerkDate}}</td>
+    <td>{{productionDate}}</td>
+    <td>{{productCode}}</td>
+    <td>{{productName}}</td>
+    <td>{{productType}}</td>
+    <td>{{productNum}}</td>
+    <td>{{num}}</td>
+    <td>{{paper}}</td>
+    <td>{{productMess}}</td>
+  </tr>
+  {{/each}}
+</script>
+

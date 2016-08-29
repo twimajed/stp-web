@@ -1,0 +1,205 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm004 {
+}
+
+.cm004 > .panel > .tablelist {
+  width: 100%;
+}
+
+.cm004 > .navpage {
+  width: 100%;
+}
+
+.cm004 > .panel > .panel-body > .navbar-left > .form-group > .form-selection {
+  min-width: 169px;
+}
+
+/**页面表头查询组块，间距和统一查询下来框宽度统一*/
+.cm004 > .view > .panel > .panel-body > .navbar-form > .form-group {
+  /*margin: auto 15px;*/
+  margin-left:-15px;
+}
+
+
+.cm004 > .view > .panel > .panel-body > .navbar-form > .form-group > .selection-wd01 {
+  min-width: 196px;
+}
+
+.selection-wd01 {
+  min-width: 196px;
+}
+
+.cm004 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm004 > .navpage {
+  width: 100%;
+}
+
+.cm004 > .cm004Panel {
+  width: 100%;
+  min-height: 350px;
+}
+
+.cm004 > .dblView > .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.cm004 > .dblView > .panel > .panel-heading h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.cm004 > .dblView > .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm004 .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.cm004 .panel > .panel-heading h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.cm004 .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm004-heading {
+  padding: 0px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.cm004-mt {
+  float: right;
+  margin-right: 15px;
+  margin-top: -20px;
+  text-align: left;
+}
+
+.cm004 .navbar-form {
+  width: 99%;
+}
+
+.cm004 fieldset {
+  padding: 2px;
+}
+
+.cm004 .form-group {
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 25%;
+  max-width: 260px;
+  margin-right: 10px;
+}
+
+.cm004 legend {
+  margin-bottom: 0px;
+  padding: 2px;
+}
+
+.cm004 .panel-body {
+  padding: 2px;
+  margin: 2px
+}
+
+.cm004 .panel {
+  margin-bottom: 2px;
+}
+
+.cm004 .w5 {
+  width: 70px;
+}
+
+.cm004 .form-group > label {
+  float: left;
+  margin-top: 6px;
+  width: 35%;
+  text-align: right;
+}
+
+.cm004 .form-group > div {
+  width: 65%;
+  padding-left: 6px;
+  float: left;
+}
+
+.cm004 .form-group > div > input,
+.cm004 .form-group > div > select {
+  width: 100%;
+}
+
+.cm004 table tr .t0 {
+  width: 30px;
+  max-width: 30px;
+}
+
+.cm004 table tr .t1 {
+  width: 35px;
+  max-width: 35px;
+}
+
+.cm004 table tr .t2 {
+  width: 50px;
+  max-width: 50px;
+}
+
+.cm004 table tr .t3 {
+  width: 65px;
+  max-width: 65px;
+}
+
+.cm004 table tr .t4 {
+  width: 80px;
+  max-width: 80px;
+}
+
+.cm004 table tr .t5 {
+  width: 95px;
+  max-width: 95px;
+}
+
+.cm004 table tr .t6 {
+  width: 110px;
+  max-width: 110px;
+}
+
+.cm004 table tr .t7 {
+  width: 125px;
+  max-widthwidth: 125px;
+}
+
+.cm004 table tr .t8 {
+  width: 140px;
+  max-width: 140px;
+}
+
+.cm004 table tr .t9 {
+  width: 155px;
+  max-width: 155px;
+}
+
+.cm004 table tr .t10 {
+  width: 165px;
+  max-width: 165px;
+}
+
+.cm004 table tr .t11 {
+  width: 180px;
+  max-width: 180px;
+}

@@ -1,0 +1,114 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.fm002 {
+}
+
+.fm002 .panel > .panel-heading {
+  border-bottom: hidden;
+}
+
+.fm002 > .navpage {
+  width: 100%;
+}
+
+.fm002 > .view > .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.fm002 > .view > .panel > .panel-heading >h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.fm002 > .view > .panel > .panel-heading > .floatRight{
+  float: right;
+  margin-right: 15px;
+}
+
+.fm002 .el-ml-14 {
+  margin-left: 14px;
+}
+.fm002 table tr .t0 {
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+}
+.fm002 table tr .t1 {
+  width: 35px;
+  min-width: 35px;
+  max-width: 35px;
+}
+.fm002 table tr .t2 {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+.fm002 table tr .t3 {
+  width: 65px;
+  min-width: 65px;
+  max-width: 65px;
+}
+.fm002 table tr .t4 {
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+}
+.fm002 table tr .t5 {
+  width: 95px;
+  min-width: 95px;
+  max-width: 95px;
+}
+.fm002 table tr .t6 {
+  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
+}
+.fm002 table tr .t7 {
+  width: 125px;
+  min-width: 125px;
+  max-width: 125px;
+}
+.fm002 table tr .t8 {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+.fm002 table tr .t9 {
+  width: 155px;
+  min-width: 155px;
+  max-width: 155px;
+}
+.fm002 table tr .t10 {
+  width: 165px;
+  min-width: 165px;
+  max-width: 165px;
+}
+.fm002 table tr .t11 {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+.fm002 .form-tight{
+  padding-top:0;
+  padding-bottom:0;
+  margin-bottom:0;
+
+}
+.fm002 .panel-tight{
+  padding-top:0;
+  padding-bottom:8px;
+}
+
+.fm002 >.listView .form-tight .form-control {
+  width: 162px;
+}
+
+.fm002 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}

@@ -1,0 +1,111 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm012 {
+}
+
+.cm012 > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm012 > .panel > .tablelist {
+  width: 100%;
+}
+.cm012 > .navpage{
+  width: 100%;
+}
+
+.cm012  .el-ml-28 {
+  margin-left: 28px;
+}
+
+/**页面表头查询组块，间距和统一查询下来框宽度统一*/
+.cm012 > .view > .panel > .panel-body > .navbar-form>.form-group>.selection-wd01 {
+  min-width: 196px;
+}
+
+.tablelist > .table > thead > tr > .t3 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .t6 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .t7 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .t8 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .t10 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .t11 {
+  min-width: 180px;
+}
+
+.tablelist > .table > thead > tr > .t12 {
+  min-width: 200px;
+}
+
+.cm012 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm012 > .navpage {
+  width: 100%;
+}
+
+.cm012 > .cm012Panel {
+  width: 100%;
+  min-height: 350px;
+}
+
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+.cm012   .panel > .panel-heading > .navbar-form { margin-top: -13px;}
+
+.cm012 .navbar-form .form-group {
+  padding-bottom: 8px;
+}
+
+.cm012 .w5 {
+  width: 70px;
+}
+.cm012 .listView .panel {
+  margin-bottom: 2px;
+}
+.cm012 .panel-body {
+  padding: 2px;
+  margin: 2px
+}
+.cm012 fieldset {
+  padding: 2px;
+}
+
+
+/**选择工厂**/
+.cm012 .table-multiselect {
+  height: 400px;
+  width: 100%;
+}
+.cm012 .table-multiselect .col-left {
+  max-width: 835px;
+  min-width: 835px;
+}
+.cm012 .table-multiselect .col-middle {
+  line-height: 400px;
+  width: 60px;
+}
+.cm012 .table-multiselect .col-right {
+  max-width: 370px;
+  min-width: 370px;
+}

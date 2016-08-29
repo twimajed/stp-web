@@ -1,0 +1,83 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.om002 {
+}
+.om002 .el-ml-27 {
+  margin-left: 27px;
+}
+.om002 .el-ml-30 {
+  margin-left: 30px;
+}
+.om002 .el-ml-54 {
+  margin-left: 54px;
+}
+.om002 .el-ml-27 {
+  margin-left: 27px;
+}
+.om002 .el-ml-40 {
+  margin-left: 40px;
+}
+.om002 .el-ml-28 {
+  margin-left: 28px;
+}
+.om002 .el-ml-43 {
+  margin-left: 43px;
+}
+.om002 .el-ml-14 {
+  margin-left: 14px;
+}
+
+.well{
+  padding: 8px;
+  margin-bottom: auto;
+}
+.om002 .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+.om002 .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+.om002 >.view> .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+.om002 .form-tight{
+  padding-top:0;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+.om002 .panel-tight{
+  padding-top:0;
+  padding-bottom:8px;
+}
+.om002 > .view > .panel > .panel-heading  .floatRight{
+  float: right;
+  margin-right: 15px;
+}
+
+.om002 .label-pl{
+  padding-left:13px;
+}
+.om002 .label-pl-3size{
+  padding-left:43px;
+}
+.om002 .label-pl-2size{
+  padding-left:30px;
+}
+.om002 .top-input-width{
+  width:150px !important;
+}
+.om002 .top-input-long{
+  width:500px !important;
+}
+.om002 .top-input-short{
+  width:50px !important;
+}
+.om002 .top-form-center{
+  text-align:center;
+}

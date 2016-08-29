@@ -1,0 +1,120 @@
+<!-- Default panel contents start -->
+<div class="cm006">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <div class="navbarbtn navbar-form navbar-left">
+        <div class="form-group"><label>可以分单的订单列表:</label></div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">撤单</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">手工分单</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">自动分单</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">修改价格</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">退回营业</button>
+        </div>
+      </div>
+    </div>
+    <!-- Default panel contents end -->
+
+
+    <div class="navbarbtn navbar-form navbar-right">
+      <div class="form-group pull-right">
+        <label>订单状态</label>
+        <select class="form-control">
+          <option>已下发</option>
+          <option>已入库</option>
+          <option>生产中</option>
+          <option>发货中</option>
+          <option>已发货</option>
+          <option>已中止</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="tablelist">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="5" style="text-align: center">订单信息</th>
+            <th colspan="3" style="text-align: center">分单状态</th>
+          </tr>
+
+          <tr>
+            <th>行号</th>
+            <th>客户简称</th>
+            <th>订单编号</th>
+            <th>订单名称</th>
+            <th>营业员</th>
+            <th>登录日期</th>
+            <th>要求交期</th>
+            <th>订单状态</th>
+            <th>分单状态</th>
+            <th>下发时间</th>
+         </tr>
+        </thead>
+        <tbody class="cm006_order_data">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- page panel start -->
+  <div class="navpage">
+    <nav>
+      <ul class="pagination pagination-sm">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- page panel end -->
+</div>
+<!-- Default panel end -->
+
+<script class="cm006_order_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td>{{inc @index}}</td>
+    <td>{{custName}}</td>
+    <td>{{docNo}}</td>
+    <td>{{docName}}</td>
+    <td>{{shopAssistant}}</td>
+    <td>{{loginDate}}</td>
+    <td>{{dateFrom}}</td>
+    <td>{{soStatus}}</td>
+    <td>{{distStatus}}</td>
+    <td>{{soDate}}</td>
+  </tr>
+  {{/each}}
+</script>
+

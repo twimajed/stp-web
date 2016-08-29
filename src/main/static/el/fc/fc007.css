@@ -1,0 +1,32 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.fc007 {
+}
+.fc007  .el-ml-14 {
+  margin-left: 14px;
+}
+.fc007 > .panel> .view> .panel-body {
+  background-color: #f4f4f4;
+}
+.tablelist > .table >thead >tr> .t3{
+  min-width:61px;
+}
+.tablelist > .table>thead >tr> .t6{
+  min-width:100px;
+}
+.tablelist > .table>thead >tr> .t7{
+  min-width:120px;
+}
+/*th{
+  background-color:  #ddd;
+  text-align: center;
+}*/
+
+.fc007 > .navpage{
+  width: 100%;
+}

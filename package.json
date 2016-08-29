@@ -1,0 +1,36 @@
+{
+  "name": "stp-web",
+  "version": "0.0.1",
+  "description": "STP Cloud - Web Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon --watch src/main/services --watch src/main/app.js src/main/app.js",
+    "check": "eslint src/main/static/el/**",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@elpdtgit:stp/stp-web.git"
+  },
+  "keywords": [
+    "adminlte",
+    "bootstrap",
+    "jquery",
+    "handlebars",
+    "moment"
+  ],
+  "author": "neo.pan@elitesland.com",
+  "devDependencies": {
+    "clean-css": "3.4.x",
+    "eslint": "3.0.x",
+    "express": "4.14.x",
+    "express-handlebars": "3.0.x",
+    "fs-extra": "0.30.x",
+    "nodemon": "1.9.x",
+    "uglify-js": "2.7.x"
+  },
+  "directories": {
+    "doc": "doc"
+  }
+}

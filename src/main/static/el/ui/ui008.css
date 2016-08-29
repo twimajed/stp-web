@@ -1,0 +1,11 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.ui008 .table-example div.box-inner,
+.ui008 .table-example div.box-inner div.antiscroll-inner {
+  height: 250px;
+}

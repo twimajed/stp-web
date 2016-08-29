@@ -1,0 +1,462 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+/*---------------------+
+|      表格分页样式      |
++=====================*/
+
+table>thead>tr {
+  background-color: #e2e4e9 !important;
+}
+table>thead>tr>th.sorting {
+  padding-right: 25px !important;
+}
+table>thead>tr>th, table>thead>tr>th.sorting {
+  text-align: center;
+}
+table>thead .sorting {
+  cursor: pointer !important;
+  position: relative;
+}
+table>thead .sorting:after {
+  content: "\e150";
+}
+table>thead .sorting.asc:after {
+  content: "\e155";
+}
+table>thead .sorting.desc:after {
+  content: "\e156";
+}
+table>thead .sorting:after,
+table>thead .sorting.asc:after,
+table>thead .sorting.desc:after {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: 'Glyphicons Halflings';
+  opacity: 0.5;
+}
+table.table {
+  margin: 0px;
+  word-break: break-all;
+}
+.paging-wrap {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  margin: 15px 0;
+  padding: 0 20px;
+}
+.paging-wrap .left-records {
+  float: left;
+  width: 130px;
+  height: 34px;
+}
+.paging-wrap .left-records select.records {
+  height: 34px;
+  width: 70px;
+  padding: 6px 12px;
+  margin-left: 3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+.paging-wrap .right-pages {
+  width: auto;
+  float: right;
+  height: 34px;
+  text-align: right;
+}
+.paging-wrap .right-pages .paging {
+  display: inline;
+}
+.paging-wrap .right-pages .paging .pagination {
+  margin-top: 0px;
+}
+.paging-wrap .right-pages .paging ul li span {
+  width: 42px;
+  text-align: center;
+  cursor: pointer;
+}
+.paging-wrap .right-pages .paging ul li.previous span,
+.paging-wrap .right-pages .paging ul li.next span {
+  width: 70px;
+}
+.paging-wrap .right-pages .total {
+  position: relative;
+  float: right;
+  margin-left: 5px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #777;
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+.paging-wrap .right-pages .chosePage {
+  position: relative;
+  float: right;
+  height: 34px;
+  width: 55px;
+  padding: 6px 8px;
+  padding-right: 0px;
+  margin-left: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+  color: #555;
+}
+.paging-wrap .right-pages .forward {
+  position: relative;
+  float: right;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/*---------------------+
+|     表格行编辑样式     |
++=====================*/
+
+input.form-control.error {
+  background-color: #fff0f0;
+  border-color: #dbb1b1;
+  color: #d95c5c;
+  box-shadow: none;
+}
+select.form-control.error {
+  background-color: #fff0f0;
+  border-color: #dbb1b1;
+  color: #d95c5c;
+  box-shadow: none;
+}
+table tr td .edit {
+  display: none !important;
+}
+table tr td span {
+  display: block !important;
+}
+table tr.edit td .edit {
+  display: block !important;
+}
+table tr.edit td span {
+  display: none !important;
+}
+table tr.edit > td.edit {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  vertical-align: middle;
+}
+
+/*---------------------+
+|   fieldset标签样式    |
++=====================*/
+
+fieldset {
+  border: 1px solid silver;
+  padding: 10px;
+}
+legend {
+  width: auto;
+  border-bottom: 0px;
+}
+
+/*---------------------+
+|     表格滚动条样式     |
++=====================*/
+
+div.box-head {
+  overflow: hidden;
+}
+div.box-inner,
+div.box-inner div.antiscroll-inner {
+  text-align: left;
+  /*一页显示10行数据默认高度*/
+  height: 380px;
+}
+
+/*---------------------+
+|    表格-列宽度样式     |
++=====================*/
+
+table tr .t0 {
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+}
+table tr .t1 {
+  width: 35px;
+  min-width: 35px;
+  max-width: 35px;
+}
+table tr .t2 {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+table tr .t3 {
+  width: 65px;
+  min-width: 65px;
+  max-width: 65px;
+}
+table tr .t4 {
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+}
+table tr .t5 {
+  width: 95px;
+  min-width: 95px;
+  max-width: 95px;
+}
+table tr .t6 {
+  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
+}
+table tr .t7 {
+  width: 125px;
+  min-width: 125px;
+  max-width: 125px;
+}
+table tr .t8 {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+table tr .t9 {
+  width: 155px;
+  min-width: 155px;
+  max-width: 155px;
+}
+table tr .t10 {
+  width: 165px;
+  min-width: 165px;
+  max-width: 165px;
+}
+table tr .t11 {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+/*---------------------+
+|     表格选择器样式     |
++=====================*/
+
+.table-multiselect {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+.table-multiselect .box-head {
+  display: inline-block;
+}
+.table-multiselect .col-left,
+.table-multiselect .col-right,
+.table-multiselect .col-middle {
+  display: inline-block;
+  font-size: 0;
+}
+.table-multiselect .col-left *,
+.table-multiselect .col-right * {
+  font-size: 14px;
+}
+.table-multiselect .col-middle {
+  height: 100%;
+  line-height: 420px;
+  vertical-align: top;
+  width: 100px;
+  text-align: center;
+}
+.table-multiselect .box-head,
+.table-multiselect .box-wrap {
+  border: 1px solid #ddd;
+}
+.table-multiselect .box-head {
+  border-bottom: 0;
+}
+.table-multiselect .box-wrap {
+  border-top: 0;
+}
+
+/*---------------------+
+|    Suggestion样式     |
++=====================*/
+
+span.suggestion {
+  position: absolute;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  border: 1px solid #d2d6de;
+  max-height: 200px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+span.suggestion ul,
+span.suggestion ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+span.suggestion ul li {
+  cursor: pointer;
+  padding: 6px 12px;
+  display: list-item;
+}
+span.suggestion ul li:hover {
+  background-color: #3c8dbc;
+  color: white;
+}
+span.suggestion ul li.selected {
+  background-color: #ddd;
+  color: #444;
+}
+
+/*---------------------+
+|        公共样式       |
++=====================*/
+
+.el-left {
+  text-align: left;
+}
+.el-right {
+  text-align: right;
+}
+.el-center {
+  text-align: center;
+}
+/*外边距设置*/
+.el-margin-5{
+  margin: 5px !important;
+}
+.el-margin-10{
+  margin: 10px !important;
+}
+.el-margin-15{
+  margin: 15px !important;
+}
+.el-margin-20{
+  margin: 20px !important;
+}
+.el-margin-25{
+  margin: 25px !important;
+}
+.el-margin-30{
+  margin: 30px !important;
+}
+/*距上外边距设置*/
+.el-mt-5{
+  margin-top: 5px !important;
+}
+.el-mt-10{
+  margin-top: 10px !important;
+}
+.el-mt-15{
+  margin-top: 15px !important;
+}
+.el-mt-20{
+  margin-top: 20px !important;
+}
+.el-mt-25{
+  margin-top: 25px !important;
+}
+.el-mt-30{
+  margin-top: 30px !important;
+}
+/*距下外边距设置*/
+.el-mb-5{
+  margin-bottom: 5px !important;
+}
+.el-mb-10{
+  margin-bottom: 10px !important;
+}
+.el-mb-15{
+  margin-bottom: 15px !important;
+}
+.el-mb-20{
+  margin-bottom: 20px !important;
+}
+.el-mb-25{
+  margin-bottom: 25px !important;
+}
+.el-mb-30{
+  margin-bottom: 30px !important;
+}
+/*距左外边距设置*/
+.el-ml-5{
+  margin-left: 5px !important;
+}
+.el-ml-10{
+  margin-left: 10px !important;
+}
+.el-ml-15{
+  margin-left: 15px !important;
+}
+.el-ml-20{
+  margin-left: 20px !important;
+}
+.el-ml-25{
+  margin-left: 25px !important;
+}
+.el-ml-30{
+  margin-left: 30px !important;
+}
+/*距右外边距设置*/
+.el-mr-5{
+  margin-right: 5px !important;
+}
+.el-mr-10{
+  margin-right: 10px !important;
+}
+.el-mr-15{
+  margin-right: 15px !important;
+}
+.el-mr-20{
+  margin-right: 20px !important;
+}
+.el-mr-25{
+  margin-right: 25px !important;
+}
+.el-mr-30{
+  margin-right: 30px !important;
+}
+
+/*---------------------+
+|      公共控件样式      |
++=====================*/
+
+/*日期控件*/
+.el-dtp{
+  max-width: 158px;
+}
+/*下拉选择*/
+.el-select{
+  min-width: 196px;
+}
+/*---------------------+
+|  检索按钮位置样式    |
++=====================*/
+.el-search{
+  position: absolute;
+  top:0;
+  right:0;
+}
+.panel-body .navbar-form{
+  position: relative;
+}

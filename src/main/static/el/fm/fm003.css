@@ -1,0 +1,63 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.fm003 {
+}
+
+.fm003 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.fm003 .panel > .panel-heading {
+  border-bottom: hidden;
+}
+
+.fm003 > .navpage {
+  width: 100%;
+}
+
+.fm003 > .view > .panel > .panel-heading {
+  height: 50px;
+  line-height: 50px;
+}
+
+.fm003 > .view > .panel > .panel-heading >h1 {
+  float: left;
+  font-size: 20px;
+}
+
+.fm003 > .view > .panel > .panel-heading > .floatRight{
+  float: right;
+  margin-right: 15px;
+}
+
+.el-dtp{
+  max-width: 158px;
+}
+
+.fm003 .el-ml-14 {
+  margin-left: 14px;
+}
+.fm003 .form-tight{
+  padding-top:0;
+  padding-bottom:0;
+  margin-bottom:0;
+
+}
+.fm003 .panel-tight{
+  padding-top:0;
+  padding-bottom:8px;
+}
+
+/*
+.fm003 >.listView .form-tight .form-control {
+  width: 150px;
+}*/
+
+.fm003 > .ticketView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}

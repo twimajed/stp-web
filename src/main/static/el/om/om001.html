@@ -1,0 +1,2043 @@
+<!-- Default panel contents start -->
+<div class="om001">
+  <div class="view listView">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body panel-tight">
+
+        <!--检索条件隐藏、显示-->
+        <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+                data-original-title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+        <!--检索条件隐藏、显示  end -->
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label for="soName" class="el-ml-28">订单名称</label>
+            <input type="text" style="width:140px" class="form-control" id="soName">
+          </div>
+          <div class="form-group el-mr-15">
+            <label for="custName" class="el-ml-28">客户名称</label>
+            <input type="text" style="width:120px" class="form-control" id="custName">
+          </div>
+          <div class="form-group el-mr-15">
+            <label for="prodName" class="el-ml-28">产品名称</label>
+            <input type="text" style="width:120px" class="form-control" id="prodName">
+          </div>
+          <div class="form-group el-mr-10">
+            <label >信控审核状态</label>
+            <select style="width: 120px" class="form-control form-selection ">
+              <option>全部</option>
+              <option>已确认</option>
+              <option>未确认</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-15">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+          </div>
+        </div>
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+
+          <div class="form-group el-mr-15">
+            <label>委印确认状态</label>
+            <select style="width:140px" class="form-control form-selection ">
+              <option>全部</option>
+              <option>已确认</option>
+              <option>未确认</option>
+            </select>
+          </div>
+
+          <div class="form-group el-mr-15">
+            <label>文件确认状态</label>
+            <select class="form-control form-selection " style="width:120px">
+              <option>全部</option>
+              <option>已确认</option>
+              <option>未确认</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-15">
+            <label>合同确认状态</label>
+            <select class="form-control form-selection" style="width:120px" >
+              <option>全部</option>
+              <option>已确认</option>
+              <option>未确认</option>
+            </select>
+          </div>
+
+          <div class="form-group el-mr-15">
+            <label>纸张确认状态</label>
+            <select class="form-control form-selection" style="width:120px">
+              <option>全部</option>
+              <option>已确认</option>
+              <option>未确认</option>
+            </select>
+          </div>
+        </div>
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+          <div class="form-group date el-mr-15">
+            <label class="el-ml-28">订单日期</label>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" style="width:99px" class="form-control pull-right el-dtp cm004-date-from">
+            </div>
+            <label>-</label>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" style="width:99px" class="form-control pull-right el-dtp cm004-date-to">
+            </div>
+          </div>
+          <div class="form-group el-mr-28">
+            <label>订单状态</label>
+            <input type="checkbox" name="check1">新建
+            <input type="checkbox" name="check2">订单生效
+            <input type="checkbox" name="check3">暂停分单
+            <input type="checkbox" name="check3">生产中
+            <input type="checkbox" name="check2">已入库
+            <input type="checkbox" name="check3">已发货
+            <input type="checkbox" name="check3">发货完毕
+            <input type="checkbox" name="check3">已完成
+          </div>
+        </div>
+      </div>
+      <!--<div class="navbarbtn navbar-form">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="printView">查看</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="gypsView">工艺评审</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="transView">发货通知单</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" data-view-value="stockView">库存查询</button>
+        </div>
+      </div>-->
+      <div class="box-head om001-table-listView">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th class="t1" ></th>
+            <th class="t2" >行号</th>
+            <th class="t5" >订单状态</th>
+            <th class="t6">订单编号</th>
+            <th class="t5">订单日期</th>
+            <th class="t6">订单交货日期</th>
+            <th class="t5" >业务员</th>
+            <th class="t5" >部门名称</th>
+            <th class="t5" >客户编码</th>
+            <th class="t5" >客户名称</th>
+            <th class="t5" >订单总金额</th>
+            <th class="t6">产品名称</th>
+            <th class="t5">产品类型</th>
+            <th class="t5">数量</th>
+            <th class="t5">金额</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap om001-table-listView">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="om001_listView">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paging el-hide om001-paging-listView"></div>
+  </div>
+  <div class="view printView ">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-primary floatRight" data-view-value="listView">返回</button>
+        <!--<button type="button" class="btn btn-primary floatRight" data-view-value="listView">提交</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="listView">信控通过</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="">委任单确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="payView">合同确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="statementView">文件确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="paperConfView">纸张确认</button>
+        <button type="button" class="btn btn-primary floatRight" data-view-value="editOrderView">订单变更</button>-->
+        <button type="button" class="btn btn-primary floatRight" data-view-value="payDetail">价格明细</button>
+      </div>
+      <fieldset>
+        <legend style="margin-bottom:10px;">基础信息</legend>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">订单编号</label>
+            <input type="text" class="form-control" readonly="readonly" value="th999" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:42px;">客户编号</label>
+            <input type="text" class="form-control" readonly="readonly" id="cityName" value="cx123" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">客户名称</label>
+            <input type="text" class="form-control" readonly="readonly" value="百度" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label >交货时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-12" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15">
+            <label style="padding-left:42px;">业务员</label>
+            <input type="text" class="form-control" readonly="readonly" value="王二" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15">
+            <label style="padding-left:42px;">业务部门</label>
+            <input type="text" class="form-control" readonly="readonly" value="管理部门" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:28px;">登记时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-16" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label >生效时间</label>
+            <input type="text" class="form-control" readonly="readonly" value="2016-08-18" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+
+          <div class="form-group el-mr-15">
+            <label style="padding-left:28px;">付款方式</label>
+            <input type="text" class="form-control" readonly="readonly" value="信用卡支付" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:42px;">付款条款</label>
+            <input type="text" class="form-control" readonly="readonly" value="先验货后付款" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:14px;">对应报价单</label>
+            <input type="text" class="form-control" readonly="readonly" value="2000" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label>工艺评审确认</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label style="padding-left:14px;">信控审核状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已审核" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>合同确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="未确认" style="width:150px;">
+          </div>
+        </div>
+        <div class="navbar-form navbar-left" >
+          <div class="form-group el-mr-15 ">
+            <label>文件确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>委印单确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="已确认" style="width:150px;">
+          </div>
+          <div class="form-group el-mr-15 ">
+            <label>纸张确认状态</label>
+            <input type="text" class="form-control" readonly="readonly" value="未确认" style="width:150px;">
+          </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="navbar-form navbar-left">
+          <div class="form-group el-mr-15 ">
+            <label class="form-group el-ml-43 ">委印单</label>
+            <button type="submit" class="btn btn-primary search-btn">上传</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>产品信息</legend>
+        <div class="tablelist table-responsive pre-scrollable">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t2">行号</th>
+              <th class="t5">产品名称</th>
+              <th class="t5">装订方式</th>
+              <th class="t5">成品宽度</th>
+              <th class="t5">成品高度</th>
+              <th class="t5">合计数量</th>
+              <th class="t5">订单数量</th>
+              <th class="t5">赠送数量</th>
+              <th class="t5">样书数量</th>
+            </tr>
+            </thead>
+            <tbody class="om001_product">
+            </tbody>
+          </table>
+        </div>
+        <div class="modal fade" id="om001-link-prodview-modal" tabindex="-1" role="dialog"
+             aria-labelledby="om001-link-prodview-ModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="om001-link-prodview-ModalLabel">
+                  产品查看
+                </h4>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>套装信息</legend>
+        <div class="tablelist table-responsive pre-scrollable">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t2">行号</th>
+              <th class="t5">产品名称</th>
+              <th class="t5">合计数量</th>
+              <th class="t5">订单数量</th>
+              <th class="t5">赠送数量</th>
+              <th class="t5">样书数量</th>
+            </tr>
+            </thead>
+            <tbody class="om001_products">
+            </tbody>
+          </table>
+        </div>
+        <div class="modal fade" id="om001-link-suitview-modal" tabindex="-1" role="dialog"
+             aria-labelledby="om001-link-suitview-ModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="om001-link-suitview-ModalLabel">
+                  套装名称：小学教材合集
+                </h4>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+      </fieldset>
+      <div class="page-container el-mt-15 el-ml-15 el-mr-15">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active">
+            <a href="#proDemd" data-toggle="tab">
+              印前要求
+            </a>
+          </li>
+          <li>
+            <a href="#packDemd" data-toggle="tab">
+              包装要求
+            </a>
+          </li>
+          <li>
+            <a href="#transDemd" data-toggle="tab">
+              物流要求
+            </a>
+          </li>
+        </ul>
+
+        <!--proDemd start-->
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="proDemd">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">印前项目名称</th>
+                  <th class="t6">数量</th>
+                  <th class="t6">单位</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om001_proDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--proDemd tab end-->
+
+          <!--packDemd start-->
+          <div class="tab-pane fade" id="packDemd">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">包装项目名称</th>
+                  <th class="t6">数量</th>
+                  <th class="t6">单位</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om001_packDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--packDemd end-->
+
+          <!--transDemd start-->
+          <div class="tab-pane fade" id="transDemd">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t2">行号</th>
+                  <th class="t6">产品名称</th>
+                  <th class="t6">物流项目名称</th>
+                  <th class="t6">发货日期</th>
+                  <th class="t6">发货数量</th>
+                  <th class="t6">备注</th>
+                </tr>
+                </thead>
+                <tbody class="om001_transDemd">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--transDemd end-->
+
+      </div>
+    </div>
+  </div>
+
+  <!--工艺评审start-->
+  <div class="view gypsView el-hide" id="om001-gypsView-div">
+    <div class="navbarbtn navbar-form el-mt-5">
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="om001-2-btn-finish">评审完成</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="om001-2-btn-save">保存</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-warning btn-primary" id="om001-2-btn-back">返回</button>
+      </div>
+    </div>
+    <fieldset>
+      <legend>产品信息</legend>
+      <div class="tablelist  table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <!-- <th class="t2"></th>-->
+            <th class="t11">产品名称</th>
+            <th class="t11">操作</th>
+          </tr>
+          </thead>
+          <tbody class="om001-2-prod-tmpl">
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t11 el-center">小学语文一年级</td>
+            <td class="t11 el-center">
+              <button type="button" class="btn btn-info btn-xs ops look"
+                      data-toggle="modal" data-target="#om001-2-btn-prod-look-modal">查看
+              </button>
+              <button type="button" class="btn btn-info btn-xs ops">开始评审</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="t11 el-center">小学数学一年级</td>
+            <td class="t11 el-center">
+              <button type="button" class="btn btn-info btn-xs ops look"
+                      data-toggle="modal" data-target="#om001-2-btn-prod-look-modal">查看
+              </button>
+              <button type="button" class="btn btn-info btn-xs ops">开始评审</button>
+            </td>
+          </tr>
+          <div class="modal fade" id="om001-2-btn-prod-look-modal" tabindex="-1" role="dialog"
+               aria-labelledby="om001-2-btn-prod-look-ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"
+                          aria-hidden="true">×
+                  </button>
+                  <h4 class="modal-title" id="om001-2-btn-prod-look-ModalLabel">
+                    产品查看
+                  </h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default"
+                          data-dismiss="modal">关闭
+                  </button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          </tbody>
+        </table>
+        <row><h4>套装名称：小学教材合集</h4></row>
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <!-- <th class="t2"></th>-->
+            <th class="t11">产品名称</th>
+            <th class="t11">单套装中数量</th>
+          </tr>
+          </thead>
+          <tbody class="om001-2-prodTeam-tmpl">
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t1 el-center">小学语文一年级</td>
+            <td class="t11 el-center">1</td>
+          </tr>
+          <tr>
+            <td class="t11 el-center">小学数学一年级</td>
+            <td class="t11 el-center">1</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+    <div class="page-container">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" href="#om001-2-fade-1" aria-expanded="true">制版、备纸、印刷</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-2" aria-expanded="false">表面处理</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-3" aria-expanded="false">书芯加工</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-4" aria-expanded="false">装订</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-5" aria-expanded="false">手工</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-6" aria-expanded="false">包装</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#om001-2-fade-7" aria-expanded="false">物流</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active fc" id="om001-2-fade-1">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade1-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade1-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade1-delete">删除</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade1-select"
+                        data-toggle="modal" data-target="#om001-2-btn-fade1-select-modal">选择用纸方案
+                </button>
+                <div class="modal fade" id="om001-2-btn-fade1-select-modal" tabindex="-1" role="dialog"
+                     aria-labelledby="om001-2-btn-fade1-select-ModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">×
+                        </button>
+                        <h4 class="modal-title" id="om001-2-btn-fade1-select-ModalLabel">
+                          用纸方案
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                          确认
+                        </button>
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">取消
+                        </button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t4">部件名称</th>
+                <th class="t4">是否装订</th>
+                <th class="t4">展开高度</th>
+                <th class="t4">展开宽度</th>
+                <th class="t4">帖数</th>
+                <th class="t4">P/帖</th>
+                <th class="t4">拼数</th>
+                <th class="t4">拼式</th>
+                <th class="t6">原色（正）</th>
+                <th class="t6">原色（反）</th>
+                <th class="t6">专色（正）</th>
+                <th class="t6">专色（反）</th>
+                <th class="t4">专色号</th>
+                <th class="t8">单本墨量（g）</th>
+                <th class="t4">联机上光</th>
+                <th class="t4">上光面数</th>
+                <th class="t4">上光版数</th>
+                <th class="t4">印刷方式</th>
+                <th class="t4">机型</th>
+                <th class="t4">开纸方式</th>
+                <th class="t8">开纸尺寸高</th>
+                <th class="t8">开纸尺寸宽</th>
+                <th class="t8">整料尺寸高</th>
+                <th class="t8">整料尺寸宽</th>
+                <th class="t4">版型</th>
+                <th class="t4">总版</th>
+                <th class="t4">印版套数</th>
+                <th class="t4">网型</th>
+                <th class="t4">线数</th>
+                <th class="t4">料源</th>
+                <th class="t4">纸张料号</th>
+                <th class="t4">纸张规格</th>
+                <th class="t4">纸张克重</th>
+                <th class="t4">纸张类型</th>
+                <th class="t4">纸张品牌</th>
+                <th class="t4">印加比例</th>
+                <th class="t4">装加比例</th>
+                <th class="t4">加工难度</th>
+                <th style="width: 220px;  min-width: 220px;">工艺路线</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-1-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">封面</td>
+                <td class="t4 el-center">是</td>
+                <td class="t4 el-center">285</td>
+                <td class="t4 el-center">570</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">16</td>
+                <td class="t4 el-center">4</td>
+                <td class="t4 el-center">头/脚</td>
+                <td class="t6 el-center">4</td>
+                <td class="t6 el-center">0</td>
+                <td class="t6 el-center">1</td>
+                <td class="t6 el-center">0</td>
+                <td class="t4 el-center">PT186C</td>
+                <td class="t8 el-center">0.2</td>
+                <td class="t4 el-center">水性亚油</td>
+                <td class="t4 el-center">反</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">平张四色</td>
+                <td class="t4 el-center">对开</td>
+                <td class="t8 el-center">880</td>
+                <td class="t8 el-center">595</td>
+                <td class="t8 el-center">889</td>
+                <td class="t8 el-center">1194</td>
+                <td class="t4 el-center">本公司</td>
+                <td class="t4 el-center">CTP</td>
+                <td class="t4 el-center">5</td>
+                <td class="t4 el-center">FM</td>
+                <td class="t4 el-center">200</td>
+                <td class="t4 el-center">厂料</td>
+                <td class="t4 el-center">2019485</td>
+                <td class="t4 el-center">889*1194</td>
+                <td class="t4 el-center">157</td>
+                <td class="t4 el-center">有光铜</td>
+                <td class="t4 el-center">太空梭</td>
+                <td class="t4 el-center">2%</td>
+                <td class="t4 el-center">3%</td>
+                <td class="t4 el-center">A</td>
+                <td style="width: 220px;  min-width: 220px;" class=" el-center">印刷→覆膜→烫印→模切→制壳</td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">2</td>
+                <td class="t4 el-center">封面</td>
+                <td class="t4 el-center">是</td>
+                <td class="t4 el-center">285</td>
+                <td class="t4 el-center">570</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">16</td>
+                <td class="t4 el-center">4</td>
+                <td class="t4 el-center">头/脚</td>
+                <td class="t6 el-center">4</td>
+                <td class="t6 el-center">0</td>
+                <td class="t6 el-center">1</td>
+                <td class="t6 el-center">0</td>
+                <td class="t4 el-center">PT186C</td>
+                <td class="t8 el-center">0.2</td>
+                <td class="t4 el-center">水性亚油</td>
+                <td class="t4 el-center">反</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">平张四色</td>
+                <td class="t4 el-center">对开</td>
+                <td class="t8 el-center">880</td>
+                <td class="t8 el-center">595</td>
+                <td class="t8 el-center">889</td>
+                <td class="t8 el-center">1194</td>
+                <td class="t4 el-center">本公司</td>
+                <td class="t4 el-center">CTP</td>
+                <td class="t4 el-center">5</td>
+                <td class="t4 el-center">FM</td>
+                <td class="t4 el-center">200</td>
+                <td class="t4 el-center">厂料</td>
+                <td class="t4 el-center">2019485</td>
+                <td class="t4 el-center">889*1194</td>
+                <td class="t4 el-center">157</td>
+                <td class="t4 el-center">有光铜</td>
+                <td class="t4 el-center">太空梭</td>
+                <td class="t4 el-center">2%</td>
+                <td class="t4 el-center">3%</td>
+                <td class="t4 el-center">A</td>
+                <td style="width: 220px;  min-width: 220px;" class=" el-center">印刷→覆膜→烫印→模切→制壳</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-2">
+
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade2-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade2-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade2-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t4">部件名称</th>
+                <th class="t4">帖数</th>
+                <th class="t4">上机规格</th>
+                <th class="t4">拼数</th>
+                <th class="t4">加工面数</th>
+                <th class="t6">表面处理工艺</th>
+                <th class="t4">加工面积</th>
+                <th class="t4">模具版数</th>
+                <th class="t4">模具费用</th>
+                <th class="t4">加工数量</th>
+                <th class="t4">单位</th>
+                <th class="t4">料源</th>
+                <th class="t4">材料编号</th>
+                <th class="t4">材料名称</th>
+                <th class="t8">材料规格/型号</th>
+                <th class="t6">单本用料数量</th>
+                <th class="t4">加工难度</th>
+                <th class="t6">加工工艺说明</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-2-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">封面</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">对开</td>
+                <td class="t4 el-center">4</td>
+                <td class="t4 el-center">正/反</td>
+                <td class="t6 el-center">覆光膜</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">12345</td>
+                <td class="t4 el-center">即涂光模</td>
+                <td class="t8 el-center">BOPP光膜880</td>
+                <td class="t6 el-center">0</td>
+                <td class="t4 el-center">A</td>
+                <td class="t6 el-center"></td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">2</td>
+                <td class="t4 el-center">封面</td>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">对开</td>
+                <td class="t4 el-center">4</td>
+                <td class="t4 el-center">正/反</td>
+                <td class="t6 el-center">覆光膜</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">12345</td>
+                <td class="t4 el-center">即涂光模</td>
+                <td class="t8 el-center">BOPP光膜880</td>
+                <td class="t6 el-center">0</td>
+                <td class="t4 el-center">A</td>
+                <td class="t6 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-3">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade3-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade3-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade3-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t8">部件名称</th>
+                <th class="t8">加工工序</th>
+                <th class="t8">加工开数</th>
+                <th class="t4">帖数</th>
+                <th class="t8">加工方式</th>
+                <th class="t8">加工后P/帖</th>
+                <th class="t4">加工数量</th>
+                <th class="t11">加工说明</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-3-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t8 el-center">内文</td>
+                <td class="t8 el-center">折页</td>
+                <td class="t8 el-center">八开</td>
+                <td class="t4 el-center">8</td>
+                <td class="t8 el-center">垂直4折</td>
+                <td class="t8 el-center">32</td>
+                <td class="t4 el-center"></td>
+                <td class="t11 el-center"></td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t8 el-center">内文</td>
+                <td class="t8 el-center">折页</td>
+                <td class="t8 el-center">八开</td>
+                <td class="t4 el-center">8</td>
+                <td class="t8 el-center">垂直4折</td>
+                <td class="t8 el-center">32</td>
+                <td class="t4 el-center"></td>
+                <td class="t11 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-4">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade4-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade4-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade4-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th colspan="7"></th>
+                <th colspan="5">材料1</th>
+                <th colspan="5">材料2</th>
+              </tr>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t4">装订工艺</th>
+                <th class="t4">加工数量</th>
+                <th class="t4">单位</th>
+                <th class="t4">书芯厚度</th>
+                <th class="t4">勒口</th>
+                <th class="t4">参考样</th>
+                <th class="t4">料号</th>
+                <th class="t4">物料名称</th>
+                <th class="t4">规格</th>
+                <th class="t4">材料用量</th>
+                <th class="t4">料源</th>
+                <th class="t4">料号</th>
+                <th class="t4">物料名称</th>
+                <th class="t4">规格</th>
+                <th class="t4">材料用量</th>
+                <th class="t4">料源</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-4-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">无线胶订</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">167</td>
+                <td class="t4 el-center">200</td>
+                <td class="t4 el-center">样书</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">本厂</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">2</td>
+                <td class="t4 el-center">无线胶订</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">167</td>
+                <td class="t4 el-center">200</td>
+                <td class="t4 el-center">样书</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center">本厂</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-5">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade5-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade5-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade5-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t10">手工加工</th>
+                <th class="t10">加工数量</th>
+                <th class="t10">加工工艺说明</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-5-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t10 el-center">夹单页</td>
+                <td class="t10 el-center">1000</td>
+                <td class="t10 el-center"></td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">2</td>
+                <td class="t10 el-center">夹单页</td>
+                <td class="t10 el-center">1000</td>
+                <td class="t10 el-center"></td>
+              </tr>
+              <tr>
+                <td class="t4 el-center">3</td>
+                <td class="t10 el-center">夹单页</td>
+                <td class="t10 el-center">1000</td>
+                <td class="t10 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-6">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade6-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade6-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade6-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t4">部件名称</th>
+                <th class="t4">工艺/设备</th>
+                <th class="t4">加工数量</th>
+                <th class="t4">单件数量</th>
+                <th class="t4">包装方式</th>
+                <th class="t4">打带要求</th>
+                <th class="t4">料号</th>
+                <th class="t10">包装材料</th>
+                <th class="t4">材料规格</th>
+                <th class="t4">用量</th>
+                <th class="t4">料源</th>
+                <th class="t4">工艺说明</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-6-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">西游记</td>
+                <td class="t4 el-center">打包</td>
+                <td class="t4 el-center">1000</td>
+                <td class="t4 el-center">12本/包</td>
+                <td class="t4 el-center">5/5/2调头</td>
+                <td class="t4 el-center">十字带</td>
+                <td class="t4 el-center">专用带</td>
+                <td class="t10 el-center">人教专用/外研专用</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="om001-2-fade-7">
+          <div class="tablelist table-responsive">
+            <div class="navbarbtn navbar-form el-mt-5">
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade7-add">添加</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade7-update">修改</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info btn-sm" id="om001-2-btn-fade7-delete">删除</button>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t4">行号</th>
+                <th class="t4">部件名称</th>
+                <th class="t4">单本重量</th>
+                <th class="t4">每件重量</th>
+                <th class="t4">件数</th>
+                <th class="t4">总重量</th>
+              </tr>
+              </thead>
+              <tbody class="om001-2-fade-7-tmpl">
+              <tr>
+                <td class="t4 el-center">1</td>
+                <td class="t4 el-center">西游记</td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+                <td class="t4 el-center"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--工艺评审 end-->
+
+  <!-- 订单变更 start-->
+  <script class="hbs" id="editOrder" type="text/x-handlebars-template">
+    <div class="navbar-form">
+        <button type="submit" class="btn btn-primary">添加</button>
+        <button type="submit" class="btn btn-primary">编辑</button>
+        <button type="submit" class="btn btn-primary rbtn">移除</button>
+    </div>
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t2"></th>
+          <th class="t6">变更日期</th>
+          <th class="t6">变更人</th>
+          <th class="t6">变更金额</th>
+          <th class="t6">变更说明</th>
+        </tr>
+        </thead>
+        <tbody class="partMessage_data">
+        <tr>
+        <td class="t2"><input type="checkbox"></td>
+        <td class="t6">2016-12-09</td>
+        <td class="t6">王强</td>
+        <td class="t6">1200</td>
+        <td class="t6">变更</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+  <!--订单变更 end  -->
+  <!-- 价格明细 start -->
+  <script class="hbs" id="payDetail" type="text/x-handlebars-template">
+    <div class="well">
+      币种<input type="text" value="RMB" disabled="disabled" style="width: 40px">
+      平台价格<input type="text" value="18000" disabled="disabled" style="width: 80px ">
+      报价单价格<input type="text" value="17000" disabled="disabled" style="width: 80px">
+    </div>
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseOne"><i class="glyphicon glyphicon-chevron-up"></i>
+              纸张费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>纸张编码</th>
+                  <th>纸张名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="paperCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseTwo"> <i class="glyphicon glyphicon-chevron-down"></i>
+              辅料费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>辅料编码</th>
+                  <th>辅料名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="accessCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseThree"> <i class="glyphicon glyphicon-chevron-down"></i>
+              印刷费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseThree" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="printCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseFour"> <i class="glyphicon glyphicon-chevron-down"></i>
+              表面处理费用
+            </a>
+            <label style="float:right">2100</label>
+          </div>
+        </div>
+        <div id="collapseFour" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>部件</th>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="dealCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseFive"> <i class="glyphicon glyphicon-chevron-down"></i>
+              装订费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseFive" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="bindCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseSix"> <i class="glyphicon glyphicon-chevron-down"></i>
+              手工费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseSix" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>工序编码</th>
+                  <th>工序名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="handCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseSeven"> <i class="glyphicon glyphicon-chevron-down"></i>
+              印前费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseSeven" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="printlnCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseEight"> <i class="glyphicon glyphicon-chevron-down"></i>
+              包装费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseEight" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="packCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <div class="well">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#accordion2" href="#collapseNine"> <i class="glyphicon glyphicon-chevron-down"></i>
+              物流费用
+            </a>
+            <label style="float:right">1000</label>
+          </div>
+        </div>
+        <div id="collapseNine" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>项目编码</th>
+                  <th>项目名称</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>价格</th>
+                </tr>
+                </thead>
+                <tbody class="transCost">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- 价格明细 end -->
+  <!-- page panel end -->
+
+  <script class="hbs hbs-tables" data-view-id="listView" type="text/x-handlebars-template" id="om001-listView">
+    {{#each this}}
+    <tr>
+      <td class="t1 el-center"><input type="radio" name="om001_table1"></td>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-left">{{lineStatus}}</td>
+      <td class="t6 el-center"><a href="####" data-param="{{soNo}}">{{soNo}}</a></td>
+      <td class="t5 el-right">{{date}}</td>
+      <td class="t6 el-center">{{deliDate}}</td>
+      <td class="t5 el-left">{{agentName}}</td>
+      <td class="t5 el-left">{{docName}}</td>
+      <td class="t5 el-center">{{custCode}}</td>
+      <td class="t5 el-left">{{custName}}</td>
+      <td class="t5 el-right">{{sum}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t5 el-left">{{prodType}}</td>
+      <td class="t5 el-right">{{num}}</td>
+      <td class="t5 el-right">{{money}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="printView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-left"><a href="####" data-toggle="modal" data-target="#om001-link-prodview-modal">{{prodName}}</a></td>
+      <td class="t5 el-left">{{method}}</td>
+      <td class="t5 el-right">{{width}}</td>
+      <td class="t5 el-right">{{heigh}}</td>
+      <td class="t5 el-right">{{proNum}}</td>
+      <td class="t5 el-right">{{proNum1}}</td>
+      <td class="t5 el-right">{{proNum2}}</td>
+      <td class="t5 el-right">{{proNum3}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="print2View" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center"><a href="####" data-toggle="modal" data-target="#om001-link-suitview-modal">{{prodName}}</a></td>
+      <td class="t5 el-right">{{num}}</td>
+      <td class="t5 el-right">{{num2}}</td>
+      <td class="t5 el-right">{{num3}}</td>
+      <td class="t5 el-right">{{num4}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="proDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-right">{{num}}</td>
+      <td class="t6 el-left">{{unit}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!-- 包装要求 -->
+  <script class="hbs" data-view-id="packDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-left">{{num}}</td>
+      <td class="t6 el-left">{{unit}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!-- 物流要求 -->
+  <script class="hbs" data-view-id="transDemdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t6 el-left">{{transName}}</td>
+      <td class="t6 el-center">{{date}}</td>
+      <td class="t6 el-right">{{num}}</td>
+      <td class="t6 el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!--价格明细-->
+  <script class="hbs" data-view-id="paperCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA}}</td>
+      <td>{{BB}}</td>
+      <td>{{CC}}</td>
+      <td>{{DD}}</td>
+      <td>{{EE}}</td>
+      <td>{{FF}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="accessCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA1}}</td>
+      <td>{{BB1}}</td>
+      <td>{{CC1}}</td>
+      <td>{{DD1}}</td>
+      <td>{{EE1}}</td>
+      <td>{{FF1}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="printCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA2}}</td>
+      <td>{{BB2}}</td>
+      <td>{{CC2}}</td>
+      <td>{{DD2}}</td>
+      <td>{{EE2}}</td>
+      <td>{{FF2}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="dealCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA3}}</td>
+      <td>{{BB3}}</td>
+      <td>{{CC3}}</td>
+      <td>{{DD3}}</td>
+      <td>{{EE3}}</td>
+      <td>{{FF3}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="bindCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA4}}</td>
+      <td>{{BB4}}</td>
+      <td>{{CC4}}</td>
+      <td>{{DD4}}</td>
+      <td>{{EE4}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="handCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA5}}</td>
+      <td>{{BB5}}</td>
+      <td>{{CC5}}</td>
+      <td>{{DD5}}</td>
+      <td>{{EE5}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="printlnCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA6}}</td>
+      <td>{{BB6}}</td>
+      <td>{{CC6}}</td>
+      <td>{{DD6}}</td>
+      <td>{{EE6}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="packCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA7}}</td>
+      <td>{{BB7}}</td>
+      <td>{{CC7}}</td>
+      <td>{{DD7}}</td>
+      <td>{{EE7}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs" data-view-id="transCost" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td>{{AA8}}</td>
+      <td>{{BB8}}</td>
+      <td>{{CC8}}</td>
+      <td>{{DD8}}</td>
+      <td>{{EE8}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <script class="hbs hbs-tables" data-view-id="stockNum" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center">{{prodName}}</td>
+      <td class="t5 el-center">{{num}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="productNum" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t2 el-center">{{inc @index}}</td>
+      <td class="t5 el-center">{{prodName}}</td>
+      <td class="t5 el-center">{{stockName}}</td>
+      <td class="t5 el-center">{{stockNum}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <script class="hbs hbs-tables" data-view-id="selectPaperView" type="text/x-handlebars-template" id="om001-2-fade1-select-tmpl">
+    <!--<div class="navbarbtn navbar-form el-mt-5" >
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="om001-2-fade1-select-tmpl-btn-save">确认</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="om001-2-fade1-select-tmpl-btn-cancel">取消</button>
+      </div>
+    </div>-->
+    <div class="tablelist  table-responsive">
+      <row><h4>封面</h4></row>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t1"></th>
+          <th class="t2">行号</th>
+          <th class="t8">部件名称</th>
+          <th class="t4">帖数</th>
+          <th class="t4">P/帖</th>
+          <th class="t4">印刷方式</th>
+          <th class="t6">机型</th>
+          <th class="t4">版数</th>
+          <th class="t6">上机尺寸</th>
+          <th class="t6">整料尺寸</th>
+          <th class="t4">令张数</th>
+          <th class="t4">是否错纹</th>
+          <th class="t4">利用率</th>
+        </tr>
+        </thead>
+        <tbody class="om001-2-fade1-select-f-tmpl">
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"><input type="radio"></td>
+          <td class="t2 el-center">1</td>
+          <td class="t8 el-center">封面</td>
+          <td class="t4 el-center">1</td>
+          <td class="t4 el-center">4</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张四色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">880*595</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">92%</td>
+        </tr>
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"><input type="radio"></td>
+          <td class="t2 el-center">2</td>
+          <td class="t8 el-center">封面</td>
+          <td class="t4 el-center">1</td>
+          <td class="t4 el-center">4</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张四色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">868*610</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">90%</td>
+        </tr>
+        </tbody>
+      </table>
+      <row><h4>内文</h4></row>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <!-- <td class="t2"></th>-->
+          <th class="t1"></th>
+          <th class="t2">行号</th>
+          <th class="t10">部件名称</th>
+          <th class="t4">帖数</th>
+          <th class="t4">P/帖</th>
+          <th class="t4">印刷方式</th>
+          <th class="t6">机型</th>
+          <th class="t4">版数</th>
+          <th class="t6">上机尺寸</th>
+          <th class="t6">整料尺寸</th>
+          <th class="t4">令张数</th>
+          <th class="t4">是否错纹</th>
+          <th class="t4">利用率</th>
+        </tr>
+        </thead>
+        <tbody class="om001-2-fade1-select-n-tmpl">
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"><input type="radio"></td>
+          <td class="t2 el-center">1</td>
+          <td class="t10 el-center">内文F1-F192</td>
+          <td class="t4 el-center">7</td>
+          <td class="t4 el-center">16</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张单色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">880*595</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">95%</td>
+        </tr>
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"></td>
+          <td class="t2 el-center"></td>
+          <td class="t10 el-center">内文F193-F254</td>
+          <td class="t4 el-center">2</td>
+          <td class="t4 el-center">16</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张单色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">430*595</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">92%</td>
+        </tr>
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"><input type="radio"></td>
+          <td class="t2 el-center">1</td>
+          <td class="t10 el-center">内文F1-F192</td>
+          <td class="t4 el-center">7</td>
+          <td class="t4 el-center">16</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张单色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">880*595</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">95%</td>
+        </tr>
+        <tr>
+          <!--<td class="t2 el-center">{{inc @index}}</td>-->
+          <td class="t1 el-center"></td>
+          <td class="t2 el-center"></td>
+          <td class="t10 el-center">内文F193-F254</td>
+          <td class="t4 el-center">2</td>
+          <td class="t4 el-center">16</td>
+          <td class="t4 el-center">正反</td>
+          <td class="t6 el-center">平张单色</td>
+          <td class="t4 el-center">1</td>
+          <td class="t6 el-center">430*595</td>
+          <td class="t6 el-center">889*1194</td>
+          <td class="t4 el-center"></td>
+          <td class="t4 el-center">否</td>
+          <td class="t4 el-center">92%</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+  <script class="hbs hbs-tables" data-view-id="prodView" type="text/x-handlebars-template" id="om001-2-prod-look-tmpl">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label class="label-pl ">产品名称</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:14px;">产品大类</label>
+            <select class="form-control top-input-width" disabled>
+              <option>图书</option>
+              <option>期刊</option>
+              <option>报纸</option>
+              <option>包装</option>
+              <option>商业印品</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >产品小类</label>
+            <select class="form-control top-input-width" disabled>
+              <option>儿童绘本</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >成品单位</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">成品高度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:14px;">成品宽度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >书脊厚度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >成品重量</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label >前勒口宽度</label><!--class="el-ml-5"-->
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >后勒口宽度</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >装订方式</label>
+            <select class="form-control top-input-width" disabled>
+              <option>胶订</option>
+            </select>
+            <select class="form-control top-input-width" disabled>
+              <option>方脊</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:43px;">开本</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">定价信息</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >色彩标识</label>
+            <select class="form-control top-input-width" disabled>
+              <option>G7</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >追色标准</label>
+            <select class="form-control top-input-width" disabled>
+              <option>数码样</option>
+            </select>
+          </div>
+        </div>
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label >ISBN/ISSN</label>
+            <input type="text" class="form-control top-input-width" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:43px;">本型</label>
+            <select class="form-control top-input-width" disabled>
+              <option>左翻本</option>
+            </select>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label class="label-pl-2size">版次</label>
+            <input type="text" class="form-control top-input-short" disabled>
+            -
+            <input type="text" class="form-control top-input-short" disabled>
+          </div>
+        </div>
+        <!-- <div class="navbar-form  ">
+           <div class="form-group el-mr-25" >
+             <label >ISBN/ISSN</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+           <div class="form-group el-mr-25" >
+             <label style="padding-left:43px;">本型</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+           <div class="form-group el-mr-25" >
+             <label class="label-pl-2size">期数</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+         </div>
+         <div class="navbar-form  ">
+           <div class="form-group el-mr-25" >
+             <label style="padding-left:43px;">批次</label>
+             <input type="text" class="form-control top-input-width" disabled>
+           </div>
+         </div>-->
+        <div class="navbar-form  ">
+          <div class="form-group el-mr-25" >
+            <label style="padding-left:13px;">特殊要求</label>
+            <input type="text" class="form-control top-input-long" disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否FSC纸张</label>
+            <input type="checkbox"  disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否绿色印刷</label>
+            <input type="checkbox"  disabled>
+          </div>
+          <div class="form-group el-mr-25" >
+            <label >是否保密</label>
+            <input type="checkbox"  disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+    <fieldset>
+      <legend >部件信息</legend>
+      <div class="tablelist  table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <!-- <th class="t2"></th>-->
+            <th class="t4">行号</th>
+            <th class="t4">部件类型</th>
+            <th class="t4">是否客来</th>
+            <th class="t4">是否装订</th>
+            <th class="t4">部件编号</th>
+            <th class="t8">部件名称</th>
+            <th class="t4">P数</th>
+            <th class="t4">正面色数</th>
+            <th class="t4">背面色数</th>
+            <th class="t5">正面专色数</th>
+            <th class="t5">背面专色书</th>
+            <th class="t4">专色号</th>
+            <th class="t4">部件高度</th>
+            <th class="t4">部件宽度</th>
+            <th class="t4">部件深度</th>
+            <th class="t4">展开高度</th>
+            <th class="t4">展开宽度</th>
+            <th class="t4">联数</th>
+            <th class="t4">工艺要求</th>
+            <th class="t4">其他说明</th>
+            <th class="t4">纸张来源</th>
+            <th class="t4">纸张料号</th>
+            <th class="t4">纸张种类</th>
+            <th class="t4">纸张规格</th>
+            <th class="t4">纸张高度</th>
+            <th class="t4">纸张宽度</th>
+            <th class="t4">纸张克重</th>
+            <th class="t4">纸张品牌</th>
+          </tr>
+          </thead>
+          <tbody class="om001-2-prodTeam-tmpl">
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t4 el-center">1</td>
+            <td class="t4 el-center">封面</td>
+            <td class="t4 el-center">否</td>
+            <td class="t4 el-center">是</td>
+            <td class="t4 el-center">BJ1</td>
+            <td class="t8 el-center">封面</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t5 el-center">1</td>
+            <td class="t5 el-center">0</td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+          </tr>
+          <tr>
+            <!--<td class="t2 el-center">{{inc @index}}</td>-->
+            <td class="t4 el-center">2</td>
+            <td class="t4 el-center">内文</td>
+            <td class="t4 el-center">否</td>
+            <td class="t4 el-center">是</td>
+            <td class="t4 el-center">BJ2</td>
+            <td class="t8 el-center">内文F1-F8</td>
+            <td class="t4 el-center">128</td>
+            <td class="t4 el-center">4</td>
+            <td class="t4 el-center">4</td>
+            <td class="t5 el-center">0</td>
+            <td class="t5 el-center">0</td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+            <td class="t4 el-center"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+  </script>
+  <script class="hbs hbs-tables" data-view-id="suitlook" type="text/x-handlebars-template" id="om001-2-suit-look-tmpl">
+    <div class="tablelist  table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t4">产品名称</th>
+          <th class="t4">单套装中数量</th>
+        </tr>
+        </thead>
+        <tbody class="om001-2-prodTeam-tmpl">
+        <tr>
+          <td class="t4 el-center">小学语文一年级</td>
+          <td class="t4 el-center">1</td>
+        </tr>
+        <tr>
+          <td class="t4 el-center">小学数学一年级</td>
+          <td class="t4 el-center">1</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+</div>

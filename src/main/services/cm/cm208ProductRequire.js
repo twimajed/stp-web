@@ -1,0 +1,22 @@
+/**
+ * Created by Spring on 2016/7/22.
+ */
+module.exports=function(){
+  return[
+    {
+      processType:'印刷',
+      processNeed:'1000000',
+      uom:'印张'
+    },
+    {
+      processType:'印刷',
+      processNeed:'1000000',
+      uom:'印张'
+    },
+    {
+      processType:'印刷',
+      processNeed:'1000000',
+      uom:'印张'
+    }
+  ];
+};

@@ -1,0 +1,34 @@
+/**
+ * Created by Spring on 2016/7/20.
+ */
+module.exports=function(){
+  return[
+    {
+      date:'2016-06-16',
+      prodCode:'0001',
+      prodName:'西游记',
+      processType:'印刷',
+      processName:'单色平张',
+      processPc:'30000',
+      uom:'印张'
+    },
+    {
+      date:'2016-06-16',
+      prodCode:'0001',
+      prodName:'西游记',
+      processType:'印刷',
+      processName:'单色平张',
+      processPc:'30000',
+      uom:'印张'
+    },
+    {
+      date:'2016-06-16',
+      prodCode:'0001',
+      prodName:'西游记',
+      processType:'印刷',
+      processName:'单色平张',
+      processPc:'30000',
+      uom:'印张'
+    }
+  ];
+};

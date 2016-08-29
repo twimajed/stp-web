@@ -1,0 +1,19 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+/*自定义表格选择器时加上以下样式*/
+.ui010 div.box-inner,
+.ui010 div.box-inner div.antiscroll-inner {
+  height: 460px;
+}
+.table-multiselect {
+  height: 500px;
+  width: 700px;
+}
+.table-multiselect .col-middle {
+  line-height: 500px;
+}

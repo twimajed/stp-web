@@ -1,0 +1,37 @@
+{
+  "name": "stp-web",
+  "description": "STP Web Design",
+  "main": "index.js",
+  "authors": [
+    "neo.pan@elitesland.com"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "adminlte",
+    "bootstrap",
+    "jquery",
+    "handlebars",
+    "moment"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/test"
+  ],
+  "dependencies": {
+    "AdminLTE": "adminlte#^2.3.5",
+    "Chart.js": "chartjs#^2.1.6",
+    "font-awesome": "^4.6.3",
+    "fullcalendar": "^2.9.0",
+    "handlebars": "^4.0.5",
+    "jquery-form-validator": "^2.3.26",
+    "jquery": "2",
+    "lodash": "^4.13.1",
+    "moment": "^2.14.0",
+    "system.js": "^0.19.31",
+    "antiscroll": "*",
+    "jquery-mousewheel": "^3.1.13"
+  }
+}

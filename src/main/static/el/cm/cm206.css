@@ -1,0 +1,76 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm206 {
+}
+
+.cm206 > .panel > .panel-heading {
+  background-color: #f4f4f4;
+}
+
+.cm206 > .panel > .tablelist {
+  width: 100%;
+}
+.cm206 > .navpage{
+  width: 100%;
+}
+
+/**
+.cm206 .page-container{
+  margin-top: 15px;
+}
+**/
+
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+
+.cm206 > .panel > .navbarbtn {
+  float:left;
+}
+
+.cm206 .panel-body >.navbar-form > .form-group{
+  margin: auto 18px ;
+}
+
+.cm206 .page-container .fromFloatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+
+.cm206 .page-container .navbar > .navbar-form > .form-group{
+  margin: auto 40px ;
+}
+
+.cm206 .page-container .navbar > .navbar-form > .form-group >.selection-wd01 {
+  min-width: 196px;
+}
+
+.tablelist > .table > thead > tr > .t3 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .t6 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .t7 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .t8 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .t10 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .t11 {
+  min-width: 180px;
+}

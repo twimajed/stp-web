@@ -1,0 +1,169 @@
+<!-- Default panel contents start -->
+<div class="sm006">
+  <div class="panel panel-default">
+    <div class="panel-body panel-tight">
+      <div class="navbar-form navbar-left form-tight">
+        <div class="form-group  el-mr-15">
+          <label for="foDocNo">印刷订单号</label>
+          <input type="text" class="form-control" id="foDocNo" style="width:150px;">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="custName">客户名称</label>
+          <input type="text" class="form-control" id="custName" style="width:150px;">
+        </div>
+        <div class="form-group date  el-mr-15">
+          <label>发货日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value=""
+                   style="width:109px;">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value=""
+                   style="width:109px;">
+          </div>
+        </div>
+        <div class="form-group el-mr-15">
+          <button type="submit" class="btn btn-primary sm006-listView-searchBtn"><i class="fa fa-search"></i>&nbsp;检索
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <!-- search panel end  -->
+
+    <div class="navbarbtn navbar-form">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+
+    <div class="box-head  sm006-listView-table table-responsive">
+      <table class="table table-bordered table-striped table-hover ">
+        <thead>
+        <tr>
+          <th class="t1"></th>
+          <th class="t2">行号</th>
+          <th class="t6">发货通知单号</th>
+          <th class="t10">结算公司</th>
+          <th class="t6">印刷订单号</th>
+          <th class="t6">客户编码</th>
+          <th class="t6">客户名称</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">订单正数</th>
+          <th class="t6">发货数量</th>
+          <th class="t6">赠送数量</th>
+          <th class="t7">累计发货数量</th>
+          <th class="t7">累计赠送数量</th>
+          <th class="t6">打包方式</th>
+          <th class="t6">每箱本数</th>
+          <th class="t6">箱数</th>
+          <th class="t6">余数</th>
+          <th class="t8">状态</th>
+          <th class="t6">单位重量</th>
+          <th class="t6">总重量</th>
+          <th class="t6">发货地址</th>
+          <th class="t6">联系人</th>
+          <th class="t6">电话</th>
+          <th class="t6">发货日期</th>
+          <th class="t6">备注</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="box-wrap antiscroll-wrap sm006-listView-table">
+      <div class="box-inner">
+        <div class="antiscroll-inner">
+          <table class="table table-bordered table-striped table-hover">
+            <tbody class="sm006_data1">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="paging el-hide stp-paging-sm006 el-mt-15"></div>
+</div>
+
+<fieldset>
+  <legend style="margin-bottom:0px;">物流信息</legend>
+  <div class="tablelist  table-responsive">
+    <table class="table table-bordered table-striped table-hover sm006-editView-table">
+      <thead>
+      <tr>
+        <th class="t6">物流公司</th>
+        <th  class="t6">车牌号</th>
+        <th  class="t5">司机</th>
+        <th  class="t5">装卸工</th>
+        <th  class="t5">过路过桥费</th>
+        <th  class="t5">物流费用</th>
+        <th  class="t5">发货数量</th>
+        <th  class="t5">赠送数量</th>
+        <th  class="t5">发货日期</th>
+      </tr>
+      </thead>
+      <tbody class="sm006_data2">
+      </tbody>
+    </table>
+  </div>
+</fieldset>
+
+<script id="sm006_table1" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t1 el-center"><input type="radio" name="sm006_table1"></td>
+    <td class="t2 el-center">{{lineNo}}</td>
+    <td class="t6 el-center">{{deDocNo}}</td>
+    <td class="t10 el-left">{{ouName}}</td>
+    <td class="t6 el-center">{{foDocNo}}</td>
+    <td class="t6 el-center">{{custCode}}</td>
+    <td class="t6 el-left">{{custName}}</td>
+    <td class="t6 el-center">{{itemCode}}</td>
+    <td class="t6 el-left">{{itemName}}</td>
+    <td class="t6 el-right">{{fomanuQty}}</td>
+    <td class="t6 el-right">{{demandDeliQty}}</td>
+    <td class="t6 el-right">{{demandGiftQty}}</td>
+    <td class="t7 el-right">{{sumDeliQty}}</td>
+    <td class="t7 el-right">{{sumGiftQty}}</td>
+    <td class="t6 el-center">牛皮</td>
+    <td class="t6 el-right">{{QTY_PERPACKAGE}}</td>
+    <td class="t6 el-right">{{PACKAGE_QTY}}</td>
+    <td class="t6 el-right">{{SPARE_QTY}}</td>
+
+    <td><select class="t8 form-control" id="lineStatus" style="width:160px;">
+      <option value="已回单">已回单</option>
+      <option value="回单已确认">回单已确认</option>
+
+    </select></td>
+    <td class="t6 el-right">{{uomWeight}}</td>
+    <td class="t6 el-right">{{weight}}</td>
+    <td class="t6 el-left">{{deliAddrNo}}</td>
+    <td class="t6 el-left">{{coutPerson}}</td>
+    <td class="t6 el-center">{{coutTel}}</td>
+    <td class="t6 el-center">{{deliDate}}</td>
+    <td class="t6 el-left">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>
+<script id="sm006_table2" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t6 el-center">圆通</td>
+    <td class="t6 el-center">{{cargoNo}}</td>
+    <td class="t5">{{cargoPic}}</td>
+    <td class="t5">{{cargoPerson}}</td>
+    <td class="t5 el-right">{{fee1}}</td>
+    <td class="t5 el-right">{{fee2}}</td>
+    <td class="t5 el-right">{{deliQty}}</td>
+    <td class="t5 el-right">{{giftQty}}</td>
+    <td class="t5 el-center">{{deliDate}}</td>
+  </tr>
+  {{/each}}
+</script>

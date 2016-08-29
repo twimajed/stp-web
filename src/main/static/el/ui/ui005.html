@@ -1,0 +1,36 @@
+<div class="ui005">
+
+  <div class="ctls">
+    <div class="btn btn-default" data-view-id="fruits">Fruits</div>
+    <div class="btn btn-default" data-view-id="books">Books</div>
+    <div class="el-cell my-book"></div>
+  </div>
+
+  <!-- FRUITS -->
+  <div class="view fruits hide"></div>
+
+  <script class="hbs-view" data-view-id="fruits" type="text/x-handlebars-template">
+    <ul>
+      {{#each fruits}}
+      <li class="{{color}}">{{label}}</li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <!-- BOOKS -->
+  <div class="view books hide"></div>
+
+  <script class="hbs-view" data-view-id="books" type="text/x-handlebars-template">
+    <ul>
+      {{#each books}}
+      <li class="{{color}}">ISBN: <b>{{isbn}}</b> - {{name}}</li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <!-- HBS HELPER (opt) -->
+  <script class="hbs-my-book" data-view-id="books" type="text/x-handlebars-template">
+    <div>My Favorite Book: <select>{{opt books myBook}}</select></div>
+  </script>
+
+</div>

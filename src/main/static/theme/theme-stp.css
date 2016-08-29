@@ -1,0 +1,68 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.skin-stp .main-header > .logo {
+  border-right: 0;
+}
+
+.skin-stp .left-side,
+.skin-stp .main-sidebar,
+.skin-stp .main-header .logo {
+  width: 200px;
+}
+.skin-stp .main-header .navbar,
+.skin-stp .content-wrapper,
+.skin-stp .main-footer {
+  /*background-color: #E5E5E5;*/
+  margin-left: 200px;
+}
+.skin-stp .main-header .navbar {
+  height: 50px;
+}
+.skin-stp .main-header .logo-lg {
+  background: url("../images/logo.png") no-repeat 5px;
+  display: block;
+  padding-left: 3.5em;
+}
+
+.skin-stp .user-panel {
+  cursor: pointer;
+  /*padding-left: 1em;*/
+  font-size: 1.1em;
+  position: static;
+  /*border-bottom: 5px solid #1E282C;*/
+  background-color: rgb(108,157,202);
+}
+.skin-stp .user-panel>.info {
+  position: inherit;
+  padding: .5em;
+}
+.skin-stp .user-panel>.info>span {
+  display: inline-block;
+  margin-left: .5em;
+}
+.skin-stp .sidebar-collapse .user-panel>.info>span {
+  display: none;
+}
+
+.skin-stp .content {
+  padding: 5px;
+  position: relative;
+}
+.skin-stp .content>ul.nav>li>a {
+  font-size: 14px;
+  padding: 6px 10px;
+}
+.skin-stp .content>ul.nav>li>a>.fa-close {
+  cursor: pointer;
+}
+.skin-stp .content>.tab-content {
+  background: white;
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 7px;
+}

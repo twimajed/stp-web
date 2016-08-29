@@ -1,0 +1,1314 @@
+<!-- Default panel contents start -->
+<div class="fm002">
+
+  <div class="view listView">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+
+      <div class="panel-body panel-tight">
+        <!--检索条件隐藏、显示-->
+        <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+                data-original-title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+        <!--检索条件隐藏、显示  end -->
+        <!-- search panel start -->
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+
+          <div class="form-group  el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control ouName">
+          </div>
+          <div class="form-group  el-mr-15">
+            <label>产品名称</label>
+            <input type="text" class="form-control prodName">
+          </div>
+
+          <div class="form-group  el-mr-15 el-ml-14">
+            <label>订单状态</label>
+            <select  class="form-control form-selection ">
+              <option>全部</option>
+              <option>生产中</option>
+              <option>已发货</option>
+              <option>已已结算</option>
+            </select>
+          </div>
+
+          <div class="form-group  el-mr-15 ">
+            <label>营业员</label>
+            <input type="text" class="form-control agentId">
+          </div>
+
+          <div class="form-group ">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+
+        <div class="navbar-form form-tight navbar-left search-toggle-content">
+          <div class="form-group  el-mr-15 ">
+            <label>客户名称</label>
+            <input type="text" class="form-control custName">
+          </div>
+
+          <div class="form-group el-mr-15 ">
+            <label>订单编号</label>
+            <input type="text" class="form-control soNo">
+          </div>
+
+          <div class="form-group  el-mr-15">
+            <label>订单日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp soDateFrom" data-date-format="yyyy-mm-dd"
+                     style="width: 124px;">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp soDateTo" data-date-format="yyyy-mm-dd"
+                     style="width: 124px;">
+            </div>
+          </div>
+        </div>
+        <!-- search panel end  -->
+      </div>
+
+      <!-- search panel end  -->
+
+      <!-- Default panel contents end -->
+
+      <div class="navbarbtn navbar-form el-mb-15 el-mt-15">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="soProdView">订单查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="prodInView">完工查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="delinoteProdView">发货查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="ticketView">发票查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="payView">收款查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="statementView">结算查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="handStatementView">生成结算单</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="listView">对账单进度查询</button>
+        </div>
+      </div>
+
+      <div class=" listView_table">
+        <div class="box-head table-master-listView">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t1"></th>
+              <th class="t2 el-hide">Id</th>
+              <th class="t3">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">客户编码</th>
+              <th class="t7">客户名称</th>
+              <th class="t4">订单编号</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t4">订单日期</th>
+              <th class="t2">单位</th>
+              <th class="t4">订单数量</th>
+              <th class="t3">订单原币单价</th>
+              <th class="t6">订单原币金额</th>
+              <th class="t2">币种</th>
+              <th class="t2">汇率</th>
+              <th class="t3">订单本币单价</th>
+              <th class="t6">订单本币金额</th>
+              <th class="t4">完工数量</th>
+              <th class="t3">完工率</th>
+              <th class="t4">发货数量</th>
+              <th class="t5">进度结算原币金额</th>
+              <th class="t5">进度结算本币金额</th>
+              <th class="t3 ">发货率</th>
+              <th class="t5">开票金额</th>
+              <th class="t5">回款金额</th>
+              <th class="t3">逾期款</th>
+              <th class="t4">逾期天数</th>
+              <th class="t4">订单状态</th>
+              <th class="t2">是否结算</th>
+              <th class="t4">结算日期</th>
+              <th class="t3">营业员</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap antiscroll-wrap table-master-listView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table table-bordered table-striped table-hover stp-table-accountName">
+                <tbody class="listView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--<div class="paging el-hide stp-fm002-listView"></div>-->
+        <div class="paging-wrap">
+          <div class="left-records">显示记录<select class="records">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+          </select></div>
+          <div class="right-pages">
+            <div class="paging paging-master" style="width: 1121px;">
+              <ul class="pagination">
+                <li class="item previous disabled" data-pi="0"><span>上一页</span></li>
+                <li class="item idx active"><span data-pi="0">1</span></li>
+                <li class="item idx"><span data-pi="1">2</span></li>
+                <li class="item idx"><span data-pi="2">3</span></li>
+                <li class="item idx"><span data-pi="3">4</span></li>
+                <li class="item idx"><span data-pi="4">5</span></li>
+                <li class="item next " data-pi="0" data-pc="14"><span>下一页</span></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary forward">跳转</button>
+            <input type="number" min="1" max="3" placeholder="页码" class="chosePage">
+            <div class="total">共<span class="pn">5</span>页/<span class="rn">46</span>条</div>
+          </div>
+        </div>
+      </div>
+
+
+      <fieldset class="el-hide accountTable soProdView_table el-mt-25">
+        <legend class="el-mb-5">订单查询</legend>
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t4">订单ID</th>
+              <th class="t4">订单行号</th>
+              <th class="t4">产品ID</th>
+              <th class="t4">订单状态</th>
+              <th class="t4">本币币种</th>
+              <th class="t4">原币币种</th>
+              <th class="t2">汇率</th>
+              <th class="t4">核算单价</th>
+              <th class="t6">原币核算单价</th>
+              <th class="t4">报价单价</th>
+              <th class="t6">原币报价单价</th>
+              <th class="t4">核算金额</th>
+              <th class="t6">原币核算金额</th>
+              <th class="t4">报价金额</th>
+              <th class="t6">原币报价金额</th>
+              <th class="t2">正数</th>
+              <th class="t5">赠送/加放</th>
+              <th class="t4">成品单位</th>
+              <th class="t4">要求交期</th>
+              <th class="t4">取消日期</th>
+              <th class="t2">备注</th>
+            </tr>
+            </thead>
+            <tbody class="soProdView-data">
+            </tbody>
+          </table>
+        </div>
+        <!--<div class="paging el-hide stp-fm002-prodIn"></div>-->
+      </fieldset>
+
+      <fieldset class="el-hide accountTable prodInView_table el-mt-25">
+        <legend class="el-mb-5">完工查询</legend>
+
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t4">公司ID</th>
+              <th class="t5">MCUID</th>
+              <th class="t4">工厂ID</th>
+              <th class="t2">单号</th>
+              <th class="t2">类型</th>
+              <th class="t4">入库日期</th>
+              <th class="t2">状态</th>
+              <th class="t4">仓库ID</th>
+              <th class="t3">入库人</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t9">订单工厂生产表ID</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t4">入库数量</th>
+              <th class="t6">销售订单正数</th>
+              <th class="t1">底</th>
+              <th class="t1">高</th>
+              <th class="t3">包册数</th>
+              <th class="t2">尾数</th>
+              <th class="t2">备注</th>
+            </tr>
+            </thead>
+            <tbody class="prodInView-data">
+            </tbody>
+          </table>
+        </div>
+
+        <!--<div class="box-head table-master-prodInView ">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t4">公司ID</th>
+              <th class="t5">MCUID</th>
+              <th class="t4">工厂ID</th>
+              <th class="t2">单号</th>
+              <th class="t2">类型</th>
+              <th class="t4">入库日期</th>
+              <th class="t2">状态</th>
+              <th class="t4">仓库ID</th>
+              <th class="t3">入库人</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t9">订单工厂生产表ID</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t4">入库数量</th>
+              <th class="t6">销售订单正数</th>
+              <th class="t1">底</th>
+              <th class="t1">高</th>
+              <th class="t3">包册数</th>
+              <th class="t2">尾数</th>
+              <th class="t2">备注</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap  antiscroll-wrap table-master-prodInView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table  table-bordered table-striped table-hover">
+                <tbody class="prodInView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+        <!--<div class="paging el-hide stp-fm002-prodIn"></div>-->
+        <!--<div class="paging-wrap">
+          <div class="left-records">显示记录<select class="records">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+          </select></div>
+          <div class="right-pages">
+            <div class="paging paging-master" style="width: 1121px;">
+              <ul class="pagination">
+                <li class="item previous disabled" data-pi="0"><span>上一页</span></li>
+                <li class="item idx active"><span data-pi="0">1</span></li>
+                <li class="item idx"><span data-pi="1">2</span></li>
+                <li class="item idx"><span data-pi="2">3</span></li>
+                <li class="item idx"><span data-pi="3">4</span></li>
+                <li class="item idx"><span data-pi="4">5</span></li>
+                <li class="item next " data-pi="0" data-pc="14"><span>下一页</span></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary forward">跳转</button>
+            <input type="number" min="1" max="3" placeholder="页码" class="chosePage">
+            <div class="total">共<span class="pn">5</span>页/<span class="rn">46</span>条</div>
+          </div>
+        </div>-->
+      </fieldset>
+
+      <fieldset class="el-hide accountTable delinoteProdView_table el-mt-25" >
+        <legend class="el-mb-5">发货查询</legend>
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t5">发货通知单</th>
+              <th class="t2">状态</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t9">订单工厂生产表ID</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t6">销售订单正数</th>
+              <th class="t4">仓库ID</th>
+              <th class="t6">要求发货日期</th>
+              <th class="t6">要求发货数量</th>
+              <th class="t6">要求赠送数量</th>
+              <th class="t6">累计发货数量</th>
+              <th class="t6">累计赠送数量</th>
+              <th class="t2">单位</th>
+              <th class="t4">单位重量</th>
+              <th class="t3">总重量</th>
+              <th class="t4">打包方式</th>
+              <th class="t4">每箱本数</th>
+              <th class="t2">箱数</th>
+              <th class="t2">余数</th>
+              <th class="t5">送货地址号</th>
+              <th class="t4">送货地址</th>
+              <th class="t5">送货联系人</th>
+              <th class="t4">联系电话</th>
+              <th class="t2">备注</th>
+            </tr>
+            </thead>
+            <tbody class="delinoteProdView-data">
+            </tbody>
+          </table>
+        </div>
+        <!--<div class="box-head table-master-delinoteProdView">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t5">发货通知单</th>
+              <th class="t2">状态</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t9">订单工厂生产表ID</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t6">销售订单正数</th>
+              <th class="t4">仓库ID</th>
+              <th class="t6">要求发货日期</th>
+              <th class="t6">要求发货数量</th>
+              <th class="t6">要求赠送数量</th>
+              <th class="t6">累计发货数量</th>
+              <th class="t6">累计赠送数量</th>
+              <th class="t2">单位</th>
+              <th class="t4">单位重量</th>
+              <th class="t3">总重量</th>
+              <th class="t4">打包方式</th>
+              <th class="t4">每箱本数</th>
+              <th class="t2">箱数</th>
+              <th class="t2">余数</th>
+              <th class="t5">送货地址号</th>
+              <th class="t4">送货地址</th>
+              <th class="t5">送货联系人</th>
+              <th class="t4">联系电话</th>
+              <th class="t2">备注</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap  antiscroll-wrap table-master-delinoteProdView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table  table-bordered table-striped table-hover">
+                <tbody class="delinoteProdView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+      </fieldset>
+
+      <fieldset class="el-hide accountTable payView_table el-mt-25" >
+        <legend class="el-mb-5">收款查询</legend>
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t6">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">收款客户</th>
+              <th class="t4">收款金额</th>
+              <th class="t4">收款号码</th>
+              <th class="t2">行号</th>
+              <th class="t4">收款日期</th>
+              <th class="t4">开票客户</th>
+              <th class="t4">开票金额</th>
+              <th class="t4">开票日期</th>
+              <th class="t4">发票号码</th>
+            </tr>
+            </thead>
+            <tbody class="payView-data">
+            </tbody>
+          </table>
+        </div>
+
+        <!--<div class="box-head table-master-payView">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t6">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">收款客户</th>
+              <th class="t4">收款金额</th>
+              <th class="t4">收款号码</th>
+              <th class="t2">行号</th>
+              <th class="t4">收款日期</th>
+              <th class="t4">开票客户</th>
+              <th class="t4">开票金额</th>
+              <th class="t4">开票日期</th>
+              <th class="t4">发票号码</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap  table-master-payView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table table-bordered table-striped table-hover">
+                <tbody class="payView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+      </fieldset>
+
+      <fieldset class="el-hide accountTable ticketView_table el-mt-25" >
+        <legend class="el-mb-5">发票查询</legend>
+
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t6">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">订单客户</th>
+              <th class="t4">订单编号</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t4">订单数量</th>
+              <th class="t2">单位</th>
+              <th class="t2">行号</th>
+              <th class="t4">订单金额</th>
+              <th class="t5">订单日期</th>
+              <th class="t4">开票客户</th>
+              <th class="t4">发票总额</th>
+              <th class="t4">应税额</th>
+              <th class="t4">税额</th>
+              <th class="t4">发票号码</th>
+              <th class="t5">发票日期</th>
+              <th class="t4">未结金额</th>
+              <th class="t5">到期日期</th>
+              <th class="t4">逾期金额</th>
+              <th class="t4">逾期天数</th>
+            </tr>
+            </thead>
+            <tbody class="ticketView-data">
+            </tbody>
+          </table>
+        </div>
+
+        <!--<div class="box-head table-master-ticketView">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t6">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">订单客户</th>
+              <th class="t4">订单编号</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t4">订单数量</th>
+              <th class="t2">单位</th>
+              <th class="t2">行号</th>
+              <th class="t4">订单金额</th>
+              <th class="t5">订单日期</th>
+              <th class="t4">开票客户</th>
+              <th class="t4">发票总额</th>
+              <th class="t4">应税额</th>
+              <th class="t4">税额</th>
+              <th class="t4">发票号码</th>
+              <th class="t5">发票日期</th>
+              <th class="t4">未结金额</th>
+              <th class="t5">到期日期</th>
+              <th class="t4">逾期金额</th>
+              <th class="t4">逾期天数</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap antiscroll-wrap table-master-ticketView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table table-bordered table-striped table-hover">
+                <tbody class="ticketView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+      </fieldset>
+
+      <fieldset class="el-hide accountTable statementView_table el-mt-25">
+        <legend class="el-mb-5">结算查询</legend>
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th class="t4">公司ID</th>
+              <th class="t4">公司名称</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">客户名称</th>
+              <th class="t4">结算单号</th>
+              <th class="t4">结算日期</th>
+              <th class="t2">状态</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t2">行号</th>
+              <th class="t2">单位</th>
+              <th class="t2">单价</th>
+              <th class="t4">订单数量</th>
+              <th class="t6">订单本币金额</th>
+              <th class="t6">本单结算数量</th>
+              <th class="t6">本单结算金额</th>
+              <th class="t4">立账日期</th>
+              <th class="t6">立账本币金额</th>
+              <th class="t4">立账标记</th>
+            </tr>
+            </thead>
+            <tbody class="statementView-data">
+            </tbody>
+          </table>
+        </div>
+
+        <!--<div class="box-head table-master-statementView">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t4">公司ID</th>
+              <th class="t4">公司名称</th>
+              <th class="t4">客户ID</th>
+              <th class="t4">客户名称</th>
+              <th class="t4">结算单号</th>
+              <th class="t4">结算日期</th>
+              <th class="t2">状态</th>
+              <th class="t6">销售订单ID</th>
+              <th class="t10">销售订单产品细表ID</th>
+              <th class="t4">产品ID</th>
+              <th class="t2">行号</th>
+              <th class="t2">单位</th>
+              <th class="t2">单价</th>
+              <th class="t4">订单数量</th>
+              <th class="t6">订单本币金额</th>
+              <th class="t6">本单结算数量</th>
+              <th class="t6">本单结算金额</th>
+              <th class="t4">立账日期</th>
+              <th class="t6">立账本币金额</th>
+              <th class="t4">立账标记</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap antiscroll-wrap table-master-statementView">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table table-bordered table-striped table-hover stp-table-accountSettle">
+                <tbody class="statementView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>-->
+      </fieldset>
+
+    </div>
+  </div>
+
+  <!--<div class="view payView el-hide">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-warning btn-sm floatRight">返回列表</button>
+        </div>
+        <div class="panel-body">
+          <div class="navbar-form ">
+            <div class="form-group el-mb-15 el-mr-15">
+              <label>结算公司</label>
+              <input type="text" class="form-control ouName" >
+            </div>
+            <div class="form-group el-mb-15 el-mr-15">
+              <label>收款日期自</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <input type="text" class="form-control pull-right el-dtp recvDateFrom" data-date-format="yyyy-mm-dd">
+              </div>
+              <label>-</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <input type="text" class="form-control pull-right el-dtp recvDateTo" data-date-format="yyyy-mm-dd">
+              </div>
+            </div>
+            <div class="form-group el-mb-15 el-mr-15">
+              <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+            </div>
+          </div>
+
+          <div class="navbar-form">
+            <div class="form-group el-mr-15">
+              <label>客户名称</label>
+              <input type="text" class="form-control custCode">
+            </div>
+            <div class="form-group el-mr-15">
+              <label>发票日期自</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <input type="text" class="form-control pull-right el-dtp invDateFrom" data-date-format="yyyy-mm-dd">
+              </div>
+              <label>-</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <input type="text" class="form-control pull-right el-dtp invDateTo" data-date-format="yyyy-mm-dd">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-head table-master">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="t6">结算公司编码</th>
+              <th class="t6">结算公司名称</th>
+              <th class="t4">收款客户</th>
+              <th class="t4">收款金额</th>
+              <th class="t4">收款号码</th>
+              <th class="t2">行号</th>
+              <th class="t4">收款日期</th>
+              <th class="t4">开票客户</th>
+              <th class="t4">开票金额</th>
+              <th class="t4">开票日期</th>
+              <th class="t4">发票号码</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="box-wrap  table-master">
+          <div class="box-inner">
+            <div class="antiscroll-inner">
+              <table class="table table-bordered table-striped table-hover">
+                <tbody class="payView-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="paging el-hide stp-fm002-pay"></div>
+      </div>
+  </div>-->
+
+  <!--<div class="view ticketView el-hide">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-sm floatRight">返回列表</button>
+      </div>
+      <div class="panel-body">
+        &lt;!&ndash; search panel start &ndash;&gt;
+        <div class="navbar-form ">
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control ouName">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp soDateFrom" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp soDateTo" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+
+        <div class="navbar-form">
+          <div class="form-group el-mr-15">
+            <label>客户名称</label>
+            <input type="text" class="form-control custCode">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>发票日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp invDateFrom" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp invDateTo" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+
+        </div>
+        &lt;!&ndash; search panel end  &ndash;&gt;
+      </div>
+
+      <div class="box-head table-master">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="t6">结算公司编码</th>
+            <th class="t6">结算公司名称</th>
+            <th class="t4">订单客户</th>
+            <th class="t4">订单编号</th>
+            <th class="t4">产品编号</th>
+            <th class="t4">产品名称</th>
+            <th class="t4">订单数量</th>
+            <th class="t2">单位</th>
+            <th class="t2">行号</th>
+            <th class="t4">订单金额</th>
+            <th class="t4">订单日期</th>
+            <th class="t4">开票客户</th>
+            <th class="t4">发票总额</th>
+            <th class="t3">应税额</th>
+            <th class="t2">税额</th>
+            <th class="t4">发票号码</th>
+            <th class="t4">发票日期</th>
+            <th class="t4">未结金额</th>
+            <th class="t4">到期日期</th>
+            <th class="t4">逾期金额</th>
+            <th class="t4">逾期天数</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap table-master">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="ticketView-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide stp-fm002-ticket"></div>
+    </div>
+  </div>-->
+
+  <!--<div class="view statementView el-hide">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-sm floatRight">返回列表</button>
+      </div>
+      <div class="panel-body">
+        &lt;!&ndash; search panel start &ndash;&gt;
+        <div class="navbar-form ">
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control ouCode">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单编号</label>
+            <input type="text" class="form-control soNo">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+          <div class="form-group el-mb-15 ">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+        <div class="navbar-form ">
+          <div class="form-group el-mr-15">
+            <label>客户名称</label>
+            <input type="text" class="form-control custCode">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>产品名称</label>
+            <input type="text" class="form-control prodCode">
+          </div>
+        </div>
+        &lt;!&ndash; search panel end  &ndash;&gt;
+      </div>
+      &lt;!&ndash; Default panel contents end &ndash;&gt;
+
+      <div class="navbarbtn navbar-form el-mb-15 el-mt-15">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-value="accountView">立账</button>
+        </div>
+      </div>
+
+      <div class="box-head table-master">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="t1"></th>
+            <th class="t4">公司ID</th>
+            <th class="t4">公司名称</th>
+            <th class="t4">客户ID</th>
+            <th class="t4">客户名称</th>
+            <th class="t4">结算单号</th>
+            <th class="t4">结算日期</th>
+            <th class="t2">状态</th>
+            <th class="t6">销售订单ID</th>
+            <th class="t10">销售订单产品细表ID</th>
+            <th class="t4">产品ID</th>
+            <th class="t2">行号</th>
+            <th class="t2">单位</th>
+            <th class="t2">单价</th>
+            <th class="t4">订单数量</th>
+            <th class="t6">订单本币金额</th>
+            <th class="t6">本单结算数量</th>
+            <th class="t6">本单结算金额</th>
+            <th class="t4">立账日期</th>
+            <th class="t6">立账本币金额</th>
+            <th class="t4">立账标记</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-master">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover stp-table-accountSettle">
+              <tbody class="statementView-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide stp-fm002-statement"></div>
+    </div>
+  </div>-->
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1 el-center"><input type="checkbox" name="fm002_table" value="{{id}}" data-settleFlag="{{settleFlag}}"
+                                      data-deliQty="{{deliQty}}" data-manuQty="{{manuQty}}"></td>
+      <td class="t2 el-hide">{{id}}</td>
+      <td class="t3 el-left">{{ouCode}}</td>
+      <td class="t6 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{custCode}}</td>
+      <td class="t7 el-left">{{custName}}</td>
+      <td class="t4 el-left">{{soNo}}</td>
+      <td class="t6 el-left">{{prodCode}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t4 el-left">{{soDateYmd}}</td>
+      <td class="t2 el-center">{{prodUom}}</td>
+      <td class="t4 el-right">{{manuQty}}</td>
+      <td class="t3 el-right">{{currQuotePrice}}</td>
+      <td class="t6 el-right">{{currQuoteAmt}}</td>
+      <td class="t2 el-center">{{foreCurrCode}}</td>
+      <td class="t2 el-right">{{currRate}}</td>
+      <td class="t3 el-right">{{quotePrice}}</td>
+      <td class="t6 el-right">{{quoteAmt}}</td>
+      <td class="t4 el-right">{{whinQty}}</td>
+      <td class="t3 el-right">{{completionRate}}</td>
+      <td class="t4 el-right">{{deliQty}}</td>
+      <td class="t5 el-right">{{currQuoteAmt}}</td>
+      <td class="t5 el-right">{{quoteAmt}}</td>
+      <td class="t3 el-right">{{deliRate}}</td>
+      <td class="t5 el-right">{{invAmt}}</td>
+      <td class="t5 el-right">{{recvAmt}}</td>
+      <td class="t3 el-right">{{overdueAmt}}</td>
+      <td class="t4 el-right">{{overdueDays}}</td>
+      <td class="t4 el-left">{{soStatus}}</td>
+      <td class="t2 el-left">{{settleFlag}}</td>
+      <td class="t4 el-left">{{SettleDateYmd}}</td>
+      <td class="t3 el-left">{{agentId}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td class="t1"></td>
+      <td class="t3">合计</td>
+      <td class="t6"></td>
+      <td class="t4"></td>
+      <td class="t7"></td>
+      <td class="t4"></td>
+      <td class="t6"></td>
+      <td class="t6"></td>
+      <td class="t4"></td>
+      <td class="t2"></td>
+      <td class="t4"></td>
+      <td class="t3"></td>
+      <td class="t6 el-right">125000.00</td>
+      <td class="t2"></td>
+      <td class="t2"></td>
+      <td class="t3"></td>
+      <td class="t6 el-right">125000.00</td>
+      <td class="t4"></td>
+      <td class="t3"></td>
+      <td class="t4"></td>
+      <td class="t5 el-right">125000.00</td>
+      <td class="t5 el-right">125000.00</td>
+      <td class="t3"></td>
+      <td class="t5 el-right">117000.00</td>
+      <td class="t5 el-right">90000.00</td>
+      <td class="t3"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t2"></td>
+      <td class="t4"></td>
+      <td class="t3"></td>
+    </tr>
+  </script>
+
+  <!--<script class="hbs" data-view-id="listTotal" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1"></td>
+      <td class="t6">合计</td>
+      <td class="t6"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t2"></td>
+      <td class="t4"></td>
+      <td class="t6"></td>
+      <td class="t6 el-right">{{currQuoteAmtTotal}}</td>
+      <td class="t2"></td>
+      <td class="t2"></td>
+      <td class="t6"></td>
+      <td class="t6 el-right">{{quoteAmtTotal}}</td>
+      <td class="t4"></td>
+      <td class="t3"></td>
+      <td class="t4"></td>
+      <td class="t8 el-right">{{currQuoteAmtTotal}}</td>
+      <td class="t8 el-right">{{quoteAmtTotal}}</td>
+      <td class="t3"></td>
+      <td class="t4 el-right">{{invAmtTotal}}</td>
+      <td class="t4 el-right">{{recvAmtTotal}}</td>
+      <td class="t3"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t4"></td>
+      <td class="t3"></td>
+    </tr>
+    {{/each}}
+  </script>-->
+
+  <script class="hbs" data-view-id="payView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t6 el-left">{{ouCode}}</td>
+      <td class="t6 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{custCode}}</td>
+      <td class="t4 el-right">{{recvAmt}}</td>
+      <td class="t4 el-left">{{recvNo}}</td>
+      <td class="t2 el-center">{{lineNo}}</td>
+      <td class="t4 el-left">{{recvDateYmd}}</td>
+      <td class="t4 el-left">{{payer}}</td>
+      <td class="t4 el-right">{{invAmt}}</td>
+      <td class="t4 el-left">{{invDateYmd}}</td>
+      <td class="t4 el-left">{{gtInvNo}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td class="el-left">合计</td>
+      <td></td>
+      <td></td>
+      <td class="el-right">50000.00</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="el-right">75000.00</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </script>
+
+  <!--<script class="hbs" data-view-id="payTotal" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-left">合计</td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{recvAmtTotal}}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{invAmtTotal}}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  {{/each}}
+</script>-->
+
+  <script class="hbs" data-view-id="ticketView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t6 el-left">{{ouCode}}</td>
+      <td class="t6 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{prodCustCode}}</td>
+      <td class="t4 el-left">{{soNo}}</td>
+      <td class="t6 el-left">{{prodCode}}</td>
+      <td class="t6 el-left">{{prodName}}</td>
+      <td class="t4 el-right">{{manuQty}}</td>
+      <td class="t2 el-center">{{prodUom}}</td>
+      <td class="t2 el-center">{{lineNo}}</td>
+      <td class="t4 el-right">{{quoteAmt}}</td>
+      <td class="t5 el-left">{{soDateYmd}}</td>
+      <td class="t4 el-left">{{custCode}}</td>
+      <td class="t4 el-right">{{invAmt}}</td>
+      <td class="t4 el-right">{{netAmt}}</td>
+      <td class="t4 el-right">{{taxAmt}}</td>
+      <td class="t4 el-right">{{gtInvNo}}</td>
+      <td class="t5 el-left">{{invDateYmd}}</td>
+      <td class="t4 el-right">{{openAmt}}</td>
+      <td class="t5 el-left">{{dueDateYmd}}</td>
+      <td class="t4 el-right">{{overdueAmt}}</td>
+      <td class="t4 el-left">{{overdueDays}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td class="el-left">合计</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="el-right">40000.00</td>
+      <td></td>
+      <td></td>
+      <td class="el-right">40000.00</td>
+      <td class="el-right">34188.03</td>
+      <td class="el-right">5811.97</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </script>
+
+  <!-- <script class="hbs" data-view-id="ticketTotal" type="text/x-handlebars-template">
+     {{#each this}}
+     <tr>
+       <td class="el-left">合计</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td class="el-right">{{quoteAmtTotal}}</td>
+       <td></td>
+       <td></td>
+       <td class="el-right">{{invAmtTotal}}</td>
+       <td class="el-right">{{netAmtTotal}}</td>
+       <td class="el-right">{{taxAmtTotal}}</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     {{/each}}
+   </script>-->
+
+  <script class="hbs" data-view-id="statementView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t4 el-left">{{ouId}}</td>
+      <td class="t4 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{custId}}</td>
+      <td class="t4 el-left">{{custName}}</td>
+      <td class="t4 el-left">{{docNo}}</td>
+      <td class="t4 el-left">{{settleDateYmd}}</td>
+      <td class="t2 el-left">{{docStatus}}</td>
+      <td class="t6 el-left">{{soId}}</td>
+      <td class="t10 el-left">{{soProdId}}</td>
+      <td class="t4 el-left">{{prodId}}</td>
+      <td class="t2 el-left">{{lineNo}}</td>
+      <td class="t2 el-center">{{uom}}</td>
+      <td class="t2 el-right">{{price}}</td>
+      <td class="t4 el-right">{{soQty}}</td>
+      <td class="t6 el-right">{{soAmt}}</td>
+      <td class="t6 el-right">{{settleQty}}</td>
+      <td class="t6 el-right">{{settleAmt}}</td>
+      <td class="t4 el-left">{{accountDateYmd}}</td>
+      <td class="t6 el-right">{{accountAmt}}</td>
+      <td class="t4 el-left">{{accountFlag}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td class="el-left">合计</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="el-right">3000</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="el-right">2000</td>
+      <td></td>
+    </tr>
+  </script>
+
+  <!--<script class="hbs" data-view-id="statementTotal" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td></td>
+    <td class="el-left">合计</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{soAmtTotal}}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="el-right">{{accountAmtTotal}}</td>
+    <td></td>
+  </tr>
+  {{/each}}
+  </script>-->
+
+  <script class="hbs" data-view-id="prodInView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t4 el-left">{{ouId}}</td>
+      <td class="t5 el-left">{{mcuId}}</td>
+      <td class="t4 el-left">{{factId}}</td>
+      <td class="t2 el-left">{{docNo}}</td>
+      <td class="t2 el-left">{{docType}}</td>
+      <td class="t4 el-left">{{docDateYmd}}</td>
+      <td class="t2 el-right">{{docStatus}}</td>
+      <td class="t4 el-center">{{whId}}</td>
+      <td class="t3 el-center">{{whinPic}}</td>
+      <td class="t6 el-right">{{soId}}</td>
+      <td class="t10 el-left">{{soprodId}}</td>
+      <td class="t9 el-left">{{somanuId}}</td>
+      <td class="t4 el-left">{{custId}}</td>
+      <td class="t4 el-right">{{prodId}}</td>
+      <td class="t4 el-right">{{whinQty}}</td>
+      <td class="t6 el-right">{{soprodQty}}</td>
+      <td class="t1 el-right">{{bottom}}</td>
+      <td class="t1 el-left">{{height}}</td>
+      <td class="t3 el-right">{{qtyPerpackag}}</td>
+      <td class="t2 el-left">{{spareQty}}</td>
+      <td class="t2 el-right">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <script class="hbs" data-view-id="soProdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t4 el-left">{{ouId}}</td>
+      <td class="t4 el-left">{{mcuId}}</td>
+      <td class="t4 el-left">{{factId}}</td>
+      <td class="t4 el-left">{{docNo}}</td>
+      <td class="t4 el-left">{{docType}}</td>
+      <td class="t4 el-left">{{docDateYmd}}</td>
+      <td class="t2 el-right">{{docStatus}}</td>
+      <td class="t4 el-center">{{whId}}</td>
+      <td class="t6 el-center">{{whinPic}}</td>
+      <td class="t4 el-right">{{soId}}</td>
+      <td class="t6 el-left">{{soprodId}}</td>
+      <td class="t4 el-left">{{somanuId}}</td>
+      <td class="t6 el-left">{{custId}}</td>
+      <td class="t4 el-right">{{prodId}}</td>
+      <td class="t6 el-right">{{whinQty}}</td>
+      <td class="t2 el-right">{{soprodQty}}</td>
+      <td class="t5 el-right">{{bottom}}</td>
+      <td class="t4 el-left">{{height}}</td>
+      <td class="t4 el-right">{{qtyPerpackag}}</td>
+      <td class="t4 el-left">{{spareQty}}</td>
+      <td class="t2 el-right">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+
+  <script class="hbs" data-view-id="delinoteProdView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t5 el-left">{{delinoteId}}</td>
+      <td class="t2 el-left">{{lineStatus}}</td>
+      <td class="t6 el-left">{{soId}}</td>
+      <td class="t10 el-left">{{soprodId}}</td>
+      <td class="t9 el-left">{{somanuId}}</td>
+      <td class="t4 el-left">{{custId}}</td>
+      <td class="t4 el-right">{{prodId}}</td>
+      <td class="t6 el-center">{{soprodQty}}</td>
+      <td class="t4 el-center">{{whId}}</td>
+      <td class="t6 el-right">{{demandDeliDateYmd}}</td>
+      <td class="t6 el-left">{{demandDeliQty}}</td>
+      <td class="t6 el-left">{{demandGiftQty}}</td>
+      <td class="t6 el-left">{{sumDeliQty}}</td>
+      <td class="t6 el-right">{{sumGiftQty}}</td>
+      <td class="t2 el-right">{{uom}}</td>
+      <td class="t4 el-right">{{uomWeight}}</td>
+      <td class="t3 el-right">{{weight}}</td>
+      <td class="t4 el-left">{{packageMethod}}</td>
+      <td class="t4 el-right">{{qtyPerpackage}}</td>
+      <td class="t2 el-left">{{packageQty}}</td>
+      <td class="t2 el-right">{{spareQty}}</td>
+      <td class="t5 el-right">{{deliAddrNo}}</td>
+      <td class="t4 el-left">{{deliAddrDesc}}</td>
+      <td class="t5 el-right">{{contPerson}}</td>
+      <td class="t4 el-left">{{contTel}}</td>
+      <td class="t2 el-right">{{remark}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <script class="hbs" data-view-id="docStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection" name="docStatus">{{opt this}}</select>
+  </script>
+
+</div>

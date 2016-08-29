@@ -1,0 +1,137 @@
+<!-- Default panel contents start -->
+<div class="fc007">
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+  <div class="view listView " id="listEditDiv">
+    <div class="panel-body">
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <label for="foDocNo">印刷订单号</label>
+          <input type="text"style="width: 140px" class="form-control" id="foDocNo">
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="itemnName">产品名称</label>
+          <input type="text" style="width: 140px" class="form-control" id="itemnName">
+        </div>
+        <div class="form-group date  el-mr-15">
+          <label class="el-ml-14">入库日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" style="width: 140px"class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" style="width: 140px" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary search-btn"> <i class="fa fa-search"></i>&nbsp;检索</button>
+      </div>
+  </div>
+</div>
+    <!-- search panel end -->
+    <div page-container>
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+          <a href="#summary" data-toggle="tab" id="summary_btn">
+            汇总
+          </a>
+        </li>
+        <li>
+          <a href="#detail" data-toggle="tab" id="detail_btn">明细</a>
+        </li>
+
+      </ul>
+    <!--detail order start-->
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade " id="detail">
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t6">入库单号</th>
+              <th class="t6">客户名称</th>
+              <th class="t6">印刷订单号</th>
+              <th class="t6">产品编码</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">订单正数</th>
+              <th class="t7">本次入库数量</th>
+              <th class="t6">入库工厂</th>
+              <th class="t6">入库日期</th>
+              <th class="t6">入库人</th>
+              <th class="t6">备注</th>
+            </tr>
+            </thead>
+            <tbody class="detail_data">
+            </tbody>
+          </table>
+        </div>
+        <div class="paging el-hide stp-paging-fc007_1 el-mt-15"></div>
+    </div>
+    <!--detail order end-->
+
+    <!--summary tab start-->
+    <div class="tab-pane fade in active fc" id="summary">
+      <div class="tablelist table-responsive">
+        <table class="table table-bordered table-striped table-hover stp-table-fc007_2">
+          <thead>
+          <tr>
+            <th style="width:30px;"></th>
+            <th style="width:30px;">行号</th>
+            <th style="width:100px;">产品编号</th>
+            <th style="width:100px;">产品名称</th>
+            <th style="width:100px;">入库工厂</th>
+            <th style="width:120px;">入库数量合计</th>
+          </tr>
+          </thead>
+          <tbody class="summary_data">
+          </tbody>
+        </table>
+      </div>
+      <div class="paging el-hide stp-paging-fc007_2 el-mt-10"></div>
+    </div>
+    <!--summary tab end-->
+
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+<script id="detail_table" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{lineNo}}</td>
+      <td class="el-center">{{prDocNo}}</td>
+      <td class="el-left">{{custName}}</td>
+      <td class="el-center">{{foDocNo}}</td>
+      <td class="el-center">{{itemCode}}</td>
+      <td class="el-left">{{itemName}}</td>
+      <td class="el-right">{{fomanuQty}}</td>
+      <td class="el-right">{{whinQty}}</td>
+      <td class="el-left">{{addrName}}</td>
+      <td class="el-center">{{docDate}}</td>
+      <td class="el-right">{{whinPic}}</td>
+      <td class="el-left">{{remark}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script id="summary_table" type="text/x-handlebars-template" >
+    {{#each this}}
+    <tr>
+      <td class="el-center"><input type="radio" name="fc007_table1"></td>
+      <td class="el-center">{{lineNo}}</td>
+      <td class="el-center">{{itemCode}}</td>
+      <td class="el-left">{{itemName}}</td>
+      <td class="el-left">{{addrName}}</td>
+      <td class="el-right">{{whinQty}}</td>
+    </tr>
+    {{/each}}
+</script>
